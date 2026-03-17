@@ -29,16 +29,16 @@ export default function CTA() {
   const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   return (
-    <section className="relative py-28 lg:py-40 overflow-hidden" ref={ref}>
+    <section className="relative py-28 lg:py-40 overflow-hidden -mt-[200px]" ref={ref}>
       {/* Parallax Background */}
-      <motion.div className="absolute inset-0 z-0" style={{ y: bgY }}>
+      <motion.div className="absolute inset-0 z-0 -mt-[200px]" style={{ y: bgY }}>
         <Image
           src="/images/todd-kent-178j8tJrNlc-unsplash-2048x1365.webp"
           alt="Construction Background"
           fill
           className="object-cover scale-110"
         />
-        <div className="absolute inset-0 bg-[#0d1117]/95" />
+        <div className="absolute inset-0 bg-[#0d1117]/95" style={{ marginTop: '-200px' }} />
       </motion.div>
 
       {/* Decorative elements */}
