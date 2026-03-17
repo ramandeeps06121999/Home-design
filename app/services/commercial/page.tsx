@@ -1,5 +1,3 @@
-"use client";
-
 import type { Metadata } from "next";
 import { Store, Building2, FileCheck, Clock, Shield, Users } from "lucide-react";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";

@@ -1,5 +1,3 @@
-"use client";
-
 import type { Metadata } from "next";
 import SiteNavbar from "@/components/shared/SiteNavbar";
 import SiteFooter from "@/components/shared/SiteFooter";

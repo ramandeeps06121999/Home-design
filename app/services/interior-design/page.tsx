@@ -1,5 +1,3 @@
-"use client";
-
 import type { Metadata } from "next";
 import { Palette, Eye, Lightbulb, Layers, Sofa, Paintbrush } from "lucide-react";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";

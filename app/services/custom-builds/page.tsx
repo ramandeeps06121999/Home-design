@@ -1,5 +1,3 @@
-"use client";
-
 import type { Metadata } from "next";
 import { Wrench, Star, Gem, Mountain, Shield, Paintbrush } from "lucide-react";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
