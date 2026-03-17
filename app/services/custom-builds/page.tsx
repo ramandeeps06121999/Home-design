@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: `${siteUrl}/services/custom-builds`,
     images: [
       {
-        url: "/images/modern-villa-with-pool-and-deck-H27FA57-1.webp",
+        url: "/images/custom-home-luxury.jpg",
         width: 1200,
         height: 630,
         alt: "Custom Home Builds - Design Homes",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Custom Builds | Design Homes",
     description: "Bespoke custom home builders across SEQ. Unique architectural designs, challenging sites & premium finishes.",
-    images: ["/images/modern-villa-with-pool-and-deck-H27FA57-1.webp"],
+    images: ["/images/custom-home-luxury.jpg"],
   },
   alternates: {
     canonical: `${siteUrl}/services/custom-builds`,
@@ -54,7 +54,7 @@ export default function CustomBuildsPage() {
       heroTitle="Bespoke"
       heroHighlight="Custom Builds"
       heroDescription="One-of-a-kind homes for unique visions. From architectural masterpieces to homes on challenging sites, we bring the extraordinary to life."
-      heroImage="/images/modern-villa-with-pool-and-deck-H27FA57-1.webp"
+      heroImage="/images/custom-home-luxury.jpg"
       breadcrumbLabel="Custom Builds"
       overview={{
         title: "Where Vision Meets",
@@ -63,7 +63,7 @@ export default function CustomBuildsPage() {
           "Custom builds are where our passion truly shines. These are projects that push boundaries, challenge conventions, and result in homes that are genuinely one-of-a-kind. Whether it's a hillside masterpiece, a waterfront retreat, or an architectural statement, we have the expertise to deliver.",
           "Our team thrives on complexity. We work closely with architects, engineers, and artisan craftspeople to bring ambitious designs to life, while ensuring every element meets our exacting quality standards.",
         ],
-        image: "/images/modern-villa-with-pool-and-deck-H27FA57.webp",
+        image: "/images/bespoke-architecture.jpg",
       }}
       features={[
         { icon: Wrench, title: "Bespoke Design", description: "Fully customized designs that reflect your unique vision, from architectural concept through to finished details." },
@@ -84,9 +84,9 @@ export default function CustomBuildsPage() {
         "Comprehensive warranty",
       ]}
       galleryImages={[
-        { src: "/images/modern-villa-with-pool-and-deck-H27FA57-1.webp", alt: "Custom Build 1" },
-        { src: "/images/modern-villa-with-pool-and-deck-H27FA57.webp", alt: "Custom Build 2" },
-        { src: "/images/modern-rooftop-patio-with-sunset-view-8SF9VVP-2.webp", alt: "Custom Build 3" },
+        { src: "/images/custom-home-luxury.jpg", alt: "Custom Build 1" },
+        { src: "/images/bespoke-architecture.jpg", alt: "Custom Build 2" },
+        { src: "/images/modern-unique-house.jpg", alt: "Custom Build 3" },
       ]}
       relatedServices={[
         { title: "New Home Builds", href: "/services/new-home-builds", description: "For standard custom homes with efficient build processes." },

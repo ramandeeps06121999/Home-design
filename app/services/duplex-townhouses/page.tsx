@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: `${siteUrl}/services/duplex-townhouses`,
     images: [
       {
-        url: "/images/modern-rooftop-patio-with-sunset-view-8SF9VVP-1.webp",
+        url: "/images/duplex-exterior.jpg",
         width: 1200,
         height: 630,
         alt: "Duplex & Townhouse Builders - Design Homes",
@@ -54,7 +54,7 @@ export default function DuplexTownhousesPage() {
       heroTitle="Duplex &"
       heroHighlight="Townhouses"
       heroDescription="Maximize your property's potential with expertly designed and built duplexes and townhouses. Smart investments, beautifully built."
-      heroImage="/images/modern-rooftop-patio-with-sunset-view-8SF9VVP-1.webp"
+      heroImage="/images/duplex-exterior.jpg"
       breadcrumbLabel="Duplex & Townhouses"
       overview={{
         title: "Smart Investments,",
@@ -63,7 +63,7 @@ export default function DuplexTownhousesPage() {
           "Dual occupancy and multi-dwelling builds are one of the smartest property investment strategies available. Our experienced team specializes in designing and building duplexes and townhouses that maximize return while maintaining exceptional living standards.",
           "We navigate the complex planning and approval processes, optimize designs for your specific block, and deliver builds that attract quality tenants or buyers. Whether you're building to live in one and rent the other, or as a pure investment, we have the expertise to make it work.",
         ],
-        image: "/images/mirador-building-in-sanchinarro-district-of-madrid-FPSM97G-1.webp",
+        image: "/images/townhouse-modern.jpg",
       }}
       features={[
         { icon: Building2, title: "Dual Occupancy Design", description: "Optimized designs that maximize the use of your block while meeting all council requirements and setback rules." },
@@ -84,9 +84,9 @@ export default function DuplexTownhousesPage() {
         "Rental-ready finish",
       ]}
       galleryImages={[
-        { src: "/images/mirador-building-in-sanchinarro-district-of-madrid-FPSM97G-1.webp", alt: "Duplex 1" },
-        { src: "/images/modern-rooftop-patio-with-sunset-view-8SF9VVP-1.webp", alt: "Townhouse 1" },
-        { src: "/images/Home-4-e1759734908574.webp", alt: "Townhouse 2" },
+        { src: "/images/duplex-exterior.jpg", alt: "Duplex 1" },
+        { src: "/images/townhouse-modern.jpg", alt: "Townhouse 1" },
+        { src: "/images/townhouse-contemporary.jpg", alt: "Townhouse 2" },
       ]}
       relatedServices={[
         { title: "New Home Builds", href: "/services/new-home-builds", description: "Looking for a single dwelling? Check out our new home builds." },

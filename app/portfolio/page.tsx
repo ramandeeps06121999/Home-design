@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: `${siteUrl}/portfolio`,
     images: [
       {
-        url: "/images/modern-villa-with-pool-and-deck-H27FA57-1.webp",
+        url: "/images/portfolio-luxury-1.jpg",
         width: 1200,
         height: 630,
         alt: "Design Homes Portfolio - Completed Projects",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Our Portfolio | Design Homes",
     description: "Explore our completed projects across Brisbane, Gold Coast & Sunshine Coast. Custom homes, renovations & commercial builds.",
-    images: ["/images/modern-villa-with-pool-and-deck-H27FA57-1.webp"],
+    images: ["/images/portfolio-luxury-1.jpg"],
   },
   alternates: {
     canonical: `${siteUrl}/portfolio`,
@@ -58,7 +58,7 @@ const categories = ["All", "Custom Build", "Renovation", "New Home Build", "Comm
 
 const projects = [
   {
-    image: "/images/modern-villa-with-pool-and-deck-H27FA57-1.webp",
+    image: "/images/portfolio-luxury-1.jpg",
     title: "Luxury Pool Villa",
     location: "Gold Coast",
     category: "Custom Build",
@@ -67,35 +67,53 @@ const projects = [
     year: "2024",
   },
   {
-    image: "/images/modern-rooftop-patio-with-sunset-view-8SF9VVP-1.webp",
-    title: "Rooftop Paradise",
-    location: "Brisbane",
-    category: "Renovation",
-    description: "Complete rooftop transformation with outdoor kitchen, lounge area, and panoramic city views.",
-    size: "120m²",
-    year: "2023",
-  },
-  {
-    image: "/images/mirador-building-in-sanchinarro-district-of-madrid-FPSM97G-1.webp",
-    title: "Modern Apartment Complex",
-    location: "Sunshine Coast",
-    category: "Commercial",
-    description: "A contemporary 12-unit apartment building featuring modern design and sustainable building practices.",
-    size: "2,400m²",
-    year: "2023",
-  },
-  {
-    image: "/images/Home-4-e1759734908574.webp",
-    title: "Contemporary Family Home",
+    image: "/images/portfolio-modern-1.jpg",
+    title: "Contemporary Timber Home",
     location: "Brisbane",
     category: "New Home Build",
-    description: "A modern family home with open-plan living, four bedrooms, and a beautifully landscaped garden.",
+    description: "A modern timber-clad family home with sustainable features, open-plan living, and seamless indoor-outdoor flow.",
     size: "320m²",
     year: "2024",
   },
   {
-    image: "/images/modern-rooftop-patio-with-sunset-view-8SF9VVP-2.webp",
-    title: "Hillside Retreat",
+    image: "/images/custom-home-luxury.jpg",
+    title: "Coastal Luxury Estate",
+    location: "Sunshine Coast",
+    category: "Custom Build",
+    description: "A premium beachside residence with resort-style pool, outdoor entertaining, and high-end finishes throughout.",
+    size: "520m²",
+    year: "2024",
+  },
+  {
+    image: "/images/new-home-build-1.jpg",
+    title: "Modern Suburban Home",
+    location: "Brisbane",
+    category: "New Home Build",
+    description: "A classic Australian home designed for family living with modern amenities and energy-efficient features.",
+    size: "280m²",
+    year: "2023",
+  },
+  {
+    image: "/images/renovation-kitchen.jpg",
+    title: "Designer Kitchen Renovation",
+    location: "Gold Coast",
+    category: "Renovation",
+    description: "Complete kitchen transformation with premium appliances, custom cabinetry, and elegant stone countertops.",
+    size: "45m²",
+    year: "2023",
+  },
+  {
+    image: "/images/duplex-exterior.jpg",
+    title: "Modern Duplex Development",
+    location: "Sunshine Coast",
+    category: "Commercial",
+    description: "A contemporary dual-occupancy build featuring modern design, private pools, and sustainable building practices.",
+    size: "680m²",
+    year: "2023",
+  },
+  {
+    image: "/images/bespoke-architecture.jpg",
+    title: "Architectural Masterpiece",
     location: "Gold Coast",
     category: "Custom Build",
     description: "Built into the hillside with spectacular ocean views, this custom home maximizes natural light and ventilation.",
@@ -103,30 +121,12 @@ const projects = [
     year: "2022",
   },
   {
-    image: "/images/the-frame-home-construction-P5J5AFM.webp",
-    title: "Suburban Dream Home",
-    location: "Sunshine Coast",
-    category: "New Home Build",
-    description: "A classic Australian home designed for family living with modern amenities and energy-efficient features.",
-    size: "280m²",
-    year: "2023",
-  },
-  {
-    image: "/images/modern-villa-with-pool-and-deck-H27FA57.webp",
-    title: "Coastal Luxury Home",
-    location: "Gold Coast",
-    category: "Custom Build",
-    description: "A premium beachside residence with resort-style pool, outdoor entertaining, and high-end finishes.",
-    size: "520m²",
-    year: "2024",
-  },
-  {
-    image: "/images/modern-rooftop-patio-with-sunset-view-8SF9VVP-3.webp",
-    title: "Penthouse Renovation",
+    image: "/images/renovation-bathroom.jpg",
+    title: "Spa-Inspired Bathroom",
     location: "Brisbane",
     category: "Renovation",
-    description: "Complete transformation of a dated penthouse into a modern luxury space with panoramic city views.",
-    size: "200m²",
+    description: "Complete bathroom transformation into a luxurious spa-like retreat with freestanding tub and rainfall shower.",
+    size: "25m²",
     year: "2024",
   },
 ];
@@ -146,7 +146,7 @@ export default function PortfolioPage() {
         title="Our Portfolio of"
         highlight="Exceptional Builds"
         description="Explore our diverse range of completed projects across South East Queensland, from luxury custom homes to commercial developments."
-        image="/images/modern-villa-with-pool-and-deck-H27FA57-1.webp"
+        image="/images/portfolio-luxury-1.jpg"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Portfolio", href: "/portfolio" }]}
       />
 

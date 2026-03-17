@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: `${siteUrl}/about`,
     images: [
       {
-        url: "/images/mirador-building-in-sanchinarro-district-of-madrid-FPSM97G-1.webp",
+        url: "/images/about-team.jpg",
         width: 1200,
         height: 630,
         alt: "About Design Homes - Trusted SEQ Builders Since 2008",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Design Homes | Trusted SEQ Builders Since 2008",
     description: "Learn about our journey from a small Brisbane team to South East Queensland's trusted builder.",
-    images: ["/images/mirador-building-in-sanchinarro-district-of-madrid-FPSM97G-1.webp"],
+    images: ["/images/about-team.jpg"],
   },
   alternates: {
     canonical: `${siteUrl}/about`,
@@ -115,7 +115,7 @@ export default function AboutPage() {
         title="Building Dreams Since"
         highlight="2008"
         description="We are a team of passionate builders, designers, and project managers committed to creating exceptional homes across South East Queensland."
-        image="/images/formwork-pillars-ready-for-concrete-pouring-in-con-73RVT8G.webp"
+        image="/images/hero-construction.jpg"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "About Us", href: "/about" }]}
       />
 
@@ -154,7 +154,7 @@ export default function AboutPage() {
             >
               <div className="relative rounded-3xl overflow-hidden">
                 <Image
-                  src="/images/mirador-building-in-sanchinarro-district-of-madrid-FPSM97G-1.webp"
+                  src="/images/about-team.jpg"
                   alt="Our Story"
                   width={600}
                   height={700}

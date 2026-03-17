@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: `${siteUrl}/services/commercial`,
     images: [
       {
-        url: "/images/mirador-building-in-sanchinarro-district-of-madrid-FPSM97G-1.webp",
+        url: "/images/commercial-building-modern.jpg",
         width: 1200,
         height: 630,
         alt: "Commercial Construction - Design Homes",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Commercial Construction | Design Homes",
     description: "Professional commercial construction across SEQ. Office fit-outs, retail spaces & mixed-use developments.",
-    images: ["/images/mirador-building-in-sanchinarro-district-of-madrid-FPSM97G-1.webp"],
+    images: ["/images/commercial-building-modern.jpg"],
   },
   alternates: {
     canonical: `${siteUrl}/services/commercial`,
@@ -54,7 +54,7 @@ export default function CommercialPage() {
       heroTitle="Commercial"
       heroHighlight="Construction"
       heroDescription="Professional commercial building services for offices, retail spaces, and mixed-use developments. Built to the highest standards."
-      heroImage="/images/mirador-building-in-sanchinarro-district-of-madrid-FPSM97G-1.webp"
+      heroImage="/images/commercial-building-modern.jpg"
       breadcrumbLabel="Commercial"
       overview={{
         title: "Professional Commercial",
@@ -63,7 +63,7 @@ export default function CommercialPage() {
           "Our commercial construction division delivers high-quality office fit-outs, retail spaces, and mixed-use developments across South East Queensland. We bring the same attention to detail and quality standards from our residential work to every commercial project.",
           "Whether you're fitting out a new office, building a retail space, or developing a mixed-use property, our experienced team manages every aspect of the project to ensure it's delivered on time, on budget, and to specification.",
         ],
-        image: "/images/formwork-pillars-ready-for-concrete-pouring-in-con-73RVT8G.webp",
+        image: "/images/retail-store-exterior.jpg",
       }}
       features={[
         { icon: Store, title: "Office Fit-outs", description: "Modern office spaces designed for productivity, collaboration, and employee wellbeing." },
@@ -84,9 +84,9 @@ export default function CommercialPage() {
         "Timely completion",
       ]}
       galleryImages={[
-        { src: "/images/mirador-building-in-sanchinarro-district-of-madrid-FPSM97G-1.webp", alt: "Commercial 1" },
-        { src: "/images/formwork-pillars-ready-for-concrete-pouring-in-con-73RVT8G.webp", alt: "Commercial 2" },
-        { src: "/images/engineer-desk-with-object-paper-and-tablet-with-bl-ZGS9T68-1.webp", alt: "Commercial 3" },
+        { src: "/images/commercial-building-modern.jpg", alt: "Commercial 1" },
+        { src: "/images/retail-store-exterior.jpg", alt: "Commercial 2" },
+        { src: "/images/commercial-building-modern.jpg", alt: "Commercial 3" },
       ]}
       relatedServices={[
         { title: "Duplex & Townhouses", href: "/services/duplex-townhouses", description: "Multi-dwelling residential developments." },

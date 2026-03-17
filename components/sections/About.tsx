@@ -55,7 +55,7 @@ export default function About() {
                 transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
               >
                 <Image
-                  src="/images/mirador-building-in-sanchinarro-district-of-madrid-FPSM97G-1.webp"
+                  src="/images/builders-working.jpg"
                   alt="Modern Architecture"
                   width={600}
                   height={700}

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: `${siteUrl}/services/new-home-builds`,
     images: [
       {
-        url: "/images/the-frame-home-construction-P5J5AFM.webp",
+        url: "/images/new-home-build-1.jpg",
         width: 1200,
         height: 630,
         alt: "New Home Builds - Design Homes",
@@ -54,7 +54,7 @@ export default function NewHomeBuildsPage() {
       heroTitle="Custom New"
       heroHighlight="Home Builds"
       heroDescription="From concept to completion, we design and build custom homes tailored to your lifestyle, budget, and aspirations."
-      heroImage="/images/the-frame-home-construction-P5J5AFM.webp"
+      heroImage="/images/new-home-build-1.jpg"
       breadcrumbLabel="New Home Builds"
       overview={{
         title: "Your Dream Home,",
@@ -63,7 +63,7 @@ export default function NewHomeBuildsPage() {
           "Building a new home is one of life's most exciting journeys. At Design Homes, we make the process seamless and enjoyable, guiding you through every step from initial concept to handing over the keys.",
           "Our team of experienced architects, designers, and builders work together to create homes that are not only beautiful but also functional, energy-efficient, and built to the highest Australian standards.",
         ],
-        image: "/images/Home-4-e1759734908574.webp",
+        image: "/images/new-home-build-2.jpg",
       }}
       features={[
         { icon: Home, title: "Custom Floor Plans", description: "Every home is uniquely designed to match your family's needs, lifestyle, and the specific characteristics of your block." },
@@ -84,9 +84,9 @@ export default function NewHomeBuildsPage() {
         "Full project management",
       ]}
       galleryImages={[
-        { src: "/images/Home-4-e1759734908574.webp", alt: "New Home Build 1" },
-        { src: "/images/the-frame-home-construction-P5J5AFM.webp", alt: "New Home Build 2" },
-        { src: "/images/modern-villa-with-pool-and-deck-H27FA57.webp", alt: "New Home Build 3" },
+        { src: "/images/new-home-build-1.jpg", alt: "New Home Build 1" },
+        { src: "/images/new-home-build-2.jpg", alt: "New Home Build 2" },
+        { src: "/images/new-home-build-3.jpg", alt: "New Home Build 3" },
       ]}
       relatedServices={[
         { title: "Interior Design", href: "/services/interior-design", description: "Complete your new home with our premium interior design services." },
