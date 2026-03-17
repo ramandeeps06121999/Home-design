@@ -19,12 +19,6 @@ const nextConfig: NextConfig = {
   // SEO Optimizations
   poweredByHeader: false, // Remove X-Powered-By header
   compress: true, // Enable gzip compression
-  
-  // Internationalization
-  i18n: {
-    locales: ['en-AU'],
-    defaultLocale: 'en-AU',
-  },
 };
 
 export default nextConfig;
