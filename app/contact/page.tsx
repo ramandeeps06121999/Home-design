@@ -1,7 +1,8 @@
 "use client";
 
+import type { Metadata } from "next";
 import { motion } from "framer-motion";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Phone, Mail, MapPin, Clock, ArrowRight } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -10,8 +11,52 @@ import SiteNavbar from "@/components/shared/SiteNavbar";
 import SiteFooter from "@/components/shared/SiteFooter";
 import PageHero from "@/components/shared/PageHero";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
+
+export const metadata: Metadata = {
+  title: "Contact Us | Design Homes - Brisbane, Gold Coast & Sunshine Coast",
+  description: "Get in touch with Design Homes for a free consultation & quote. Serving Brisbane, Gold Coast & Sunshine Coast. Call +61 7 1234 5678 or email hello@designhomes.com.au",
+  keywords: [
+    "contact home builders Brisbane",
+    "home builders Gold Coast contact",
+    "builders Sunshine Coast",
+    "free quote home construction",
+    "home building consultation SEQ",
+    "Design Homes contact",
+    "custom builder enquiry",
+    "renovation quote Queensland",
+  ],
+  openGraph: {
+    title: "Contact Us | Design Homes Pty Ltd",
+    description: "Get in touch for a free consultation & quote. Serving Brisbane, Gold Coast & Sunshine Coast. Call +61 7 1234 5678.",
+    type: "website",
+    url: `${siteUrl}/contact`,
+    images: [
+      {
+        url: "/images/engineer-desk-with-object-paper-and-tablet-with-bl-ZGS9T68-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Contact Design Homes - Free Consultation",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Us | Design Homes",
+    description: "Get in touch for a free consultation & quote. Serving Brisbane, Gold Coast & Sunshine Coast.",
+    images: ["/images/engineer-desk-with-object-paper-and-tablet-with-bl-ZGS9T68-1.webp"],
+  },
+  alternates: {
+    canonical: `${siteUrl}/contact`,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 const contactInfo = [
-  { icon: Phone, title: "Phone", content: "+61 123 456 789", href: "tel:+61123456789" },
+  { icon: Phone, title: "Phone", content: "+61 7 1234 5678", href: "tel:+61712345678" },
   { icon: Mail, title: "Email", content: "hello@designhomes.com.au", href: "mailto:hello@designhomes.com.au" },
   { icon: MapPin, title: "Location", content: "Brisbane, QLD, Australia", href: "#" },
   { icon: Clock, title: "Business Hours", content: "Mon – Fri: 8am – 5pm", href: "#" },

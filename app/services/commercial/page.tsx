@@ -1,7 +1,52 @@
 "use client";
 
+import type { Metadata } from "next";
 import { Store, Building2, FileCheck, Clock, Shield, Users } from "lucide-react";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
+
+export const metadata: Metadata = {
+  title: "Commercial Builders Brisbane, Gold Coast & Sunshine Coast | Design Homes",
+  description: "Professional commercial construction across SEQ. Office fit-outs, retail spaces & mixed-use developments in Brisbane, Gold Coast & Sunshine Coast. BCA compliant.",
+  keywords: [
+    "commercial builders Brisbane",
+    "office fit outs Gold Coast",
+    "retail construction Sunshine Coast",
+    "commercial construction SEQ",
+    "mixed use development Queensland",
+    "shop fitters",
+    "commercial renovations",
+    "BCA compliant builders",
+  ],
+  openGraph: {
+    title: "Commercial Construction | Professional Building Services",
+    description: "Professional commercial construction across Brisbane, Gold Coast & Sunshine Coast. Office fit-outs, retail spaces & mixed-use developments.",
+    type: "article",
+    url: `${siteUrl}/services/commercial`,
+    images: [
+      {
+        url: "/images/mirador-building-in-sanchinarro-district-of-madrid-FPSM97G-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Commercial Construction - Design Homes",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Commercial Construction | Design Homes",
+    description: "Professional commercial construction across SEQ. Office fit-outs, retail spaces & mixed-use developments.",
+    images: ["/images/mirador-building-in-sanchinarro-district-of-madrid-FPSM97G-1.webp"],
+  },
+  alternates: {
+    canonical: `${siteUrl}/services/commercial`,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function CommercialPage() {
   return (

@@ -1,5 +1,6 @@
 "use client";
 
+import type { Metadata } from "next";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
@@ -9,6 +10,41 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import SiteNavbar from "@/components/shared/SiteNavbar";
 import SiteFooter from "@/components/shared/SiteFooter";
 import PageHero from "@/components/shared/PageHero";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
+
+export const metadata: Metadata = {
+  title: "FAQ | Design Homes - Frequently Asked Questions",
+  description: "Find answers to common questions about our building process, pricing, services & more. Design Homes - trusted builders in Brisbane, Gold Coast & Sunshine Coast.",
+  keywords: [
+    "home building FAQ",
+    "renovation questions Brisbane",
+    "building process explained",
+    "home construction costs SEQ",
+    "custom builder questions",
+    "renovation timeline",
+    "building warranty Queensland",
+    "council approval process",
+  ],
+  openGraph: {
+    title: "FAQ | Frequently Asked Questions",
+    description: "Find answers to common questions about our building process, pricing, services & more. Trusted builders in Brisbane, Gold Coast & Sunshine Coast.",
+    type: "website",
+    url: `${siteUrl}/faq`,
+  },
+  twitter: {
+    card: "summary",
+    title: "FAQ | Design Homes",
+    description: "Find answers to common questions about our building process, pricing & services.",
+  },
+  alternates: {
+    canonical: `${siteUrl}/faq`,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 const faqCategories = [
   {
@@ -40,6 +76,62 @@ const faqCategories = [
   },
 ];
 
+// FAQPage Schema for SEO
+const faqPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does a typical build take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The duration depends on complexity and size, but typically ranges from 6 to 12 months. During our initial consultation, we'll provide a detailed timeline specific to your project, including all phases from design to final handover."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the building process from start to finish?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our process follows 5 key stages: (1) Free consultation to understand your vision, (2) Design and planning phase, (3) Council approvals and permits, (4) Construction with regular updates, and (5) Final inspection and handover. We keep you informed at every stage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need council approval for my build?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most construction projects require council approval. We handle the entire approval process for you, including preparing and submitting all required documentation. Our experience with local councils ensures a smooth approval process."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer fixed-price contracts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we provide fixed-price contracts to ensure transparency and peace of mind. No hidden costs or surprise expenses during construction. Everything is clearly outlined before we begin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas do you service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We service the entire South East Queensland region, including Brisbane, Gold Coast, Sunshine Coast, Ipswich, Logan, and surrounding areas. Our team is familiar with local council requirements across all these regions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer warranty on your builds?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, all our builds come with comprehensive warranties including a 6-year structural warranty as required by Queensland building legislation, plus our own 12-month maintenance warranty covering any defects."
+      }
+    }
+  ]
+};
+
 export default function FAQPage() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
@@ -47,6 +139,14 @@ export default function FAQPage() {
   return (
     <main className="min-h-screen">
       <SiteNavbar />
+
+      {/* FAQPage Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqPageSchema),
+        }}
+      />
 
       <PageHero
         title="Frequently Asked"

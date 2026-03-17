@@ -1,7 +1,52 @@
 "use client";
 
+import type { Metadata } from "next";
 import { Home, Ruler, Shield, Leaf, Hammer, Clock } from "lucide-react";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
+
+export const metadata: Metadata = {
+  title: "New Home Builds Brisbane, Gold Coast & Sunshine Coast | Design Homes",
+  description: "Custom new home builders in SEQ. We design & build quality homes tailored to your lifestyle across Brisbane, Gold Coast & Sunshine Coast. Fixed-price contracts.",
+  keywords: [
+    "new home builds Brisbane",
+    "custom home construction Gold Coast",
+    "new home builders Sunshine Coast",
+    "house and land packages SEQ",
+    "custom home design Queensland",
+    "energy efficient homes",
+    "fixed price home builds",
+    "new home construction",
+  ],
+  openGraph: {
+    title: "New Home Builds | Custom Home Construction SEQ",
+    description: "Custom new home builders across Brisbane, Gold Coast & Sunshine Coast. Fixed-price contracts, energy efficient designs & quality craftsmanship.",
+    type: "article",
+    url: `${siteUrl}/services/new-home-builds`,
+    images: [
+      {
+        url: "/images/the-frame-home-construction-P5J5AFM.webp",
+        width: 1200,
+        height: 630,
+        alt: "New Home Builds - Design Homes",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "New Home Builds | Design Homes",
+    description: "Custom new home builders across Brisbane, Gold Coast & Sunshine Coast. Fixed-price contracts & quality craftsmanship.",
+    images: ["/images/the-frame-home-construction-P5J5AFM.webp"],
+  },
+  alternates: {
+    canonical: `${siteUrl}/services/new-home-builds`,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function NewHomeBuildsPage() {
   return (

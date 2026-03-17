@@ -1,7 +1,28 @@
 "use client";
 
+import type { Metadata } from "next";
 import SiteNavbar from "@/components/shared/SiteNavbar";
 import SiteFooter from "@/components/shared/SiteFooter";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
+
+export const metadata: Metadata = {
+  title: "Terms of Service | Design Homes Pty Ltd",
+  description: "Terms of Service for Design Homes Pty Ltd. Please read these terms carefully before using our website and services.",
+  keywords: [
+    "terms of service",
+    "terms and conditions",
+    "website terms",
+    "Design Homes terms",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: `${siteUrl}/terms-of-service`,
+  },
+};
 
 export default function TermsPage() {
   return (
@@ -58,7 +79,7 @@ export default function TermsPage() {
                 <p>Design Homes Pty Ltd</p>
                 <p>Brisbane, QLD, Australia</p>
                 <p>Email: hello@designhomes.com.au</p>
-                <p>Phone: +61 123 456 789</p>
+                <p>Phone: +61 7 1234 5678</p>
               </div>
             </div>
           </div>

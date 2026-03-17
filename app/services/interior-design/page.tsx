@@ -1,7 +1,52 @@
 "use client";
 
+import type { Metadata } from "next";
 import { Palette, Eye, Lightbulb, Layers, Sofa, Paintbrush } from "lucide-react";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
+
+export const metadata: Metadata = {
+  title: "Interior Design Services Brisbane, Gold Coast & Sunshine Coast",
+  description: "Premium interior design services across SEQ. Space planning, material selection, 3D visualization & styling for homes in Brisbane, Gold Coast & Sunshine Coast.",
+  keywords: [
+    "interior design Brisbane",
+    "interior designers Gold Coast",
+    "home styling Sunshine Coast",
+    "space planning SEQ",
+    "interior decoration Queensland",
+    "3D visualization",
+    "color consulting",
+    "material selection",
+  ],
+  openGraph: {
+    title: "Interior Design Services | Premium Home Styling",
+    description: "Premium interior design services across Brisbane, Gold Coast & Sunshine Coast. Space planning, material selection & 3D visualization.",
+    type: "article",
+    url: `${siteUrl}/services/interior-design`,
+    images: [
+      {
+        url: "/images/ImageGen-1-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Interior Design Services - Design Homes",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Interior Design | Design Homes",
+    description: "Premium interior design services across SEQ. Space planning, material selection & 3D visualization.",
+    images: ["/images/ImageGen-1-1.webp"],
+  },
+  alternates: {
+    canonical: `${siteUrl}/services/interior-design`,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function InteriorDesignPage() {
   return (

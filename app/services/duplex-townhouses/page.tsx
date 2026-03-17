@@ -1,7 +1,52 @@
 "use client";
 
+import type { Metadata } from "next";
 import { Building2, TrendingUp, Shield, Ruler, Users, FileCheck } from "lucide-react";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
+
+export const metadata: Metadata = {
+  title: "Duplex & Townhouse Builders Brisbane, Gold Coast & Sunshine Coast",
+  description: "Expert duplex & townhouse builders across SEQ. Maximize your investment with dual occupancy properties in Brisbane, Gold Coast & Sunshine Coast. Council approvals handled.",
+  keywords: [
+    "duplex builders Brisbane",
+    "townhouse construction Gold Coast",
+    "dual occupancy Sunshine Coast",
+    "duplex designs SEQ",
+    "investment property builders",
+    "multi dwelling construction",
+    "strata title setup",
+    "dual occupancy specialists",
+  ],
+  openGraph: {
+    title: "Duplex & Townhouse Builders | Dual Occupancy Specialists",
+    description: "Expert duplex & townhouse builders across Brisbane, Gold Coast & Sunshine Coast. Maximize your investment with dual occupancy properties.",
+    type: "article",
+    url: `${siteUrl}/services/duplex-townhouses`,
+    images: [
+      {
+        url: "/images/modern-rooftop-patio-with-sunset-view-8SF9VVP-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Duplex & Townhouse Builders - Design Homes",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Duplex & Townhouses | Design Homes",
+    description: "Expert duplex & townhouse builders across SEQ. Maximize your investment with dual occupancy properties.",
+    images: ["/images/modern-rooftop-patio-with-sunset-view-8SF9VVP-1.webp"],
+  },
+  alternates: {
+    canonical: `${siteUrl}/services/duplex-townhouses`,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function DuplexTownhousesPage() {
   return (

@@ -1,7 +1,52 @@
 "use client";
 
+import type { Metadata } from "next";
 import { Wrench, Star, Gem, Mountain, Shield, Paintbrush } from "lucide-react";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
+
+export const metadata: Metadata = {
+  title: "Custom Home Builders Brisbane, Gold Coast & Sunshine Coast",
+  description: "Bespoke custom home builders across SEQ. Unique architectural designs, challenging sites & premium finishes in Brisbane, Gold Coast & Sunshine Coast.",
+  keywords: [
+    "custom home builders Brisbane",
+    "bespoke homes Gold Coast",
+    "architectural homes Sunshine Coast",
+    "luxury home builders SEQ",
+    "unique home designs Queensland",
+    "challenging site builders",
+    "architect collaboration",
+    "premium home construction",
+  ],
+  openGraph: {
+    title: "Custom Home Builders | Bespoke Architectural Homes",
+    description: "Bespoke custom home builders across Brisbane, Gold Coast & Sunshine Coast. Unique architectural designs, challenging sites & premium finishes.",
+    type: "article",
+    url: `${siteUrl}/services/custom-builds`,
+    images: [
+      {
+        url: "/images/modern-villa-with-pool-and-deck-H27FA57-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Custom Home Builds - Design Homes",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Custom Builds | Design Homes",
+    description: "Bespoke custom home builders across SEQ. Unique architectural designs, challenging sites & premium finishes.",
+    images: ["/images/modern-villa-with-pool-and-deck-H27FA57-1.webp"],
+  },
+  alternates: {
+    canonical: `${siteUrl}/services/custom-builds`,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function CustomBuildsPage() {
   return (

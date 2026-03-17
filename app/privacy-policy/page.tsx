@@ -1,7 +1,28 @@
 "use client";
 
+import type { Metadata } from "next";
 import SiteNavbar from "@/components/shared/SiteNavbar";
 import SiteFooter from "@/components/shared/SiteFooter";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | Design Homes Pty Ltd",
+  description: "Privacy Policy for Design Homes Pty Ltd. Learn how we collect, use and protect your personal information when you use our website and services.",
+  keywords: [
+    "privacy policy",
+    "data protection",
+    "personal information",
+    "Design Homes privacy",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: `${siteUrl}/privacy-policy`,
+  },
+};
 
 export default function PrivacyPolicyPage() {
   return (
@@ -66,7 +87,7 @@ export default function PrivacyPolicyPage() {
                 <p>Design Homes Pty Ltd</p>
                 <p>Brisbane, QLD, Australia</p>
                 <p>Email: hello@designhomes.com.au</p>
-                <p>Phone: +61 123 456 789</p>
+                <p>Phone: +61 7 1234 5678</p>
               </div>
             </div>
           </div>

@@ -11,6 +11,8 @@ import SiteFooter from "@/components/shared/SiteFooter";
 import PageHero from "@/components/shared/PageHero";
 import CTABanner from "@/components/shared/CTABanner";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
+
 /* ---------- fallback images for related service cards ---------- */
 const SERVICE_IMAGE_MAP: Record<string, string> = {
   "/services/new-home-builds": "/images/the-frame-home-construction-P5J5AFM.webp",
@@ -63,8 +65,60 @@ export default function ServicePageTemplate({
   const benefitsRef = useRef(null);
   const benefitsInView = useInView(benefitsRef, { once: true, margin: "-80px" });
 
+  // Generate Service schema
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": `${heroTitle} ${heroHighlight}`,
+    "description": heroDescription,
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Design Homes Pty Ltd",
+      "@id": `${siteUrl}/#business`
+    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Brisbane",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "QLD",
+          "addressCountry": "AU"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Gold Coast",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "QLD",
+          "addressCountry": "AU"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Sunshine Coast",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "QLD",
+          "addressCountry": "AU"
+        }
+      }
+    ],
+    "url": `${siteUrl}/services/${breadcrumbLabel.toLowerCase().replace(/\s+/g, '-')}`.replace(/-+/g, '-'),
+    "image": heroImage.startsWith('http') ? heroImage : `${siteUrl}${heroImage}`
+  };
+
   return (
     <main className="min-h-screen">
+      {/* Service Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema),
+        }}
+      />
+
       <SiteNavbar />
 
       <PageHero

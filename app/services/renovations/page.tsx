@@ -1,7 +1,52 @@
 "use client";
 
+import type { Metadata } from "next";
 import { Hammer, Sparkles, Shield, TrendingUp, Paintbrush, Wrench } from "lucide-react";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
+
+export const metadata: Metadata = {
+  title: "Home Renovations Brisbane, Gold Coast & Sunshine Coast | Design Homes",
+  description: "Expert home renovation services across SEQ. Kitchen, bathroom, extensions & full home transformations. Quality craftsmanship in Brisbane, Gold Coast & Sunshine Coast.",
+  keywords: [
+    "home renovations Brisbane",
+    "kitchen renovations Gold Coast",
+    "bathroom renovations Sunshine Coast",
+    "house extensions SEQ",
+    "home makeover Queensland",
+    "renovation builders",
+    "heritage restoration",
+    "modern home upgrades",
+  ],
+  openGraph: {
+    title: "Home Renovations | Transform Your Space",
+    description: "Expert home renovation services across Brisbane, Gold Coast & Sunshine Coast. Kitchen, bathroom, extensions & full home transformations.",
+    type: "article",
+    url: `${siteUrl}/services/renovations`,
+    images: [
+      {
+        url: "/images/modern-rooftop-patio-with-sunset-view-8SF9VVP.webp",
+        width: 1200,
+        height: 630,
+        alt: "Home Renovations - Design Homes",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Home Renovations | Design Homes",
+    description: "Expert home renovation services across SEQ. Kitchen, bathroom, extensions & full home transformations.",
+    images: ["/images/modern-rooftop-patio-with-sunset-view-8SF9VVP.webp"],
+  },
+  alternates: {
+    canonical: `${siteUrl}/services/renovations`,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function RenovationsPage() {
   return (

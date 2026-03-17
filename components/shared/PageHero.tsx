@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
+
 interface PageHeroProps {
   title: string;
   highlight?: string;
@@ -12,12 +14,35 @@ interface PageHeroProps {
 }
 
 export default function PageHero({ title, highlight, description, image, breadcrumb }: PageHeroProps) {
+  // Generate BreadcrumbList schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": breadcrumb.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.label,
+      "item": item.href.startsWith('http') ? item.href : `${siteUrl}${item.href}`
+    }))
+  };
+
   return (
     <section className="relative min-h-[60vh] flex items-end pb-16 pt-32 overflow-hidden">
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image src={image} alt={title} fill className="object-cover" priority quality={85} />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-black/60 to-black/30" />
+        {/* Bottom-up gradient for content visibility */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-black/60 to-transparent" />
+        {/* Top-down gradient for navbar visibility - stronger at top */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-transparent" />
       </div>
 
       {/* Content */}
