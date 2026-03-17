@@ -107,7 +107,7 @@ export default function ServicesPage() {
                   </div>
                 </div>
                 <div className="p-8">
-                  <h3 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                  <h3 className="font-sora text-2xl font-bold text-gray-900 mb-3">{service.title}</h3>
                   <p className="text-gray-500 leading-relaxed text-[15px] mb-6">{service.description}</p>
                   <div className="flex flex-wrap gap-2 mb-6">
                     {service.features.map((feature) => (
@@ -142,7 +142,7 @@ export default function ServicesPage() {
               <span className="text-[#FF5A1F] font-semibold uppercase tracking-wider text-sm">Our Process</span>
               <div className="w-8 h-[2px] bg-[#FF5A1F]" />
             </div>
-            <h2 className="font-[family-name:var(--font-sora)] text-3xl md:text-4xl lg:text-[44px] font-bold text-white leading-[1.15]">
+            <h2 className="font-sora text-3xl md:text-4xl lg:text-[44px] font-bold text-white leading-[1.15]">
               How We Bring Your Vision to
               <span className="text-gradient"> Life</span>
             </h2>
@@ -157,8 +157,8 @@ export default function ServicesPage() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-[#1c2128] rounded-3xl p-8 border border-white/5 hover:border-[#FF5A1F]/20 transition-all duration-500 text-center group hover:-translate-y-2"
               >
-                <span className="font-[family-name:var(--font-sora)] text-4xl font-bold text-[#FF5A1F]/20 group-hover:text-[#FF5A1F]/40 transition-colors">{step.number}</span>
-                <h3 className="font-[family-name:var(--font-sora)] text-lg font-bold text-white mt-3 mb-2">{step.title}</h3>
+                <span className="font-sora text-4xl font-bold text-[#FF5A1F]/20 group-hover:text-[#FF5A1F]/40 transition-colors">{step.number}</span>
+                <h3 className="font-sora text-lg font-bold text-white mt-3 mb-2">{step.title}</h3>
                 <p className="text-white text-sm leading-relaxed">{step.description}</p>
               </motion.div>
             ))}

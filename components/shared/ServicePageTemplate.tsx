@@ -5,7 +5,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Sparkles, type LucideIcon } from "lucide-react";
+import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
 import SiteNavbar from "@/components/shared/SiteNavbar";
 import SiteFooter from "@/components/shared/SiteFooter";
 import PageHero from "@/components/shared/PageHero";
@@ -23,6 +23,43 @@ const SERVICE_IMAGE_MAP: Record<string, string> = {
   "/services/commercial": "/images/mirador-building-in-sanchinarro-district-of-madrid-FPSM97G-1.webp",
 };
 
+// Icon component that renders based on icon name
+function FeatureIcon({ iconName }: { iconName: string }) {
+  // Dynamically import and render the icon
+  const icons: Record<string, React.ComponentType<{ className?: string }>> = {
+    Home: require("lucide-react").Home,
+    Hammer: require("lucide-react").Hammer,
+    Palette: require("lucide-react").Palette,
+    Building2: require("lucide-react").Building2,
+    Wrench: require("lucide-react").Wrench,
+    Store: require("lucide-react").Store,
+    TrendingUp: require("lucide-react").TrendingUp,
+    Shield: require("lucide-react").Shield,
+    Ruler: require("lucide-react").Ruler,
+    Users: require("lucide-react").Users,
+    FileCheck: require("lucide-react").FileCheck,
+    Paintbrush: require("lucide-react").Paintbrush,
+    Lightbulb: require("lucide-react").Lightbulb,
+    Sofa: require("lucide-react").Sofa,
+    TreePine: require("lucide-react").TreePine,
+    BadgeCheck: require("lucide-react").BadgeCheck,
+    HardHat: require("lucide-react").HardHat,
+    ClipboardCheck: require("lucide-react").ClipboardCheck,
+    Wallet: require("lucide-react").Wallet,
+    Clock: require("lucide-react").Clock,
+    Briefcase: require("lucide-react").Briefcase,
+    Award: require("lucide-react").Award,
+    Settings: require("lucide-react").Settings,
+    MapPin: require("lucide-react").MapPin,
+    Gem: require("lucide-react").Gem,
+    Layers: require("lucide-react").Layers,
+  };
+
+  const IconComponent = icons[iconName];
+  if (!IconComponent) return null;
+  return <IconComponent className="w-7 h-7 text-[#FF5A1F] group-hover:text-white transition-colors duration-500" />;
+}
+
 interface ServicePageProps {
   heroTitle: string;
   heroHighlight: string;
@@ -35,7 +72,7 @@ interface ServicePageProps {
     description: string[];
     image: string;
   };
-  features: { icon: LucideIcon; title: string; description: string }[];
+  features: { iconName: string; title: string; description: string }[];
   benefits: string[];
   galleryImages: { src: string; alt: string }[];
   relatedServices: {
@@ -172,7 +209,7 @@ export default function ServicePageTemplate({
                   Overview
                 </span>
               </div>
-              <h2 className="font-[family-name:var(--font-sora)] text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-gray-900 leading-[1.15] mb-8">
+              <h2 className="font-sora text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-gray-900 leading-[1.15] mb-8">
                 {overview.title}
                 <span className="text-gradient"> {overview.highlight}</span>
               </h2>
@@ -225,7 +262,7 @@ export default function ServicePageTemplate({
               </span>
               <div className="w-8 h-[2px] bg-[#FF5A1F]" />
             </div>
-            <h2 className="font-[family-name:var(--font-sora)] text-3xl md:text-4xl font-bold text-gray-900 leading-[1.15]">
+            <h2 className="font-sora text-3xl md:text-4xl font-bold text-gray-900 leading-[1.15]">
               Why Choose Our
               <span className="text-gradient"> Service</span>
             </h2>
@@ -244,9 +281,9 @@ export default function ServicePageTemplate({
                 <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#FF5A1F] to-orange-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 
                 <div className="w-14 h-14 bg-gradient-to-br from-[#FF5A1F]/10 to-[#FF5A1F]/5 rounded-2xl flex items-center justify-center mb-6 group-hover:from-[#FF5A1F] group-hover:to-orange-500 transition-all duration-500">
-                  <feature.icon className="w-7 h-7 text-[#FF5A1F] group-hover:text-white transition-colors duration-500" />
+                  <FeatureIcon iconName={feature.iconName} />
                 </div>
-                <h3 className="font-[family-name:var(--font-sora)] text-xl font-bold text-gray-900 mb-3">
+                <h3 className="font-sora text-xl font-bold text-gray-900 mb-3">
                   {feature.title}
                 </h3>
                 <p className="text-gray-500 leading-relaxed text-[15px]">
@@ -275,7 +312,7 @@ export default function ServicePageTemplate({
                 </span>
                 <div className="w-8 h-[2px] bg-[#FF5A1F]" />
               </div>
-              <h2 className="font-[family-name:var(--font-sora)] text-3xl md:text-4xl font-bold text-white leading-[1.15]">
+              <h2 className="font-sora text-3xl md:text-4xl font-bold text-white leading-[1.15]">
                 Project <span className="text-gradient">Gallery</span>
               </h2>
             </motion.div>
@@ -297,7 +334,7 @@ export default function ServicePageTemplate({
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
                   <div className="absolute bottom-5 left-5 right-5 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                    <p className="text-white text-sm font-medium font-[family-name:var(--font-sora)]">
+                    <p className="text-white text-sm font-medium font-sora">
                       {img.alt}
                     </p>
                   </div>
@@ -324,7 +361,7 @@ export default function ServicePageTemplate({
               </span>
               <div className="w-8 h-[2px] bg-[#FF5A1F]" />
             </div>
-            <h2 className="font-[family-name:var(--font-sora)] text-3xl md:text-4xl font-bold text-gray-900">
+            <h2 className="font-sora text-3xl md:text-4xl font-bold text-gray-900">
               Related <span className="text-gradient">Services</span>
             </h2>
           </motion.div>
@@ -368,7 +405,7 @@ export default function ServicePageTemplate({
 
                     {/* Card content */}
                     <div className="p-7">
-                      <h3 className="font-[family-name:var(--font-sora)] text-xl font-bold text-gray-900 mb-2 group-hover:text-[#FF5A1F] transition-colors duration-300">
+                      <h3 className="font-sora text-xl font-bold text-gray-900 mb-2 group-hover:text-[#FF5A1F] transition-colors duration-300">
                         {service.title}
                       </h3>
                       <p className="text-gray-500 text-sm leading-relaxed mb-5">

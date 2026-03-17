@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Palette, Eye, Lightbulb, Layers, Sofa, Paintbrush } from "lucide-react";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
@@ -64,12 +63,12 @@ export default function InteriorDesignPage() {
         image: "/images/interior-luxury-modern.jpg",
       }}
       features={[
-        { icon: Palette, title: "Color Consulting", description: "Expert color schemes that set the mood and create cohesion throughout your home's interior spaces." },
-        { icon: Eye, title: "3D Visualization", description: "See your new interior before construction begins with detailed 3D renders and virtual walkthroughs." },
-        { icon: Lightbulb, title: "Lighting Design", description: "Strategic lighting plans that enhance ambiance, highlight features, and improve functionality." },
-        { icon: Layers, title: "Material Selection", description: "Access to premium materials, tiles, stones, and finishes from Australia's top suppliers." },
-        { icon: Sofa, title: "Furniture & Styling", description: "Custom furniture specifications and complete styling to create a magazine-worthy finish." },
-        { icon: Paintbrush, title: "Space Planning", description: "Optimized layouts that maximize space efficiency while maintaining beautiful flow between rooms." },
+        { iconName: "Palette", title: "Color Consulting", description: "Expert color schemes that set the mood and create cohesion throughout your home's interior spaces." },
+        { iconName: "BadgeCheck", title: "3D Visualization", description: "See your new interior before construction begins with detailed 3D renders and virtual walkthroughs." },
+        { iconName: "Lightbulb", title: "Lighting Design", description: "Strategic lighting plans that enhance ambiance, highlight features, and improve functionality." },
+        { iconName: "Layers", title: "Material Selection", description: "Access to premium materials, tiles, stones, and finishes from Australia's top suppliers." },
+        { iconName: "Sofa", title: "Furniture & Styling", description: "Custom furniture specifications and complete styling to create a magazine-worthy finish." },
+        { iconName: "Paintbrush", title: "Space Planning", description: "Optimized layouts that maximize space efficiency while maintaining beautiful flow between rooms." },
       ]}
       benefits={[
         "Personalized design approach",

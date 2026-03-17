@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Wrench, Star, Gem, Mountain, Shield, Paintbrush } from "lucide-react";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
@@ -64,12 +63,12 @@ export default function CustomBuildsPage() {
         image: "/images/bespoke-architecture.jpg",
       }}
       features={[
-        { icon: Wrench, title: "Bespoke Design", description: "Fully customized designs that reflect your unique vision, from architectural concept through to finished details." },
-        { icon: Star, title: "Premium Finishes", description: "Access to the finest materials, fixtures, and finishes from around the world for a truly luxury result." },
-        { icon: Gem, title: "Unique Architecture", description: "We specialize in complex architectural designs including cantilevered structures, curved walls, and innovative forms." },
-        { icon: Mountain, title: "Challenging Sites", description: "Expert solutions for difficult blocks including steep slopes, waterfront, bushfire zones, and flood-prone areas." },
-        { icon: Shield, title: "Engineering Excellence", description: "Advanced structural engineering solutions that make seemingly impossible designs a reality." },
-        { icon: Paintbrush, title: "Artisan Craftsmanship", description: "We engage specialist craftspeople for bespoke joinery, metalwork, stone masonry, and other artisan finishes." },
+        { iconName: "Wrench", title: "Bespoke Design", description: "Fully customized designs that reflect your unique vision, from architectural concept through to finished details." },
+        { iconName: "Award", title: "Premium Finishes", description: "Access to the finest materials, fixtures, and finishes from around the world for a truly luxury result." },
+        { iconName: "Gem", title: "Unique Architecture", description: "We specialize in complex architectural designs including cantilevered structures, curved walls, and innovative forms." },
+        { iconName: "MapPin", title: "Challenging Sites", description: "Expert solutions for difficult blocks including steep slopes, waterfront, bushfire zones, and flood-prone areas." },
+        { iconName: "Shield", title: "Engineering Excellence", description: "Advanced structural engineering solutions that make seemingly impossible designs a reality." },
+        { iconName: "Paintbrush", title: "Artisan Craftsmanship", description: "We engage specialist craftspeople for bespoke joinery, metalwork, stone masonry, and other artisan finishes." },
       ]}
       benefits={[
         "Fully bespoke design",

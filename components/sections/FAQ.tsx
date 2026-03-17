@@ -60,7 +60,7 @@ export default function FAQ() {
                 FAQ
               </span>
             </div>
-            <h2 className="font-[family-name:var(--font-sora)] text-3xl md:text-4xl lg:text-[44px] font-bold text-gray-900 leading-[1.15] mb-6">
+            <h2 className="font-sora text-3xl md:text-4xl lg:text-[44px] font-bold text-gray-900 leading-[1.15] mb-6">
               Common Questions About
               <span className="text-gradient"> Building</span>
             </h2>
@@ -70,7 +70,7 @@ export default function FAQ() {
 
             {/* CTA Card */}
             <div className="bg-[#0d1117] rounded-3xl p-8 text-white">
-              <h3 className="font-[family-name:var(--font-sora)] text-xl font-bold mb-3">
+              <h3 className="font-sora text-xl font-bold mb-3">
                 Still have questions?
               </h3>
               <p className="text-white text-sm mb-6 leading-relaxed">
@@ -99,7 +99,7 @@ export default function FAQ() {
                   value={`item-${index}`}
                   className="border-b border-gray-100 py-1 group"
                 >
-                  <AccordionTrigger className="text-left font-[family-name:var(--font-sora)] text-lg lg:text-xl font-semibold text-gray-900 hover:text-[#FF5A1F] transition-colors duration-300 py-6 [&[data-state=open]]:text-[#FF5A1F]">
+                  <AccordionTrigger className="text-left font-sora text-lg lg:text-xl font-semibold text-gray-900 hover:text-[#FF5A1F] transition-colors duration-300 py-6 [&[data-state=open]]:text-[#FF5A1F]">
                     <div className="flex items-start gap-4">
                       <span className="text-[#FF5A1F]/30 group-hover:text-[#FF5A1F]/60 font-bold text-sm mt-1 font-mono transition-colors duration-300">
                         {String(index + 1).padStart(2, "0")}

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Hammer, Sparkles, Shield, TrendingUp, Paintbrush, Wrench } from "lucide-react";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
@@ -64,12 +63,12 @@ export default function RenovationsPage() {
         image: "/images/renovation-bathroom.jpg",
       }}
       features={[
-        { icon: Hammer, title: "Kitchen & Bathroom", description: "Complete kitchen and bathroom renovations with modern finishes, quality fixtures, and smart storage solutions." },
-        { icon: Sparkles, title: "Home Extensions", description: "Add extra living space, bedrooms, or outdoor areas that seamlessly integrate with your existing home." },
-        { icon: Shield, title: "Structural Changes", description: "From removing walls to adding stories, we handle all structural modifications safely and to code." },
-        { icon: TrendingUp, title: "Value Adding", description: "Our renovations are designed to maximize your property value while improving your living experience." },
-        { icon: Paintbrush, title: "Modern Upgrades", description: "Update finishes, lighting, flooring, and fixtures to bring your home into the modern era." },
-        { icon: Wrench, title: "Heritage Restoration", description: "Sensitive restoration of heritage homes that preserves character while adding modern comforts." },
+        { iconName: "Hammer", title: "Kitchen & Bathroom", description: "Complete kitchen and bathroom renovations with modern finishes, quality fixtures, and smart storage solutions." },
+        { iconName: "BadgeCheck", title: "Home Extensions", description: "Add extra living space, bedrooms, or outdoor areas that seamlessly integrate with your existing home." },
+        { iconName: "Shield", title: "Structural Changes", description: "From removing walls to adding stories, we handle all structural modifications safely and to code." },
+        { iconName: "TrendingUp", title: "Value Adding", description: "Our renovations are designed to maximize your property value while improving your living experience." },
+        { iconName: "Paintbrush", title: "Modern Upgrades", description: "Update finishes, lighting, flooring, and fixtures to bring your home into the modern era." },
+        { iconName: "Wrench", title: "Heritage Restoration", description: "Sensitive restoration of heritage homes that preserves character while adding modern comforts." },
       ]}
       benefits={[
         "Minimal disruption",

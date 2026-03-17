@@ -28,7 +28,7 @@ export default function CTABanner({
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="font-[family-name:var(--font-sora)] text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
+          <h2 className="font-sora text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
             {title}
             <span className="text-gradient"> {highlight}</span>
           </h2>

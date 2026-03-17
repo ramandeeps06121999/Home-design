@@ -74,7 +74,7 @@ export default function About() {
                 <div className="grid grid-cols-3 gap-4">
                   {stats.map((stat) => (
                     <div key={stat.label} className="text-center">
-                      <div className="font-[family-name:var(--font-sora)] text-2xl lg:text-3xl font-bold text-white">
+                      <div className="font-sora text-2xl lg:text-3xl font-bold text-white">
                         <AnimatedCounter target={stat.value} suffix={stat.suffix} />
                       </div>
                       <div className="text-white text-xs mt-1">{stat.label}</div>
@@ -100,7 +100,7 @@ export default function About() {
               <span className="text-[#FF5A1F] font-semibold uppercase tracking-wider text-sm">About Us</span>
             </div>
 
-            <h2 className="font-[family-name:var(--font-sora)] text-3xl md:text-4xl lg:text-[44px] font-bold text-gray-900 leading-[1.15] mb-8">
+            <h2 className="font-sora text-3xl md:text-4xl lg:text-[44px] font-bold text-gray-900 leading-[1.15] mb-8">
               Built today for the needs of
               <span className="text-gradient"> tomorrow</span>
             </h2>

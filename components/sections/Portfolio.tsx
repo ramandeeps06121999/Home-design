@@ -101,7 +101,7 @@ export default function Portfolio() {
                 Our Portfolio
               </span>
             </div>
-            <h2 className="font-[family-name:var(--font-sora)] text-3xl md:text-4xl lg:text-[44px] font-bold text-white leading-[1.15]">
+            <h2 className="font-sora text-3xl md:text-4xl lg:text-[44px] font-bold text-white leading-[1.15]">
               Inspired Homes Built Across
               <span className="text-gradient"> South East Queensland</span>
             </h2>
@@ -179,7 +179,7 @@ export default function Portfolio() {
                   <span className="inline-block bg-[#FF5A1F]/10 text-[#FF5A1F] text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-3">
                     {project.category}
                   </span>
-                  <h3 className="font-[family-name:var(--font-sora)] text-lg font-bold text-white mb-2 group-hover:text-[#FF5A1F] transition-colors duration-300">
+                  <h3 className="font-sora text-lg font-bold text-white mb-2 group-hover:text-[#FF5A1F] transition-colors duration-300">
                     {project.title}
                   </h3>
                   <div className="flex items-center gap-1.5 text-white text-sm">
@@ -216,7 +216,7 @@ export default function Portfolio() {
                   <span className="inline-block bg-[#FF5A1F]/10 text-[#FF5A1F] text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-2">
                     {project.category}
                   </span>
-                  <h3 className="font-[family-name:var(--font-sora)] text-lg font-bold text-white mb-1.5">
+                  <h3 className="font-sora text-lg font-bold text-white mb-1.5">
                     {project.title}
                   </h3>
                   <div className="flex items-center gap-1.5 text-white text-sm">

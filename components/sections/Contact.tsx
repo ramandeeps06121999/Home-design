@@ -71,7 +71,7 @@ export default function Contact() {
                 Contact Us
               </span>
             </div>
-            <h2 className="font-[family-name:var(--font-sora)] text-3xl md:text-4xl lg:text-[44px] font-bold text-gray-900 leading-[1.15] mb-4">
+            <h2 className="font-sora text-3xl md:text-4xl lg:text-[44px] font-bold text-gray-900 leading-[1.15] mb-4">
               Let&apos;s Talk About Your
               <span className="text-gradient"> Project</span>
             </h2>
@@ -106,7 +106,7 @@ export default function Contact() {
 
             {/* Service Areas */}
             <div>
-              <h4 className="font-[family-name:var(--font-sora)] font-bold text-gray-900 text-sm mb-3 uppercase tracking-wider">
+              <h4 className="font-sora font-bold text-gray-900 text-sm mb-3 uppercase tracking-wider">
                 Service Areas
               </h4>
               <div className="flex flex-wrap gap-2">
@@ -150,7 +150,7 @@ export default function Contact() {
                       />
                     </svg>
                   </div>
-                  <h3 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-gray-900 mb-2">
+                  <h3 className="font-sora text-2xl font-bold text-gray-900 mb-2">
                     Message Sent!
                   </h3>
                   <p className="text-gray-500">

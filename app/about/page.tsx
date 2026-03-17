@@ -88,7 +88,7 @@ export default function AboutPage() {
                 transition={{ delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="font-[family-name:var(--font-sora)] text-4xl lg:text-5xl font-bold text-gray-900 mb-2">
+                <div className="font-sora text-4xl lg:text-5xl font-bold text-gray-900 mb-2">
                   <AnimatedCounter target={stat.value} suffix={stat.suffix} />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-1">{stat.label}</h3>
@@ -129,7 +129,7 @@ export default function AboutPage() {
                 <div className="w-8 h-[2px] bg-[#FF5A1F]" />
                 <span className="text-[#FF5A1F] font-semibold uppercase tracking-wider text-sm">Our Story</span>
               </div>
-              <h2 className="font-[family-name:var(--font-sora)] text-3xl md:text-4xl lg:text-[44px] font-bold text-gray-900 leading-[1.15] mb-8">
+              <h2 className="font-sora text-3xl md:text-4xl lg:text-[44px] font-bold text-gray-900 leading-[1.15] mb-8">
                 From a Small Team to South East Queensland&apos;s
                 <span className="text-gradient"> Trusted Builder</span>
               </h2>
@@ -173,7 +173,7 @@ export default function AboutPage() {
               <span className="text-[#FF5A1F] font-semibold uppercase tracking-wider text-sm">Our Values</span>
               <div className="w-8 h-[2px] bg-[#FF5A1F]" />
             </div>
-            <h2 className="font-[family-name:var(--font-sora)] text-3xl md:text-4xl lg:text-[44px] font-bold text-gray-900 leading-[1.15]">
+            <h2 className="font-sora text-3xl md:text-4xl lg:text-[44px] font-bold text-gray-900 leading-[1.15]">
               The Principles That
               <span className="text-gradient"> Guide Us</span>
             </h2>
@@ -191,7 +191,7 @@ export default function AboutPage() {
                 <div className="w-14 h-14 bg-gradient-to-br from-[#FF5A1F]/10 to-[#FF5A1F]/5 rounded-2xl flex items-center justify-center mb-6 group-hover:from-[#FF5A1F]/20 group-hover:to-[#FF5A1F]/10 transition-all duration-500">
                   <value.icon className="w-7 h-7 text-[#FF5A1F]" />
                 </div>
-                <h3 className="font-[family-name:var(--font-sora)] text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
+                <h3 className="font-sora text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
                 <p className="text-gray-500 leading-relaxed text-[15px]">{value.description}</p>
               </motion.div>
             ))}
@@ -213,7 +213,7 @@ export default function AboutPage() {
               <span className="text-[#FF5A1F] font-semibold uppercase tracking-wider text-sm">Our Journey</span>
               <div className="w-8 h-[2px] bg-[#FF5A1F]" />
             </div>
-            <h2 className="font-[family-name:var(--font-sora)] text-3xl md:text-4xl lg:text-[44px] font-bold text-white leading-[1.15]">
+            <h2 className="font-sora text-3xl md:text-4xl lg:text-[44px] font-bold text-white leading-[1.15]">
               Key Milestones in Our
               <span className="text-gradient"> History</span>
             </h2>
@@ -233,8 +233,8 @@ export default function AboutPage() {
                   className={`lg:grid lg:grid-cols-2 lg:gap-16 lg:py-10 ${index % 2 === 0 ? "" : "lg:direction-rtl"}`}
                 >
                   <div className={`${index % 2 === 0 ? "lg:text-right lg:pr-16" : "lg:col-start-2 lg:pl-16"}`}>
-                    <span className="text-[#FF5A1F] font-[family-name:var(--font-sora)] text-4xl font-bold">{item.year}</span>
-                    <h3 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-white mt-2 mb-3">{item.title}</h3>
+                    <span className="text-[#FF5A1F] font-sora text-4xl font-bold">{item.year}</span>
+                    <h3 className="font-sora text-2xl font-bold text-white mt-2 mb-3">{item.title}</h3>
                     <p className="text-white leading-relaxed">{item.description}</p>
                   </div>
                 </motion.div>
@@ -258,7 +258,7 @@ export default function AboutPage() {
               <span className="text-[#FF5A1F] font-semibold uppercase tracking-wider text-sm">Our Team</span>
               <div className="w-8 h-[2px] bg-[#FF5A1F]" />
             </div>
-            <h2 className="font-[family-name:var(--font-sora)] text-3xl md:text-4xl lg:text-[44px] font-bold text-gray-900 leading-[1.15]">
+            <h2 className="font-sora text-3xl md:text-4xl lg:text-[44px] font-bold text-gray-900 leading-[1.15]">
               Meet the People Behind
               <span className="text-gradient"> Design Homes</span>
             </h2>
@@ -287,7 +287,7 @@ export default function AboutPage() {
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
-                <h3 className="font-[family-name:var(--font-sora)] text-lg font-bold text-gray-900">{member.name}</h3>
+                <h3 className="font-sora text-lg font-bold text-gray-900">{member.name}</h3>
                 <p className="text-[#FF5A1F] text-sm font-semibold">{member.role}</p>
               </motion.div>
             ))}

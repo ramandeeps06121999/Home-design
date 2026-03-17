@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Store, Building2, FileCheck, Clock, Shield, Users } from "lucide-react";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
@@ -64,12 +63,12 @@ export default function CommercialPage() {
         image: "/images/retail-store-exterior.jpg",
       }}
       features={[
-        { icon: Store, title: "Office Fit-outs", description: "Modern office spaces designed for productivity, collaboration, and employee wellbeing." },
-        { icon: Building2, title: "Retail Construction", description: "Eye-catching retail spaces that attract customers and enhance the shopping experience." },
-        { icon: FileCheck, title: "Code Compliance", description: "Full compliance with BCA, fire safety, accessibility standards, and local council requirements." },
-        { icon: Clock, title: "Minimal Downtime", description: "Efficient construction schedules that minimize disruption to your business operations." },
-        { icon: Shield, title: "Quality Assurance", description: "Rigorous quality control processes throughout every phase of construction." },
-        { icon: Users, title: "Stakeholder Management", description: "Professional communication with all stakeholders including tenants, landlords, and authorities." },
+        { iconName: "Store", title: "Office Fit-outs", description: "Modern office spaces designed for productivity, collaboration, and employee wellbeing." },
+        { iconName: "Building2", title: "Retail Construction", description: "Eye-catching retail spaces that attract customers and enhance the shopping experience." },
+        { iconName: "FileCheck", title: "Code Compliance", description: "Full compliance with BCA, fire safety, accessibility standards, and local council requirements." },
+        { iconName: "Clock", title: "Minimal Downtime", description: "Efficient construction schedules that minimize disruption to your business operations." },
+        { iconName: "Shield", title: "Quality Assurance", description: "Rigorous quality control processes throughout every phase of construction." },
+        { iconName: "Users", title: "Stakeholder Management", description: "Professional communication with all stakeholders including tenants, landlords, and authorities." },
       ]}
       benefits={[
         "Commercial expertise",

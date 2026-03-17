@@ -81,7 +81,7 @@ export default function Services() {
             <span className="text-[#FF5A1F] font-semibold uppercase tracking-wider text-sm">Our Services</span>
             <div className="w-8 h-[2px] bg-[#FF5A1F]" />
           </div>
-          <h2 className="font-[family-name:var(--font-sora)] text-3xl md:text-4xl lg:text-[44px] font-bold text-gray-900 leading-[1.15] mb-4">
+          <h2 className="font-sora text-3xl md:text-4xl lg:text-[44px] font-bold text-gray-900 leading-[1.15] mb-4">
             Comprehensive Building &
             <span className="text-gradient"> Design Services</span>
           </h2>
@@ -116,12 +116,12 @@ export default function Services() {
 
                       {/* Number badge */}
                       <div className="absolute top-5 left-5 w-11 h-11 bg-white/95 backdrop-blur-md rounded-xl flex items-center justify-center shadow-lg">
-                        <span className="font-[family-name:var(--font-sora)] text-sm font-bold text-[#FF5A1F]">{service.number}</span>
+                        <span className="font-sora text-sm font-bold text-[#FF5A1F]">{service.number}</span>
                       </div>
 
                       {/* Title overlay at bottom of image */}
                       <div className="absolute bottom-0 left-0 right-0 p-6 pb-5">
-                        <h3 className="font-[family-name:var(--font-sora)] text-[22px] font-bold text-white drop-shadow-sm">
+                        <h3 className="font-sora text-[22px] font-bold text-white drop-shadow-sm">
                           {service.title}
                         </h3>
                       </div>

@@ -171,7 +171,7 @@ export default function PortfolioPage() {
                       <span className="w-1 h-1 bg-white/40 rounded-full" />
                       <span>{project.year}</span>
                     </div>
-                    <h3 className="font-[family-name:var(--font-sora)] text-xl lg:text-2xl font-bold text-white mb-2">
+                    <h3 className="font-sora text-xl lg:text-2xl font-bold text-white mb-2">
                       {project.title}
                     </h3>
                     <p className="text-white text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 line-clamp-2">

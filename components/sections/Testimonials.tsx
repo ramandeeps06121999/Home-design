@@ -90,7 +90,7 @@ function TestimonialCard({
             />
           </div>
           <div className="min-w-0">
-            <h4 className="font-[family-name:var(--font-sora)] font-semibold text-white text-sm truncate">
+            <h4 className="font-sora font-semibold text-white text-sm truncate">
               {testimonial.name}
             </h4>
             <p className="text-white text-xs mt-0.5">{testimonial.location}</p>
@@ -191,7 +191,7 @@ export default function Testimonials() {
             </span>
             <div className="w-8 h-[2px] bg-[#FF5A1F]" />
           </div>
-          <h2 className="font-[family-name:var(--font-sora)] text-3xl md:text-4xl lg:text-[44px] font-bold text-white leading-[1.15] mb-5">
+          <h2 className="font-sora text-3xl md:text-4xl lg:text-[44px] font-bold text-white leading-[1.15] mb-5">
             Trusted by Families Across
             <span className="text-gradient"> South East QLD</span>
           </h2>

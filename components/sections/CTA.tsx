@@ -70,7 +70,7 @@ export default function CTA() {
               ))}
             </div>
 
-            <h2 className="font-[family-name:var(--font-sora)] text-4xl md:text-5xl lg:text-[56px] font-bold text-white leading-[1.1] mb-6">
+            <h2 className="font-sora text-4xl md:text-5xl lg:text-[56px] font-bold text-white leading-[1.1] mb-6">
               Ready to Build Your
               <span className="text-gradient"> Dream Home?</span>
             </h2>
@@ -139,7 +139,7 @@ export default function CTA() {
               <div className="absolute top-0 left-8 right-8 h-[3px] bg-gradient-to-r from-transparent via-[#FF5A1F] to-transparent rounded-full" />
 
               <div className="text-center mb-8">
-                <div className="font-[family-name:var(--font-sora)] text-7xl font-bold text-white mb-2">
+                <div className="font-sora text-7xl font-bold text-white mb-2">
                   100<span className="text-gradient">%</span>
                 </div>
                 <p className="text-white text-sm uppercase tracking-wider">Project Completion Rate</p>
@@ -147,11 +147,11 @@ export default function CTA() {
 
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="bg-white/5 rounded-2xl p-5 text-center border border-white/5">
-                  <div className="font-[family-name:var(--font-sora)] text-3xl font-bold text-white">50+</div>
+                  <div className="font-sora text-3xl font-bold text-white">50+</div>
                   <p className="text-white text-sm mt-1">Homes Built</p>
                 </div>
                 <div className="bg-white/5 rounded-2xl p-5 text-center border border-white/5">
-                  <div className="font-[family-name:var(--font-sora)] text-3xl font-bold text-white">15+</div>
+                  <div className="font-sora text-3xl font-bold text-white">15+</div>
                   <p className="text-white text-sm mt-1">Years Exp.</p>
                 </div>
               </div>

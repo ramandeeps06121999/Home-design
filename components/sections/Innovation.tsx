@@ -81,7 +81,7 @@ export default function Innovation() {
               Innovation & Excellence
             </span>
           </div>
-          <h2 className="font-[family-name:var(--font-sora)] text-3xl md:text-4xl lg:text-[44px] font-bold text-white leading-[1.15] max-w-2xl">
+          <h2 className="font-sora text-3xl md:text-4xl lg:text-[44px] font-bold text-white leading-[1.15] max-w-2xl">
             Building Trust Through Innovation, Quality &
             <span className="text-gradient"> Excellence.</span>
           </h2>
@@ -107,7 +107,7 @@ export default function Innovation() {
               <span className="bg-[#FF5A1F] text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
                 Featured Project
               </span>
-              <h3 className="font-[family-name:var(--font-sora)] text-2xl lg:text-3xl font-bold text-white mt-3">
+              <h3 className="font-sora text-2xl lg:text-3xl font-bold text-white mt-3">
                 Luxury Pool Villa
               </h3>
               <p className="text-white text-sm mt-1.5">
@@ -137,7 +137,7 @@ export default function Innovation() {
 
                 {/* Floating number badge */}
                 <div className="absolute top-4 right-4 w-10 h-10 bg-[#0d1117]/70 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/10">
-                  <span className="font-[family-name:var(--font-sora)] text-sm font-bold text-[#FF5A1F]">
+                  <span className="font-sora text-sm font-bold text-[#FF5A1F]">
                     {feature.number}
                   </span>
                 </div>
@@ -151,7 +151,7 @@ export default function Innovation() {
                     <feature.icon className="w-6 h-6 text-[#FF5A1F]" />
                   </div>
 
-                  <h3 className="font-[family-name:var(--font-sora)] text-xl lg:text-[22px] font-bold text-white mb-3">
+                  <h3 className="font-sora text-xl lg:text-[22px] font-bold text-white mb-3">
                     {feature.title}
                   </h3>
                   <p className="text-white leading-relaxed text-[15px]">

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Building2, TrendingUp, Shield, Ruler, Users, FileCheck } from "lucide-react";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
@@ -64,12 +63,12 @@ export default function DuplexTownhousesPage() {
         image: "/images/townhouse-modern.jpg",
       }}
       features={[
-        { icon: Building2, title: "Dual Occupancy Design", description: "Optimized designs that maximize the use of your block while meeting all council requirements and setback rules." },
-        { icon: TrendingUp, title: "Investment Maximization", description: "Strategic design choices that maximize rental yields and capital growth for your property investment." },
-        { icon: Shield, title: "Council Compliance", description: "Expert navigation of council requirements, including town planning, building approvals, and compliance certificates." },
-        { icon: Ruler, title: "Smart Layouts", description: "Clever floor plans that provide privacy, natural light, and functional living spaces for each dwelling." },
-        { icon: Users, title: "Tenant Appeal", description: "Modern finishes and thoughtful design elements that attract and retain quality tenants." },
-        { icon: FileCheck, title: "Turnkey Solutions", description: "Complete packages from feasibility assessment to final handover, including all approvals and certifications." },
+        { iconName: "Building2", title: "Dual Occupancy Design", description: "Optimized designs that maximize the use of your block while meeting all council requirements and setback rules." },
+        { iconName: "TrendingUp", title: "Investment Maximization", description: "Strategic design choices that maximize rental yields and capital growth for your property investment." },
+        { iconName: "Shield", title: "Council Compliance", description: "Expert navigation of council requirements, including town planning, building approvals, and compliance certificates." },
+        { iconName: "Ruler", title: "Smart Layouts", description: "Clever floor plans that provide privacy, natural light, and functional living spaces for each dwelling." },
+        { iconName: "Users", title: "Tenant Appeal", description: "Modern finishes and thoughtful design elements that attract and retain quality tenants." },
+        { iconName: "FileCheck", title: "Turnkey Solutions", description: "Complete packages from feasibility assessment to final handover, including all approvals and certifications." },
       ]}
       benefits={[
         "Feasibility assessment",

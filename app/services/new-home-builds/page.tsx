@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Home, Ruler, Shield, Leaf, Hammer, Clock } from "lucide-react";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
@@ -64,12 +63,12 @@ export default function NewHomeBuildsPage() {
         image: "/images/new-home-build-2.jpg",
       }}
       features={[
-        { icon: Home, title: "Custom Floor Plans", description: "Every home is uniquely designed to match your family's needs, lifestyle, and the specific characteristics of your block." },
-        { icon: Ruler, title: "Precision Engineering", description: "We use the latest construction techniques and technologies to ensure structural integrity and longevity." },
-        { icon: Shield, title: "Fixed-Price Contracts", description: "No surprises. Our fixed-price contracts give you complete peace of mind throughout the build process." },
-        { icon: Leaf, title: "Energy Efficient", description: "Smart design principles and quality materials ensure your home is energy efficient, reducing long-term running costs." },
-        { icon: Hammer, title: "Quality Materials", description: "We source only premium materials from trusted Australian suppliers, ensuring durability and lasting beauty." },
-        { icon: Clock, title: "On-Time Delivery", description: "Our project management expertise ensures your home is delivered on schedule, with regular progress updates." },
+        { iconName: "Home", title: "Custom Floor Plans", description: "Every home is uniquely designed to match your family's needs, lifestyle, and the specific characteristics of your block." },
+        { iconName: "Ruler", title: "Precision Engineering", description: "We use the latest construction techniques and technologies to ensure structural integrity and longevity." },
+        { iconName: "Shield", title: "Fixed-Price Contracts", description: "No surprises. Our fixed-price contracts give you complete peace of mind throughout the build process." },
+        { iconName: "TreePine", title: "Energy Efficient", description: "Smart design principles and quality materials ensure your home is energy efficient, reducing long-term running costs." },
+        { iconName: "Hammer", title: "Quality Materials", description: "We source only premium materials from trusted Australian suppliers, ensuring durability and lasting beauty." },
+        { iconName: "Clock", title: "On-Time Delivery", description: "Our project management expertise ensures your home is delivered on schedule, with regular progress updates." },
       ]}
       benefits={[
         "Custom designed to your brief",

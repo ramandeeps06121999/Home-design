@@ -73,7 +73,7 @@ export default function PageHero({ title, highlight, description, image, breadcr
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="font-[family-name:var(--font-sora)] text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6 max-w-3xl"
+          className="font-sora text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6 max-w-3xl"
         >
           {title}
           {highlight && <span className="text-gradient"> {highlight}</span>}

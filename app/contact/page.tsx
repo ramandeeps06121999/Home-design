@@ -81,7 +81,7 @@ export default function ContactPage() {
               </div>
 
               <div className="mb-10">
-                <h4 className="font-[family-name:var(--font-sora)] font-bold text-gray-900 text-sm mb-3 uppercase tracking-wider">Service Areas</h4>
+                <h4 className="font-sora font-bold text-gray-900 text-sm mb-3 uppercase tracking-wider">Service Areas</h4>
                 <div className="flex flex-wrap gap-2">
                   {serviceAreas.map((area) => (
                     <span key={area} className="bg-[#fafafa] text-gray-600 px-4 py-2 rounded-full text-sm font-medium border border-gray-100">{area}</span>
@@ -106,7 +106,7 @@ export default function ContactPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="bg-[#fafafa] rounded-3xl p-8 lg:p-12 border border-gray-100">
-                <h3 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-gray-900 mb-2">Send Us a Message</h3>
+                <h3 className="font-sora text-2xl font-bold text-gray-900 mb-2">Send Us a Message</h3>
                 <p className="text-gray-500 text-sm mb-8">Fill in the form below and we&apos;ll get back to you within 24 hours.</p>
 
                 {isSubmitted ? (
@@ -116,7 +116,7 @@ export default function ContactPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <h3 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-gray-900 mb-2">Message Sent!</h3>
+                    <h3 className="font-sora text-2xl font-bold text-gray-900 mb-2">Message Sent!</h3>
                     <p className="text-gray-500">We&apos;ll get back to you within 24 hours.</p>
                   </motion.div>
                 ) : (

@@ -49,7 +49,7 @@ export default function Footer() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="text-center lg:text-left">
-              <h3 className="font-[family-name:var(--font-sora)] text-2xl lg:text-3xl font-bold text-white mb-2">
+              <h3 className="font-sora text-2xl lg:text-3xl font-bold text-white mb-2">
                 Stay Updated
               </h3>
               <p className="text-white text-sm">
@@ -117,7 +117,7 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h4 className="font-[family-name:var(--font-sora)] text-white font-bold text-sm uppercase tracking-wider mb-6">
+            <h4 className="font-sora text-white font-bold text-sm uppercase tracking-wider mb-6">
               Quick Links
             </h4>
             <ul className="space-y-3">
@@ -141,7 +141,7 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h4 className="font-[family-name:var(--font-sora)] text-white font-bold text-sm uppercase tracking-wider mb-6">
+            <h4 className="font-sora text-white font-bold text-sm uppercase tracking-wider mb-6">
               Services
             </h4>
             <ul className="space-y-3">
@@ -165,7 +165,7 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <h4 className="font-[family-name:var(--font-sora)] text-white font-bold text-sm uppercase tracking-wider mb-6">
+            <h4 className="font-sora text-white font-bold text-sm uppercase tracking-wider mb-6">
               Contact
             </h4>
             <ul className="space-y-3 text-white text-sm">

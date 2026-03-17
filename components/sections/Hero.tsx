@@ -106,7 +106,7 @@ export default function Hero() {
 
         {/* Split-Text Title */}
         <div className="text-center mb-6">
-          <h1 className="font-[family-name:var(--font-sora)] text-[clamp(48px,11vw,140px)] font-bold text-white leading-[0.9] tracking-[-0.04em]">
+          <h1 className="font-sora text-[clamp(48px,11vw,140px)] font-bold text-white leading-[0.9] tracking-[-0.04em]">
             {titleWords.map((word, i) => (
               <motion.span
                 key={i}
@@ -179,7 +179,7 @@ export default function Hero() {
                 initial={{ scale: 0.5 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.5, delay: 1 }}
-                className="text-6xl lg:text-7xl font-bold font-[family-name:var(--font-sora)] text-white mb-2"
+                className="text-6xl lg:text-7xl font-bold font-sora text-white mb-2"
               >
                 100<span className="text-gradient">%</span>
               </motion.div>
