@@ -77,7 +77,7 @@ export default function About() {
                       <div className="font-[family-name:var(--font-sora)] text-2xl lg:text-3xl font-bold text-white">
                         <AnimatedCounter target={stat.value} suffix={stat.suffix} />
                       </div>
-                      <div className="text-white/60 text-xs mt-1">{stat.label}</div>
+                      <div className="text-white text-xs mt-1">{stat.label}</div>
                     </div>
                   ))}
                 </div>

@@ -18,7 +18,7 @@ export default function TrustTicker() {
     <div className="bg-[#0d1117] border-y border-white/5 py-5 overflow-hidden">
       <div className="ticker-track flex gap-12 whitespace-nowrap">
         {[...items, ...items, ...items].map((item, i) => (
-          <span key={i} className="flex items-center gap-3 text-white/30 text-sm font-medium uppercase tracking-wider shrink-0">
+          <span key={i} className="flex items-center gap-3 text-white text-sm font-medium uppercase tracking-wider shrink-0">
             <span className="w-1.5 h-1.5 bg-[#FF5A1F] rounded-full" />
             {item}
           </span>

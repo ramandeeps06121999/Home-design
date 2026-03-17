@@ -279,7 +279,7 @@ export default function AboutPage() {
                   <div className={`${index % 2 === 0 ? "lg:text-right lg:pr-16" : "lg:col-start-2 lg:pl-16"}`}>
                     <span className="text-[#FF5A1F] font-[family-name:var(--font-sora)] text-4xl font-bold">{item.year}</span>
                     <h3 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-white mt-2 mb-3">{item.title}</h3>
-                    <p className="text-white/50 leading-relaxed">{item.description}</p>
+                    <p className="text-white leading-relaxed">{item.description}</p>
                   </div>
                 </motion.div>
               ))}

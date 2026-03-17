@@ -94,7 +94,7 @@ function TestimonialCard({
         </div>
 
         {/* Quote text */}
-        <blockquote className="text-white/70 text-[15px] leading-[1.75] font-light flex-1 relative z-10">
+        <blockquote className="text-white text-[15px] leading-[1.75] font-light flex-1 relative z-10">
           &ldquo;{testimonial.text}&rdquo;
         </blockquote>
 
@@ -115,7 +115,7 @@ function TestimonialCard({
             <h4 className="font-[family-name:var(--font-sora)] font-semibold text-white text-sm truncate">
               {testimonial.name}
             </h4>
-            <p className="text-white/35 text-xs mt-0.5">{testimonial.location}</p>
+            <p className="text-white text-xs mt-0.5">{testimonial.location}</p>
           </div>
           <span className="ml-auto text-[11px] font-medium text-[#FF5A1F]/70 bg-[#FF5A1F]/[0.08] px-2.5 py-1 rounded-full whitespace-nowrap flex-shrink-0">
             {testimonial.project}
@@ -179,7 +179,7 @@ export default function Testimonials() {
             Trusted by Families Across
             <span className="text-gradient"> South East QLD</span>
           </h2>
-          <p className="text-white/40 text-base lg:text-lg leading-relaxed">
+          <p className="text-white text-base lg:text-lg leading-relaxed">
             Real stories from real homeowners who trusted us to build their
             dream homes.
           </p>
@@ -240,7 +240,7 @@ export default function Testimonials() {
                 <span className="text-[10px] font-bold text-white">50+</span>
               </div>
             </div>
-            <span className="text-white/40 text-sm">Happy families</span>
+            <span className="text-white text-sm">Happy families</span>
           </div>
 
           {/* Divider */}
@@ -256,7 +256,7 @@ export default function Testimonials() {
                 />
               ))}
             </div>
-            <span className="text-white/40 text-sm">
+            <span className="text-white text-sm">
               5.0 average rating
             </span>
           </div>
@@ -265,7 +265,7 @@ export default function Testimonials() {
           <div className="hidden sm:block w-px h-6 bg-white/10" />
 
           {/* Years */}
-          <div className="text-white/40 text-sm">
+          <div className="text-white text-sm">
             <span className="text-white font-semibold">15+</span> years of
             excellence
           </div>

@@ -32,7 +32,7 @@ export default function CTABanner({
             {title}
             <span className="text-gradient"> {highlight}</span>
           </h2>
-          <p className="text-white/50 text-lg mb-10 max-w-[550px] mx-auto">{description}</p>
+          <p className="text-white text-lg mb-10 max-w-[550px] mx-auto">{description}</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/contact"
@@ -43,7 +43,7 @@ export default function CTABanner({
             </Link>
             <a
               href="tel:+61123456789"
-              className="inline-flex items-center gap-2 text-white/60 hover:text-white font-medium transition-colors text-lg"
+              className="inline-flex items-center gap-2 text-white hover:text-white font-medium transition-colors text-lg"
             >
               <Phone className="w-5 h-5" />
               +61 123 456 789

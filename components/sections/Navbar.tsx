@@ -110,7 +110,7 @@ export default function Navbar() {
                     className={`relative px-4 py-2 rounded-lg font-medium text-[15px] transition-all duration-300 flex items-center gap-1 ${
                       isActive
                         ? "text-white"
-                        : "text-white/60 hover:text-white"
+                        : "text-white hover:text-white"
                     }`}
                   >
                     {link.name}
@@ -134,7 +134,7 @@ export default function Navbar() {
                           <button
                             key={child.name}
                             onClick={() => scrollToSection(child.href)}
-                            className="block w-full text-left px-5 py-3 text-white/70 text-sm hover:text-white hover:bg-white/5 transition-all duration-200 first:rounded-t-xl last:rounded-b-xl"
+                            className="block w-full text-left px-5 py-3 text-white text-sm hover:text-white hover:bg-white/5 transition-all duration-200 first:rounded-t-xl last:rounded-b-xl"
                           >
                             {child.name}
                           </button>
@@ -218,7 +218,7 @@ export default function Navbar() {
                         <button
                           key={child.name}
                           onClick={() => scrollToSection(child.href)}
-                          className="text-white/50 text-lg hover:text-[#FF5A1F] transition-colors"
+                          className="text-white text-lg hover:text-[#FF5A1F] transition-colors"
                         >
                           {child.name}
                         </button>

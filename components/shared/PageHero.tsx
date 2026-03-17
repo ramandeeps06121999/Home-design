@@ -56,11 +56,11 @@ export default function PageHero({ title, highlight, description, image, breadcr
         >
           {breadcrumb.map((item, i) => (
             <span key={item.label} className="flex items-center gap-2">
-              {i > 0 && <span className="text-white/30">/</span>}
+              {i > 0 && <span className="text-white">/</span>}
               <a
                 href={item.href}
                 className={`text-sm font-medium transition-colors ${
-                  i === breadcrumb.length - 1 ? "text-[#FF5A1F]" : "text-white/50 hover:text-white"
+                  i === breadcrumb.length - 1 ? "text-[#FF5A1F]" : "text-white hover:text-white"
                 }`}
               >
                 {item.label}
@@ -83,7 +83,7 @@ export default function PageHero({ title, highlight, description, image, breadcr
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-white/60 text-lg md:text-xl max-w-2xl leading-relaxed"
+          className="text-white text-lg md:text-xl max-w-2xl leading-relaxed"
         >
           {description}
         </motion.p>

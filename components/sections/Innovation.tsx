@@ -110,7 +110,7 @@ export default function Innovation() {
               <h3 className="font-[family-name:var(--font-sora)] text-2xl lg:text-3xl font-bold text-white mt-3">
                 Luxury Pool Villa
               </h3>
-              <p className="text-white/60 text-sm mt-1.5">
+              <p className="text-white text-sm mt-1.5">
                 Gold Coast, QLD
               </p>
             </div>
@@ -154,7 +154,7 @@ export default function Innovation() {
                   <h3 className="font-[family-name:var(--font-sora)] text-xl lg:text-[22px] font-bold text-white mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-white/50 leading-relaxed text-[15px]">
+                  <p className="text-white leading-relaxed text-[15px]">
                     {feature.description}
                   </p>
                 </div>

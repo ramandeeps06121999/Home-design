@@ -52,7 +52,7 @@ export default function Footer() {
               <h3 className="font-[family-name:var(--font-sora)] text-2xl lg:text-3xl font-bold text-white mb-2">
                 Stay Updated
               </h3>
-              <p className="text-white/40 text-sm">
+              <p className="text-white text-sm">
                 Get the latest news on our projects and building insights.
               </p>
             </div>
@@ -60,7 +60,7 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 bg-white/5 border border-white/10 rounded-l-xl px-5 py-3.5 text-white text-sm placeholder:text-white/30 focus:outline-none focus:border-[#FF5A1F]/50 transition-colors"
+                className="flex-1 bg-white/5 border border-white/10 rounded-l-xl px-5 py-3.5 text-white text-sm placeholder:text-white focus:outline-none focus:border-[#FF5A1F]/50 transition-colors"
               />
               <button className="bg-[#FF5A1F] hover:bg-[#e54e1a] text-white px-6 py-3.5 rounded-r-xl font-semibold text-sm transition-all duration-300 flex items-center gap-2 whitespace-nowrap">
                 Subscribe
@@ -90,7 +90,7 @@ export default function Footer() {
                 className="h-14 w-auto object-contain"
               />
             </button>
-            <p className="text-white/40 leading-relaxed mb-8 max-w-sm text-sm">
+            <p className="text-white leading-relaxed mb-8 max-w-sm text-sm">
               Custom home builders specializing in high-quality residential
               construction across South East Queensland. Building dreams since
               2008.
@@ -102,7 +102,7 @@ export default function Footer() {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="w-10 h-10 bg-white/5 hover:bg-[#FF5A1F] rounded-xl flex items-center justify-center text-white/40 hover:text-white transition-all duration-300 hover:-translate-y-1"
+                  className="w-10 h-10 bg-white/5 hover:bg-[#FF5A1F] rounded-xl flex items-center justify-center text-white hover:text-white transition-all duration-300 hover:-translate-y-1"
                 >
                   <social.icon className="w-4 h-4" />
                 </a>
@@ -125,7 +125,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <button
                     onClick={() => scrollToSection(link.href)}
-                    className="text-white/40 hover:text-[#FF5A1F] transition-all duration-300 text-sm hover:translate-x-1 inline-block"
+                    className="text-white hover:text-[#FF5A1F] transition-all duration-300 text-sm hover:translate-x-1 inline-block"
                   >
                     {link.name}
                   </button>
@@ -149,7 +149,7 @@ export default function Footer() {
                 <li key={service.name}>
                   <button
                     onClick={() => scrollToSection(service.href)}
-                    className="text-white/40 hover:text-[#FF5A1F] transition-all duration-300 text-sm hover:translate-x-1 inline-block"
+                    className="text-white hover:text-[#FF5A1F] transition-all duration-300 text-sm hover:translate-x-1 inline-block"
                   >
                     {service.name}
                   </button>
@@ -168,7 +168,7 @@ export default function Footer() {
             <h4 className="font-[family-name:var(--font-sora)] text-white font-bold text-sm uppercase tracking-wider mb-6">
               Contact
             </h4>
-            <ul className="space-y-3 text-white/40 text-sm">
+            <ul className="space-y-3 text-white text-sm">
               <li>+61 123 456 789</li>
               <li>hello@designhomes.com.au</li>
               <li>Brisbane, QLD, Australia</li>
@@ -180,14 +180,14 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/5 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/25 text-sm">
+            <p className="text-white text-sm">
               &copy; {new Date().getFullYear()} Design Homes Pty Ltd. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
-              <span className="text-white/25 text-sm">Built with Precision in SEQ</span>
+              <span className="text-white text-sm">Built with Precision in SEQ</span>
               <button
                 onClick={scrollToTop}
-                className="w-10 h-10 bg-white/5 hover:bg-[#FF5A1F] rounded-xl flex items-center justify-center text-white/40 hover:text-white transition-all duration-300"
+                className="w-10 h-10 bg-white/5 hover:bg-[#FF5A1F] rounded-xl flex items-center justify-center text-white hover:text-white transition-all duration-300"
                 aria-label="Back to top"
               >
                 <ArrowUp className="w-4 h-4" />

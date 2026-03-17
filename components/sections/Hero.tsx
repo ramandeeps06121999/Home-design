@@ -100,7 +100,7 @@ export default function Hero() {
         >
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full px-5 py-2.5">
             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-            <span className="text-white/90 text-sm font-medium tracking-wide">Licensed QBCC Builder — South East Queensland</span>
+            <span className="text-white text-sm font-medium tracking-wide">Licensed QBCC Builder — South East Queensland</span>
           </div>
         </motion.div>
 
@@ -131,7 +131,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center text-white/60 text-lg md:text-xl max-w-[600px] mx-auto mb-12 lg:mb-16 leading-relaxed"
+          className="text-center text-white text-lg md:text-xl max-w-[600px] mx-auto mb-12 lg:mb-16 leading-relaxed"
         >
           Building new homes, duplexes, townhouses and custom builds across South East Queensland.
         </motion.p>
@@ -185,11 +185,11 @@ export default function Hero() {
               </motion.div>
               <p className="text-lg font-semibold text-white mb-6">Project Completion Rate</p>
               <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-3 text-white/70 text-sm">
+                <li className="flex items-center gap-3 text-white text-sm">
                   <span className="w-1.5 h-1.5 bg-[#FF5A1F] rounded-full" />
                   50+ Homes Built Across SEQ
                 </li>
-                <li className="flex items-center gap-3 text-white/70 text-sm">
+                <li className="flex items-center gap-3 text-white text-sm">
                   <span className="w-1.5 h-1.5 bg-[#FF5A1F] rounded-full" />
                   Serving Brisbane, Gold Coast & Sunshine Coast
                 </li>
@@ -236,7 +236,7 @@ export default function Hero() {
                 className="flex items-center gap-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl px-5 py-3"
               >
                 <badge.icon className="w-5 h-5 text-[#FF5A1F]" />
-                <span className="text-white/80 text-sm font-medium">{badge.label}</span>
+                <span className="text-white text-sm font-medium">{badge.label}</span>
               </motion.div>
             ))}
           </motion.div>
@@ -250,12 +250,12 @@ export default function Hero() {
         transition={{ delay: 1.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
       >
-        <span className="text-white/30 text-xs uppercase tracking-widest">Scroll</span>
+        <span className="text-white text-xs uppercase tracking-widest">Scroll</span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         >
-          <ArrowDown className="w-4 h-4 text-white/30" />
+          <ArrowDown className="w-4 h-4 text-white" />
         </motion.div>
       </motion.div>
     </section>

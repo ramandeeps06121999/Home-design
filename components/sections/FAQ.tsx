@@ -73,7 +73,7 @@ export default function FAQ() {
               <h3 className="font-[family-name:var(--font-sora)] text-xl font-bold mb-3">
                 Still have questions?
               </h3>
-              <p className="text-white/50 text-sm mb-6 leading-relaxed">
+              <p className="text-white text-sm mb-6 leading-relaxed">
                 Can&apos;t find the answer you&apos;re looking for? Our team is happy to help.
               </p>
               <button

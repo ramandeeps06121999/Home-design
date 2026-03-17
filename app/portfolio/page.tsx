@@ -209,7 +209,7 @@ export default function PortfolioPage() {
                   </div>
 
                   <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
-                    <div className="flex items-center gap-4 text-sm text-white/60 mb-2">
+                    <div className="flex items-center gap-4 text-sm text-white mb-2">
                       <span>{project.location}</span>
                       <span className="w-1 h-1 bg-white/40 rounded-full" />
                       <span>{project.size}</span>
@@ -219,7 +219,7 @@ export default function PortfolioPage() {
                     <h3 className="font-[family-name:var(--font-sora)] text-xl lg:text-2xl font-bold text-white mb-2">
                       {project.title}
                     </h3>
-                    <p className="text-white/60 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 line-clamp-2">
+                    <p className="text-white text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 line-clamp-2">
                       {project.description}
                     </p>
                   </div>

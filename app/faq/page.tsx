@@ -200,7 +200,7 @@ export default function FAQPage() {
             className="bg-[#0d1117] rounded-3xl p-10 text-center mt-16"
           >
             <h3 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-white mb-3">Still Have Questions?</h3>
-            <p className="text-white/50 text-sm mb-6 max-w-md mx-auto">Can&apos;t find the answer you&apos;re looking for? Our team is happy to help with any questions you have.</p>
+            <p className="text-white text-sm mb-6 max-w-md mx-auto">Can&apos;t find the answer you&apos;re looking for? Our team is happy to help with any questions you have.</p>
             <Link href="/contact" className="inline-flex items-center gap-2 bg-[#FF5A1F] hover:bg-[#e54e1a] text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:shadow-[#FF5A1F]/30 group">
               Contact Us <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>

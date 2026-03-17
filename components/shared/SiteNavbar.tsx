@@ -81,7 +81,7 @@ export default function SiteNavbar() {
                   <Link
                     href={link.href}
                     className={`relative px-4 py-2 rounded-lg font-medium text-[15px] transition-all duration-300 flex items-center gap-1 ${
-                      active ? "text-white" : "text-white/60 hover:text-white"
+                      active ? "text-white" : "text-white hover:text-white"
                     }`}
                   >
                     {link.name}
@@ -107,7 +107,7 @@ export default function SiteNavbar() {
                             className={`block w-full text-left px-5 py-3 text-sm transition-all duration-200 first:rounded-t-xl last:rounded-b-xl ${
                               pathname === child.href
                                 ? "text-[#FF5A1F] bg-white/5"
-                                : "text-white/70 hover:text-white hover:bg-white/5"
+                                : "text-white hover:text-white hover:bg-white/5"
                             }`}
                           >
                             {child.name}
@@ -172,14 +172,14 @@ export default function SiteNavbar() {
                           animate={{ opacity: 1, height: "auto" }}
                           className="flex flex-col items-center gap-3 mt-3"
                         >
-                          <Link href="/services" className="text-white/50 text-lg hover:text-[#FF5A1F] transition-colors">
+                          <Link href="/services" className="text-white text-lg hover:text-[#FF5A1F] transition-colors">
                             All Services
                           </Link>
                           {link.children.map((child) => (
                             <Link
                               key={child.name}
                               href={child.href}
-                              className="text-white/50 text-lg hover:text-[#FF5A1F] transition-colors"
+                              className="text-white text-lg hover:text-[#FF5A1F] transition-colors"
                             >
                               {child.name}
                             </Link>

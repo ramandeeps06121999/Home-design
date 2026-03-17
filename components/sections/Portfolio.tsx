@@ -111,7 +111,7 @@ export default function Portfolio() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <p className="text-white/40 text-lg leading-relaxed">
+            <p className="text-white text-lg leading-relaxed">
               We take pride in our diverse portfolio of projects, ranging from
               luxury villas to modern urban apartments.
             </p>
@@ -132,13 +132,13 @@ export default function Portfolio() {
               className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                 activeCategory === cat
                   ? "bg-[#FF5A1F] text-white shadow-lg shadow-[#FF5A1F]/30"
-                  : "bg-white/5 text-white/50 hover:bg-white/10 hover:text-white"
+                  : "bg-white/5 text-white hover:bg-white/10 hover:text-white"
               }`}
             >
               {cat}
             </button>
           ))}
-          <span className="flex items-center text-white/20 text-sm ml-2">
+          <span className="flex items-center text-white text-sm ml-2">
             {filteredProjects.length} Projects
           </span>
         </motion.div>
@@ -182,7 +182,7 @@ export default function Portfolio() {
                   <h3 className="font-[family-name:var(--font-sora)] text-lg font-bold text-white mb-2 group-hover:text-[#FF5A1F] transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <div className="flex items-center gap-1.5 text-white/40 text-sm">
+                  <div className="flex items-center gap-1.5 text-white text-sm">
                     <MapPin className="w-3.5 h-3.5" />
                     <span>{project.location}</span>
                   </div>
@@ -219,7 +219,7 @@ export default function Portfolio() {
                   <h3 className="font-[family-name:var(--font-sora)] text-lg font-bold text-white mb-1.5">
                     {project.title}
                   </h3>
-                  <div className="flex items-center gap-1.5 text-white/40 text-sm">
+                  <div className="flex items-center gap-1.5 text-white text-sm">
                     <MapPin className="w-3.5 h-3.5" />
                     <span>{project.location}</span>
                   </div>

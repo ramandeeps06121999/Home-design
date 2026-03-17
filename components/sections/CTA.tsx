@@ -65,7 +65,7 @@ export default function CTA() {
                   className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2"
                 >
                   <item.icon className="w-4 h-4 text-[#FF5A1F]" />
-                  <span className="text-white/80 text-sm font-medium">{item.label}</span>
+                  <span className="text-white text-sm font-medium">{item.label}</span>
                 </motion.div>
               ))}
             </div>
@@ -74,7 +74,7 @@ export default function CTA() {
               Ready to Build Your
               <span className="text-gradient"> Dream Home?</span>
             </h2>
-            <p className="text-white/50 text-lg leading-relaxed mb-8 max-w-[520px]">
+            <p className="text-white text-lg leading-relaxed mb-8 max-w-[520px]">
               From new builds to duplexes and custom projects — let&apos;s create something extraordinary together.
             </p>
 
@@ -89,7 +89,7 @@ export default function CTA() {
                   className="flex items-center gap-3"
                 >
                   <CheckCircle2 className="w-5 h-5 text-[#FF5A1F] shrink-0" />
-                  <span className="text-white/70 text-[15px]">{item}</span>
+                  <span className="text-white text-[15px]">{item}</span>
                 </motion.div>
               ))}
             </div>
@@ -142,23 +142,23 @@ export default function CTA() {
                 <div className="font-[family-name:var(--font-sora)] text-7xl font-bold text-white mb-2">
                   100<span className="text-gradient">%</span>
                 </div>
-                <p className="text-white/50 text-sm uppercase tracking-wider">Project Completion Rate</p>
+                <p className="text-white text-sm uppercase tracking-wider">Project Completion Rate</p>
               </div>
 
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="bg-white/5 rounded-2xl p-5 text-center border border-white/5">
                   <div className="font-[family-name:var(--font-sora)] text-3xl font-bold text-white">50+</div>
-                  <p className="text-white/40 text-sm mt-1">Homes Built</p>
+                  <p className="text-white text-sm mt-1">Homes Built</p>
                 </div>
                 <div className="bg-white/5 rounded-2xl p-5 text-center border border-white/5">
                   <div className="font-[family-name:var(--font-sora)] text-3xl font-bold text-white">15+</div>
-                  <p className="text-white/40 text-sm mt-1">Years Exp.</p>
+                  <p className="text-white text-sm mt-1">Years Exp.</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-3 bg-[#FF5A1F]/10 border border-[#FF5A1F]/20 rounded-xl p-4">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse shrink-0" />
-                <p className="text-white/70 text-sm">
+                <p className="text-white text-sm">
                   Currently accepting new projects for 2026
                 </p>
               </div>

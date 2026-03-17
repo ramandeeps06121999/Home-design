@@ -204,7 +204,7 @@ export default function ServicesPage() {
               >
                 <span className="font-[family-name:var(--font-sora)] text-4xl font-bold text-[#FF5A1F]/20 group-hover:text-[#FF5A1F]/40 transition-colors">{step.number}</span>
                 <h3 className="font-[family-name:var(--font-sora)] text-lg font-bold text-white mt-3 mb-2">{step.title}</h3>
-                <p className="text-white/50 text-sm leading-relaxed">{step.description}</p>
+                <p className="text-white text-sm leading-relaxed">{step.description}</p>
               </motion.div>
             ))}
           </div>
