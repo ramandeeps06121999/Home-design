@@ -38,7 +38,7 @@ export default function CTA() {
           fill
           className="object-cover scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0d1117]/90 via-black/80 to-[#0d1117]/95" />
+        <div className="absolute inset-0 bg-[#0d1117]/95" />
       </motion.div>
 
       {/* Decorative elements */}

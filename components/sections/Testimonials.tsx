@@ -1,9 +1,9 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
@@ -48,35 +48,13 @@ const testimonials = [
   },
 ];
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      delay: 0.15 * i,
-      ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
-    },
-  }),
-};
-
 function TestimonialCard({
   testimonial,
-  index,
 }: {
   testimonial: (typeof testimonials)[0];
-  index: number;
 }) {
   return (
-    <motion.div
-      custom={index}
-      variants={cardVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-60px" }}
-      className="group relative flex-shrink-0 w-[340px] sm:w-auto"
-    >
+    <div className="group relative h-full">
       <div className="relative h-full bg-[#1c2128] rounded-2xl border border-white/[0.06] p-7 lg:p-8 flex flex-col gap-6 transition-all duration-500 hover:border-[#FF5A1F]/30 hover:shadow-[0_0_40px_-12px_rgba(255,90,31,0.15)]">
         {/* Decorative corner quote */}
         <div className="absolute top-5 right-5 opacity-[0.06] group-hover:opacity-[0.12] transition-opacity duration-500">
@@ -122,13 +100,51 @@ function TestimonialCard({
           </span>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
 export default function Testimonials() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  // Auto-play carousel
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+    
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [isAutoPlaying]);
+
+  const goToPrevious = () => {
+    setIsAutoPlaying(false);
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const goToNext = () => {
+    setIsAutoPlaying(false);
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setIsAutoPlaying(false);
+    setCurrentIndex(index);
+  };
+
+  // Get visible testimonials (3 on desktop, 1 on mobile)
+  const getVisibleTestimonials = () => {
+    const visible = [];
+    for (let i = 0; i < 3; i++) {
+      const index = (currentIndex + i) % testimonials.length;
+      visible.push({ ...testimonials[index], originalIndex: index });
+    }
+    return visible;
+  };
 
   return (
     <section
@@ -185,33 +201,60 @@ export default function Testimonials() {
           </p>
         </motion.div>
 
-        {/* Cards - Desktop: 3-column grid, Mobile: horizontal scroll */}
-
-        {/* Desktop Grid (3 visible) */}
-        <div className="hidden lg:grid grid-cols-3 gap-6">
-          {testimonials.slice(0, 3).map((testimonial, i) => (
-            <TestimonialCard key={i} testimonial={testimonial} index={i} />
-          ))}
-        </div>
-
-        {/* Second row desktop - 2 cards centered */}
-        <div className="hidden lg:grid grid-cols-3 gap-6 mt-6">
-          <div className="col-start-1">
-            <TestimonialCard testimonial={testimonials[3]} index={3} />
+        {/* Carousel Container */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="relative"
+        >
+          {/* Desktop Carousel (3 visible) */}
+          <div className="hidden lg:grid grid-cols-3 gap-6">
+            {getVisibleTestimonials().map((testimonial, i) => (
+              <TestimonialCard key={`desktop-${testimonial.originalIndex}`} testimonial={testimonial} />
+            ))}
           </div>
-          <div className="col-start-2">
-            <TestimonialCard testimonial={testimonials[4]} index={4} />
-          </div>
-        </div>
 
-        {/* Mobile: Horizontal scrolling cards */}
-        <div className="lg:hidden flex gap-5 overflow-x-auto pb-4 -mx-6 px-6 snap-x snap-mandatory scrollbar-hide">
-          {testimonials.map((testimonial, i) => (
-            <div key={i} className="snap-start">
-              <TestimonialCard testimonial={testimonial} index={i} />
+          {/* Mobile Carousel (1 visible) */}
+          <div className="lg:hidden">
+            <TestimonialCard testimonial={testimonials[currentIndex]} />
+          </div>
+
+          {/* Navigation Arrows */}
+          <div className="flex items-center justify-center gap-4 mt-8">
+            <button
+              onClick={goToPrevious}
+              className="w-12 h-12 rounded-full bg-[#1c2128] border border-white/[0.06] flex items-center justify-center text-white hover:bg-[#FF5A1F] hover:border-[#FF5A1F] transition-all duration-300"
+              aria-label="Previous testimonial"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+
+            {/* Dots Indicator */}
+            <div className="flex items-center gap-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`transition-all duration-300 rounded-full ${
+                    index === currentIndex
+                      ? "w-8 h-2 bg-[#FF5A1F]"
+                      : "w-2 h-2 bg-white/30 hover:bg-white/50"
+                  }`}
+                  aria-label={`Go to testimonial ${index + 1}`}
+                />
+              ))}
             </div>
-          ))}
-        </div>
+
+            <button
+              onClick={goToNext}
+              className="w-12 h-12 rounded-full bg-[#1c2128] border border-white/[0.06] flex items-center justify-center text-white hover:bg-[#FF5A1F] hover:border-[#FF5A1F] transition-all duration-300"
+              aria-label="Next testimonial"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+        </motion.div>
 
         {/* Bottom trust bar */}
         <motion.div
