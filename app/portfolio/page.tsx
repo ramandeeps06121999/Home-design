@@ -9,7 +9,7 @@ import SiteFooter from "@/components/shared/SiteFooter";
 import PageHero from "@/components/shared/PageHero";
 import CTABanner from "@/components/shared/CTABanner";
 
-const categories = ["All", "Custom Build", "Renovation", "New Home Build", "Commercial"];
+const categories = ["All", "Custom Build", "New Home Build", "Duplex & Townhouse", "Queenslander"];
 
 const projects = [
   {
@@ -49,19 +49,10 @@ const projects = [
     year: "2023",
   },
   {
-    image: "/images/renovation-kitchen.jpg",
-    title: "Designer Kitchen Renovation",
-    location: "Gold Coast",
-    category: "Renovation",
-    description: "Complete kitchen transformation with premium appliances, custom cabinetry, and elegant stone countertops.",
-    size: "45m²",
-    year: "2023",
-  },
-  {
     image: "/images/duplex-exterior.jpg",
     title: "Modern Duplex Development",
     location: "Sunshine Coast",
-    category: "Commercial",
+    category: "Duplex & Townhouse",
     description: "A contemporary dual-occupancy build featuring modern design, private pools, and sustainable building practices.",
     size: "680m²",
     year: "2023",
@@ -76,12 +67,12 @@ const projects = [
     year: "2022",
   },
   {
-    image: "/images/renovation-bathroom.jpg",
-    title: "Spa-Inspired Bathroom",
+    image: "/images/the-frame-home-construction-P5J5AFM.webp",
+    title: "Classic Queenslander Revival",
     location: "Brisbane",
-    category: "Renovation",
-    description: "Complete bathroom transformation into a luxurious spa-like retreat with freestanding tub and rainfall shower.",
-    size: "25m²",
+    category: "Queenslander",
+    description: "A beautifully crafted Queenslander home with wraparound verandahs, traditional character, and modern interior comfort.",
+    size: "310m²",
     year: "2024",
   },
 ];
@@ -100,7 +91,7 @@ export default function PortfolioPage() {
       <PageHero
         title="Our Portfolio of"
         highlight="Exceptional Builds"
-        description="Explore our diverse range of completed projects across South East Queensland, from luxury custom homes to commercial developments."
+        description="Explore our diverse range of completed projects across South East Queensland, from luxury custom homes to Queenslander builds."
         image="/images/portfolio-luxury-1.jpg"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Portfolio", href: "/portfolio" }]}
       />

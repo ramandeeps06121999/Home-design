@@ -155,13 +155,13 @@ export default function Hero() {
         </motion.div>
 
         {/* Bottom Row */}
-        <div className="flex justify-center lg:justify-end">
+        <div className="flex justify-center">
           {/* Trust Badges with slide-in */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.9 }}
-            className="flex flex-wrap justify-center lg:justify-end gap-4"
+            className="flex flex-wrap justify-center gap-4"
           >
             {trustBadges.map((badge, index) => (
               <motion.div

@@ -9,7 +9,7 @@ const sora = Sora({
   weight: ["300", "400", "500", "600", "700", "800"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://thedesignhomes.com.au";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     default: "Design Homes Pty Ltd | Custom Home Builders Brisbane, Gold Coast & Sunshine Coast",
     template: "%s | Design Homes Pty Ltd",
   },
-  description: "Award-winning custom home builders in South East Queensland. We specialize in new home builds, renovations, duplexes, townhouses & commercial projects across Brisbane, Gold Coast & Sunshine Coast.",
+  description: "Award-winning custom home builders in South East Queensland. We specialize in new home builds, duplexes, townhouses, custom builds & Queenslander homes across Brisbane, Gold Coast & Sunshine Coast.",
   keywords: [
     "custom home builders",
     "Brisbane",
@@ -27,9 +27,8 @@ export const metadata: Metadata = {
     "new homes",
     "duplexes",
     "townhouses",
-    "renovations",
-    "interior design",
-    "commercial construction",
+    "custom builds",
+    "Queenslander homes",
     "Queensland builders",
     "home construction",
     "residential builders",
@@ -55,7 +54,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: "Design Homes Pty Ltd",
     title: "Design Homes Pty Ltd | Custom Home Builders Brisbane, Gold Coast & Sunshine Coast",
-    description: "Award-winning custom home builders in South East Queensland. New homes, renovations, duplexes & commercial projects.",
+    description: "Award-winning custom home builders in South East Queensland. New homes, duplexes, custom builds & Queenslander homes.",
     images: [
       {
         url: "/images/modern-villa-with-pool-and-deck-H27FA57-1.webp",
@@ -68,7 +67,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Design Homes Pty Ltd | Custom Home Builders SEQ",
-    description: "Award-winning custom home builders in South East Queensland. New homes, renovations, duplexes & commercial projects.",
+    description: "Award-winning custom home builders in South East Queensland. New homes, duplexes, custom builds & Queenslander homes.",
     images: ["/images/modern-villa-with-pool-and-deck-H27FA57-1.webp"],
   },
   alternates: {
@@ -110,10 +109,10 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   "@id": `${siteUrl}/#business`,
   name: "Design Homes Pty Ltd",
-  description: "Award-winning custom home builders in South East Queensland specializing in new home builds, renovations, duplexes, townhouses, and commercial projects.",
+  description: "Award-winning custom home builders in South East Queensland specializing in new home builds, duplexes, townhouses, custom builds, and Queenslander homes.",
   url: siteUrl,
-  telephone: "+61 7 1234 5678",
-  email: "hello@designhomes.com.au",
+  telephone: "0436376001",
+  email: "harj@thedesignhomes.com.au",
   image: `${siteUrl}/images/modern-villa-with-pool-and-deck-H27FA57-1.webp`,
   logo: `${siteUrl}/logo.webp`,
   priceRange: "$$$",
@@ -189,22 +188,6 @@ const localBusinessSchema = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Renovations",
-          description: "Transform existing spaces into modern masterpieces.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Interior Design",
-          description: "Premium interior design services for your dream home.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
           name: "Duplex & Townhouses",
           description: "Expertly designed and built dual occupancy properties.",
         },
@@ -221,23 +204,11 @@ const localBusinessSchema = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Commercial Construction",
-          description: "Professional commercial building services for offices and retail.",
+          name: "Queenslander Homes",
+          description: "Authentic Queenslander homes built with traditional character and modern comfort.",
         },
       },
     ],
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "50",
-    bestRating: "5",
-    worstRating: "1",
-  },
-  foundingDate: "2008",
-  numberOfEmployees: {
-    "@type": "QuantitativeValue",
-    value: "25",
   },
 };
 
@@ -254,9 +225,9 @@ const organizationSchema = {
   },
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+61 7 1234 5678",
+    telephone: "0436376001",
     contactType: "sales",
-    email: "hello@designhomes.com.au",
+    email: "harj@thedesignhomes.com.au",
     availableLanguage: ["English"],
     areaServed: "AU",
   },

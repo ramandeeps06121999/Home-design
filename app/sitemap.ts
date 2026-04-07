@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://thedesignhomes.com.au";
 
 export const dynamic = "force-static";
 
@@ -16,11 +16,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     
     // Service pages
     { path: "/services/new-home-builds", priority: 0.9, changeFrequency: "weekly" as const },
-    { path: "/services/renovations", priority: 0.9, changeFrequency: "weekly" as const },
-    { path: "/services/interior-design", priority: 0.8, changeFrequency: "weekly" as const },
-    { path: "/services/duplex-townhouses", priority: 0.8, changeFrequency: "weekly" as const },
+    { path: "/services/duplex-townhouses", priority: 0.9, changeFrequency: "weekly" as const },
     { path: "/services/custom-builds", priority: 0.8, changeFrequency: "weekly" as const },
-    { path: "/services/commercial", priority: 0.8, changeFrequency: "weekly" as const },
+    { path: "/services/queenslander-homes", priority: 0.8, changeFrequency: "weekly" as const },
     
     // Legal pages
     { path: "/privacy-policy", priority: 0.5, changeFrequency: "yearly" as const },

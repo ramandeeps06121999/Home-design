@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://thedesignhomes.com.au";
 
 export const metadata: Metadata = {
   title: "Custom Home Builders Brisbane, Gold Coast & Sunshine Coast",
@@ -87,8 +87,8 @@ export default function CustomBuildsPage() {
       ]}
       relatedServices={[
         { title: "New Home Builds", href: "/services/new-home-builds", description: "For standard custom homes with efficient build processes." },
-        { title: "Interior Design", href: "/services/interior-design", description: "Complete your custom home with bespoke interior design." },
-        { title: "Renovations", href: "/services/renovations", description: "Transform an existing property into something extraordinary." },
+        { title: "Queenslander Homes", href: "/services/queenslander-homes", description: "Authentic Queenslander homes with traditional character and modern comfort." },
+        { title: "Duplex & Townhouses", href: "/services/duplex-townhouses", description: "Maximize your investment with expertly built dual occupancy properties." },
       ]}
     />
   );

@@ -1,10 +1,10 @@
 import { Metadata } from "next";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://thedesignhomes.com.au";
 
 export const metadata: Metadata = {
   title: "Contact Us | Design Homes - Brisbane, Gold Coast & Sunshine Coast",
-  description: "Get in touch with Design Homes for a free consultation & quote. Serving Brisbane, Gold Coast & Sunshine Coast. Call +61 7 1234 5678 or email hello@designhomes.com.au",
+  description: "Get in touch with Design Homes for a free consultation & quote. Serving Brisbane, Gold Coast & Sunshine Coast. Call 0436 376 001 or email harj@thedesignhomes.com.au",
   keywords: [
     "contact home builders Brisbane",
     "home builders Gold Coast contact",
@@ -13,11 +13,11 @@ export const metadata: Metadata = {
     "home building consultation SEQ",
     "Design Homes contact",
     "custom builder enquiry",
-    "renovation quote Queensland",
+    "new home quote Queensland",
   ],
   openGraph: {
     title: "Contact Us | Design Homes Pty Ltd",
-    description: "Get in touch for a free consultation & quote. Serving Brisbane, Gold Coast & Sunshine Coast. Call +61 7 1234 5678.",
+    description: "Get in touch for a free consultation & quote. Serving Brisbane, Gold Coast & Sunshine Coast. Call 0436 376 001.",
     type: "website",
     url: `${siteUrl}/contact`,
     images: [

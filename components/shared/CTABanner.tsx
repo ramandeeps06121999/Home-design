@@ -42,11 +42,11 @@ export default function CTABanner({
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a
-              href="tel:+61123456789"
+              href="tel:0436376001"
               className="inline-flex items-center gap-2 text-white hover:text-white font-medium transition-colors text-lg"
             >
               <Phone className="w-5 h-5" />
-              +61 123 456 789
+              0436 376 001
             </a>
           </div>
         </motion.div>

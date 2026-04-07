@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://thedesignhomes.com.au";
 
 export const metadata: Metadata = {
   title: "Interior Design Services Brisbane, Gold Coast & Sunshine Coast",

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://thedesignhomes.com.au";
 
 export const metadata: Metadata = {
   title: "Duplex & Townhouse Builders Brisbane, Gold Coast & Sunshine Coast",
@@ -87,8 +87,8 @@ export default function DuplexTownhousesPage() {
       ]}
       relatedServices={[
         { title: "New Home Builds", href: "/services/new-home-builds", description: "Looking for a single dwelling? Check out our new home builds." },
-        { title: "Commercial", href: "/services/commercial", description: "For larger multi-unit developments and commercial projects." },
-        { title: "Interior Design", href: "/services/interior-design", description: "Premium interiors to maximize your property's appeal." },
+        { title: "Queenslander Homes", href: "/services/queenslander-homes", description: "Authentic Queenslander homes with traditional character and modern comfort." },
+        { title: "Custom Builds", href: "/services/custom-builds", description: "Unique homes for unique visions and challenging sites." },
       ]}
     />
   );

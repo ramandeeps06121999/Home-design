@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import SiteNavbar from "@/components/shared/SiteNavbar";
 import SiteFooter from "@/components/shared/SiteFooter";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://thedesignhomes.com.au";
 
 export const metadata: Metadata = {
   title: "Terms of Service | Design Homes Pty Ltd",
@@ -42,7 +42,7 @@ export default function TermsPage() {
 
             <div>
               <h2 className="font-sora text-2xl font-bold text-gray-900 mb-4">2. Services</h2>
-              <p className="text-gray-600 leading-relaxed">Design Homes Pty Ltd provides residential and commercial building services across South East Queensland. All building services are subject to a separate written contract between Design Homes and the client.</p>
+              <p className="text-gray-600 leading-relaxed">Design Homes Pty Ltd provides residential building services across South East Queensland. All building services are subject to a separate written contract between Design Homes and the client.</p>
             </div>
 
             <div>
@@ -76,8 +76,8 @@ export default function TermsPage() {
               <div className="mt-3 text-gray-600">
                 <p>Design Homes Pty Ltd</p>
                 <p>Brisbane, QLD, Australia</p>
-                <p>Email: hello@designhomes.com.au</p>
-                <p>Phone: +61 7 1234 5678</p>
+                <p>Email: harj@thedesignhomes.com.au</p>
+                <p>Phone: 0436 376 001</p>
               </div>
             </div>
           </div>

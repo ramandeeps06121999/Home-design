@@ -11,8 +11,8 @@ import SiteFooter from "@/components/shared/SiteFooter";
 import PageHero from "@/components/shared/PageHero";
 
 const contactInfo = [
-  { icon: Phone, title: "Phone", content: "+61 7 1234 5678", href: "tel:+61712345678" },
-  { icon: Mail, title: "Email", content: "hello@designhomes.com.au", href: "mailto:hello@designhomes.com.au" },
+  { icon: Phone, title: "Phone", content: "0436 376 001", href: "tel:0436376001" },
+  { icon: Mail, title: "Email", content: "harj@thedesignhomes.com.au", href: "mailto:harj@thedesignhomes.com.au" },
   { icon: MapPin, title: "Location", content: "Brisbane, QLD, Australia", href: "#" },
   { icon: Clock, title: "Business Hours", content: "Mon – Fri: 8am – 5pm", href: "#" },
 ];
@@ -145,11 +145,9 @@ export default function ContactPage() {
                         <select id="service" className="w-full h-13 px-4 rounded-xl border border-gray-200 focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 focus:outline-none bg-white text-sm text-gray-700">
                           <option value="">Select a service</option>
                           <option value="new-home">New Home Build</option>
-                          <option value="renovation">Renovation</option>
-                          <option value="interior">Interior Design</option>
                           <option value="duplex">Duplex / Townhouse</option>
                           <option value="custom">Custom Build</option>
-                          <option value="commercial">Commercial</option>
+                          <option value="queenslander">Queenslander Homes</option>
                         </select>
                       </div>
                     </div>

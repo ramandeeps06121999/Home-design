@@ -11,16 +11,14 @@ import SiteFooter from "@/components/shared/SiteFooter";
 import PageHero from "@/components/shared/PageHero";
 import CTABanner from "@/components/shared/CTABanner";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://designhomes.com.au";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://thedesignhomes.com.au";
 
 /* ---------- fallback images for related service cards ---------- */
 const SERVICE_IMAGE_MAP: Record<string, string> = {
   "/services/new-home-builds": "/images/the-frame-home-construction-P5J5AFM.webp",
-  "/services/renovations": "/images/Home-4-e1759734908574.webp",
-  "/services/interior-design": "/images/ImageGen-1-1.webp",
   "/services/custom-builds": "/images/modern-villa-with-pool-and-deck-H27FA57-1.webp",
   "/services/duplex-townhouses": "/images/modern-rooftop-patio-with-sunset-view-8SF9VVP-1.webp",
-  "/services/commercial": "/images/mirador-building-in-sanchinarro-district-of-madrid-FPSM97G-1.webp",
+  "/services/queenslander-homes": "/images/the-frame-home-construction-P5J5AFM.webp",
 };
 
 // Icon component that renders based on icon name

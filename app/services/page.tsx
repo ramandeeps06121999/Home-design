@@ -5,7 +5,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Home, Hammer, Palette, Building2, Wrench, Store } from "lucide-react";
+import { ArrowRight, Home, Building2, Wrench, Landmark } from "lucide-react";
 import SiteNavbar from "@/components/shared/SiteNavbar";
 import SiteFooter from "@/components/shared/SiteFooter";
 import PageHero from "@/components/shared/PageHero";
@@ -19,22 +19,6 @@ const services = [
     title: "New Home Builds",
     description: "Custom-designed homes tailored to your lifestyle and budget. From concept to completion, we bring your dream home to life with precision craftsmanship.",
     features: ["Custom Floor Plans", "Energy Efficient", "Quality Materials", "Fixed Price Contracts"],
-  },
-  {
-    icon: Hammer,
-    slug: "renovations",
-    image: "/images/modern-rooftop-patio-with-sunset-view-8SF9VVP.webp",
-    title: "Renovations",
-    description: "Transforming existing spaces into modern masterpieces. We breathe new life into your property with stunning, functional renovations.",
-    features: ["Kitchen & Bath", "Extensions", "Structural Changes", "Modern Upgrades"],
-  },
-  {
-    icon: Palette,
-    slug: "interior-design",
-    image: "/images/ImageGen-1-1.webp",
-    title: "Interior Design",
-    description: "Premium interior design services to complete your dream home. Our designers create spaces that inspire, delight, and reflect your personality.",
-    features: ["Space Planning", "Material Selection", "Color Consulting", "3D Visualization"],
   },
   {
     icon: Building2,
@@ -53,12 +37,12 @@ const services = [
     features: ["Bespoke Design", "Premium Finishes", "Unique Architecture", "Full Customization"],
   },
   {
-    icon: Store,
-    slug: "commercial",
-    image: "/images/mirador-building-in-sanchinarro-district-of-madrid-FPSM97G-1.webp",
-    title: "Commercial",
-    description: "Professional commercial construction services for offices, retail spaces, and mixed-use developments built to the highest standards.",
-    features: ["Office Fit-outs", "Retail Spaces", "Mixed Use", "Code Compliant"],
+    icon: Landmark,
+    slug: "queenslander-homes",
+    image: "/images/the-frame-home-construction-P5J5AFM.webp",
+    title: "Queenslander Homes",
+    description: "Authentic Queenslander homes that blend traditional character with modern comfort. We honour the classic style while delivering contemporary livability.",
+    features: ["Traditional Character", "Modern Comfort", "Elevated Design", "Wraparound Verandahs"],
   },
 ];
 
@@ -81,7 +65,7 @@ export default function ServicesPage() {
       <PageHero
         title="Comprehensive Building &"
         highlight="Design Services"
-        description="From new home builds to renovations and commercial projects, we deliver exceptional quality across every project we undertake."
+        description="From new home builds to duplexes, custom builds and Queenslander homes, we deliver exceptional quality across every project we undertake."
         image="/images/engineer-desk-with-object-paper-and-tablet-with-bl-ZGS9T68-1.webp"
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Services", href: "/services" }]}
       />

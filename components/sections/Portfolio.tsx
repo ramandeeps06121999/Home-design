@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, ArrowRight, MapPin } from "lucide-react";
 
-const categories = ["All", "Custom Build", "Renovation", "New Home Build"];
+const categories = ["All", "Custom Build", "New Home Build", "Queenslander"];
 
 const projects = [
   {
@@ -20,7 +20,7 @@ const projects = [
     image: "/images/modern-rooftop-patio-with-sunset-view-8SF9VVP-1.webp",
     title: "Rooftop Paradise",
     location: "Brisbane",
-    category: "Renovation",
+    category: "Queenslander",
   },
   {
     image: "/images/mirador-building-in-sanchinarro-district-of-madrid-FPSM97G-1.webp",

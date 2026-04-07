@@ -17,10 +17,10 @@ const testimonials = [
   {
     name: "Emma Richardson",
     location: "Brisbane, QLD",
-    project: "Full Renovation",
+    project: "Queenslander Home",
     rating: 5,
     avatar: "https://i.pravatar.cc/200?u=emma",
-    text: "We were nervous about renovating our 1970s home, but Design Homes made the process seamless. They transformed our dated house into a modern masterpiece while preserving the character we loved. Couldn't be happier!",
+    text: "We wanted a classic Queenslander with all the modern comforts, and Design Homes delivered beyond our expectations. They honoured the traditional character while creating a stunning, liveable home. Couldn't be happier!",
   },
   {
     name: "David & Lisa Chen",
@@ -41,10 +41,10 @@ const testimonials = [
   {
     name: "Rachel & Tom Williams",
     location: "Gold Coast, QLD",
-    project: "Interior Design",
+    project: "Custom Build",
     rating: 5,
     avatar: "https://i.pravatar.cc/200?u=rachel",
-    text: "The interior design team at Design Homes completely transformed our living space. They understood our style perfectly and created rooms that are both beautiful and functional. We get compliments from every visitor!",
+    text: "Design Homes built us a truly unique custom home that perfectly suits our lifestyle. They understood our vision and created spaces that are both beautiful and functional. We get compliments from every visitor!",
   },
 ];
 
