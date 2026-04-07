@@ -96,8 +96,8 @@ export default function Portfolio() {
             transition={{ duration: 0.6 }}
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-[2px] bg-[#FF5A1F]" />
-              <span className="text-[#FF5A1F] font-semibold uppercase tracking-wider text-sm">
+              <div className="w-8 h-[2px] bg-[#D4AF37]" />
+              <span className="text-[#A88725] font-semibold uppercase tracking-wider text-sm">
                 Our Portfolio
               </span>
             </div>
@@ -131,7 +131,7 @@ export default function Portfolio() {
               onClick={() => setActiveCategory(cat)}
               className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                 activeCategory === cat
-                  ? "bg-[#FF5A1F] text-white shadow-lg shadow-[#FF5A1F]/30"
+                  ? "bg-[#D4AF37] text-white shadow-lg shadow-[#D4AF37]/30"
                   : "bg-white/5 text-white hover:bg-white/10 hover:text-white"
               }`}
             >
@@ -154,7 +154,7 @@ export default function Portfolio() {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.5, delay: 0.2 + index * 0.08 }}
                 layout
-                className="group relative bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden cursor-pointer hover:border-[#FF5A1F]/30 transition-colors duration-500"
+                className="group relative bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden cursor-pointer hover:border-[#A88725]/30 transition-colors duration-500"
               >
                 {/* Image Container - Fixed aspect ratio for uniformity */}
                 <div className="relative w-full aspect-[4/3] overflow-hidden">
@@ -168,7 +168,7 @@ export default function Portfolio() {
 
                   {/* Hover arrow button */}
                   <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 scale-75 group-hover:scale-100">
-                    <div className="w-10 h-10 bg-[#FF5A1F] rounded-full flex items-center justify-center shadow-lg shadow-[#FF5A1F]/30">
+                    <div className="w-10 h-10 bg-[#D4AF37] rounded-full flex items-center justify-center shadow-lg shadow-[#D4AF37]/30">
                       <ArrowUpRight className="w-4 h-4 text-white" />
                     </div>
                   </div>
@@ -176,10 +176,10 @@ export default function Portfolio() {
 
                 {/* Card Info */}
                 <div className="p-5">
-                  <span className="inline-block bg-[#FF5A1F]/10 text-[#FF5A1F] text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-3">
+                  <span className="inline-block bg-[#D4AF37]/10 text-[#A88725] text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-3">
                     {project.category}
                   </span>
-                  <h3 className="font-sora text-lg font-bold text-white mb-2 group-hover:text-[#FF5A1F] transition-colors duration-300">
+                  <h3 className="font-sora text-lg font-bold text-white mb-2 group-hover:text-[#A88725] transition-colors duration-300">
                     {project.title}
                   </h3>
                   <div className="flex items-center gap-1.5 text-white text-sm">
@@ -213,7 +213,7 @@ export default function Portfolio() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                 </div>
                 <div className="p-4">
-                  <span className="inline-block bg-[#FF5A1F]/10 text-[#FF5A1F] text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-2">
+                  <span className="inline-block bg-[#D4AF37]/10 text-[#A88725] text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-2">
                     {project.category}
                   </span>
                   <h3 className="font-sora text-lg font-bold text-white mb-1.5">
@@ -238,7 +238,7 @@ export default function Portfolio() {
         >
           <Link
             href="/portfolio"
-            className="inline-flex items-center gap-3 bg-white/5 hover:bg-[#FF5A1F] border border-white/10 hover:border-[#FF5A1F] text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 group"
+            className="inline-flex items-center gap-3 bg-white/5 hover:bg-[#D4AF37] border border-white/10 hover:border-[#A88725] text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 group"
           >
             View All Projects
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

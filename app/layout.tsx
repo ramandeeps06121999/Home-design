@@ -86,8 +86,8 @@ export const metadata: Metadata = {
     apple: "/logo.webp",
   },
   other: {
-    "theme-color": "#FF5A1F",
-    "msapplication-TileColor": "#FF5A1F",
+    "theme-color": "#D4AF37",
+    "msapplication-TileColor": "#D4AF37",
     "msapplication-config": "/browserconfig.xml",
   },
 };
@@ -95,7 +95,7 @@ export const metadata: Metadata = {
 // Viewport configuration for theme color and responsive design
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#FF5A1F" },
+    { media: "(prefers-color-scheme: light)", color: "#D4AF37" },
     { media: "(prefers-color-scheme: dark)", color: "#0d1117" },
   ],
   colorScheme: "dark light",
@@ -314,6 +314,7 @@ export default function RootLayout({
       <body
         className={`${sora.variable} antialiased bg-[#0d1117]`}
         style={{ fontFamily: "var(--font-sora), sans-serif" }}
+        suppressHydrationWarning
       >
         {children}
       </body>

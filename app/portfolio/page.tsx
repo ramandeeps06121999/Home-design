@@ -121,7 +121,7 @@ export default function PortfolioPage() {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
                   activeCategory === cat
-                    ? "bg-[#FF5A1F] text-white shadow-lg shadow-[#FF5A1F]/30"
+                    ? "bg-[#D4AF37] text-white shadow-lg shadow-[#D4AF37]/30"
                     : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                 }`}
               >
@@ -152,7 +152,7 @@ export default function PortfolioPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500" />
 
                   <div className="absolute top-5 left-5">
-                    <span className="bg-[#FF5A1F] text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
+                    <span className="bg-[#D4AF37] text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
                       {project.category}
                     </span>
                   </div>

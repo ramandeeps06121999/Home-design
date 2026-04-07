@@ -27,10 +27,11 @@ function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: str
   return <span ref={ref}>{count}{suffix}</span>;
 }
 
-const stats = [
-  { value: 50, suffix: "+", label: "Homes Built" },
-  { value: 15, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Completion Rate" },
+const values = [
+  "High-quality finishes",
+  "Strong project leadership",
+  "Clear and honest communication",
+  "Attention to detail at every stage",
 ];
 
 export default function About() {
@@ -55,29 +56,27 @@ export default function About() {
                 transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
               >
                 <Image
-                  src="/images/builders-working.jpg"
-                  alt="Modern Architecture"
+                  src="/images/about-construction.jpg"
+                  alt="Design Homes construction site"
                   width={600}
                   height={700}
-                  className="w-full h-[500px] lg:h-[620px] object-cover"
+                  className="w-full h-[550px] lg:h-[680px] object-cover"
                 />
               </motion.div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
 
-              {/* Floating Stats Card */}
+              {/* Floating Values Card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.8 }}
                 className="absolute bottom-6 left-6 right-6 glass rounded-2xl p-6"
               >
-                <div className="grid grid-cols-3 gap-4">
-                  {stats.map((stat) => (
-                    <div key={stat.label} className="text-center">
-                      <div className="font-sora text-2xl lg:text-3xl font-bold text-white">
-                        <AnimatedCounter target={stat.value} suffix={stat.suffix} />
-                      </div>
-                      <div className="text-white text-xs mt-1">{stat.label}</div>
+                <div className="grid grid-cols-2 gap-3">
+                  {values.map((value) => (
+                    <div key={value} className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full shrink-0" />
+                      <span className="text-white text-xs font-medium">{value}</span>
                     </div>
                   ))}
                 </div>
@@ -85,8 +84,8 @@ export default function About() {
             </div>
 
             {/* Floating decorative accents */}
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-[#FF5A1F]/10 rounded-3xl -z-10 animate-float" />
-            <div className="absolute -top-4 -left-4 w-20 h-20 bg-[#FF5A1F]/5 rounded-2xl -z-10 animate-float-delayed" />
+            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-[#D4AF37]/10 rounded-3xl -z-10 animate-float" />
+            <div className="absolute -top-4 -left-4 w-20 h-20 bg-[#D4AF37]/5 rounded-2xl -z-10 animate-float-delayed" />
           </motion.div>
 
           {/* Content Side */}
@@ -96,32 +95,34 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-[2px] bg-[#FF5A1F]" />
-              <span className="text-[#FF5A1F] font-semibold uppercase tracking-wider text-sm">About Us</span>
+              <div className="w-8 h-[2px] bg-[#D4AF37]" />
+              <span className="text-[#A88725] font-semibold uppercase tracking-wider text-sm">About Us</span>
             </div>
 
             <h2 className="font-sora text-3xl md:text-4xl lg:text-[44px] font-bold text-gray-900 leading-[1.15] mb-8">
-              Built today for the needs of
-              <span className="text-gradient"> tomorrow</span>
+              Homes defined by quality,
+              <span className="text-gradient"> precision & care</span>
             </h2>
 
-            <p className="text-gray-500 text-base lg:text-lg leading-relaxed mb-8">
-              Our commitment to excellence ensures that every project we undertake
-              is executed with precision and care. We believe in creating homes
-              that are not just beautiful, but also functional and sustainable.
+            <p className="text-gray-500 text-base lg:text-lg leading-relaxed mb-4">
+              Design Homes is a Queensland-based residential building company led by Harj Tiwana, bringing over 5 years of building experience and more than a decade of broader construction knowledge as a carpenter to every project.
             </p>
 
-            <div className="relative bg-[#faf9f8] rounded-2xl p-6 lg:p-8 mb-8 border-l-4 border-[#FF5A1F]">
+            <p className="text-gray-500 text-base lg:text-lg leading-relaxed mb-8">
+              With award-winning experience in New Zealand and a strong track record in new builds, we deliver homes that reflect quality workmanship, attention to detail, and lasting value. We believe a well-built home should offer more than visual appeal — it should function effortlessly for everyday living.
+            </p>
+
+            <div className="relative bg-[#faf9f8] rounded-2xl p-6 lg:p-8 mb-8 border-l-4 border-[#A88725]">
               <p className="text-gray-600 italic leading-relaxed mb-4">
-                &ldquo;With over 15 years of experience, we have built a reputation for delivering exceptional results that stand the test of time.&rdquo;
+                &ldquo;At Design Homes, we take pride in delivering homes with integrity, excellence, and a standard of workmanship our clients can be proud of.&rdquo;
               </p>
               <div className="flex items-center gap-4">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-[#FF5A1F]/20">
-                  <Image src="https://i.pravatar.cc/100?u=ceo" alt="Jason Smith - Managing Director" fill className="object-cover" />
+                <div className="w-12 h-12 rounded-full bg-[#D4AF37]/10 flex items-center justify-center ring-2 ring-[#D4AF37]/20">
+                  <span className="font-sora font-bold text-[#A88725] text-lg">HT</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-900 text-sm">Jason Smith</h4>
-                  <p className="text-[#FF5A1F] text-xs font-semibold">Managing Director</p>
+                  <h4 className="font-bold text-gray-900 text-sm">Harj Tiwana</h4>
+                  <p className="text-[#A88725] text-xs font-semibold">Director — QBCC Builder</p>
                 </div>
               </div>
             </div>
@@ -130,7 +131,7 @@ export default function About() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
-              className="inline-flex items-center gap-3 bg-[#FF5A1F] hover:bg-[#e54e1a] text-white px-7 py-3.5 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-[#FF5A1F]/30 group"
+              className="inline-flex items-center gap-3 bg-[#D4AF37] hover:bg-[#C49B2A] text-white px-7 py-3.5 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-[#D4AF37]/30 group"
             >
               Explore Our Services
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

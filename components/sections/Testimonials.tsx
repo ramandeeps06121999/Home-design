@@ -55,10 +55,10 @@ function TestimonialCard({
 }) {
   return (
     <div className="group relative h-full">
-      <div className="relative h-full bg-[#1c2128] rounded-2xl border border-white/[0.06] p-7 lg:p-8 flex flex-col gap-6 transition-all duration-500 hover:border-[#FF5A1F]/30 hover:shadow-[0_0_40px_-12px_rgba(255,90,31,0.15)]">
+      <div className="relative h-full bg-[#1c2128] rounded-2xl border border-white/[0.06] p-7 lg:p-8 flex flex-col gap-6 transition-all duration-500 hover:border-[#D4AF37]/30 hover:shadow-[0_0_40px_-12px_rgba(255,90,31,0.15)]">
         {/* Decorative corner quote */}
         <div className="absolute top-5 right-5 opacity-[0.06] group-hover:opacity-[0.12] transition-opacity duration-500">
-          <Quote className="w-16 h-16 text-[#FF5A1F]" />
+          <Quote className="w-16 h-16 text-[#D4AF37]" />
         </div>
 
         {/* Stars */}
@@ -66,7 +66,7 @@ function TestimonialCard({
           {Array.from({ length: testimonial.rating }).map((_, i) => (
             <Star
               key={i}
-              className="w-4 h-4 fill-[#FF5A1F] text-[#FF5A1F]"
+              className="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]"
             />
           ))}
         </div>
@@ -81,7 +81,7 @@ function TestimonialCard({
 
         {/* Author */}
         <div className="flex items-center gap-4">
-          <div className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-[#FF5A1F]/20 ring-offset-2 ring-offset-[#1c2128] flex-shrink-0">
+          <div className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-[#D4AF37]/20 ring-offset-2 ring-offset-[#1c2128] flex-shrink-0">
             <Image
               src={testimonial.avatar}
               alt={testimonial.name}
@@ -95,7 +95,7 @@ function TestimonialCard({
             </h4>
             <p className="text-white text-xs mt-0.5">{testimonial.location}</p>
           </div>
-          <span className="ml-auto text-[11px] font-medium text-[#FF5A1F]/70 bg-[#FF5A1F]/[0.08] px-2.5 py-1 rounded-full whitespace-nowrap flex-shrink-0">
+          <span className="ml-auto text-[11px] font-medium text-[#D4AF37]/70 bg-[#D4AF37]/[0.08] px-2.5 py-1 rounded-full whitespace-nowrap flex-shrink-0">
             {testimonial.project}
           </span>
         </div>
@@ -152,9 +152,9 @@ export default function Testimonials() {
       ref={ref}
     >
       {/* Ambient glow effects */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-[#FF5A1F]/[0.025] rounded-full blur-[150px] pointer-events-none" />
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#FF5A1F]/[0.03] rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[#FF5A1F]/[0.02] rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-[#D4AF37]/[0.025] rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#D4AF37]/[0.03] rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[#D4AF37]/[0.02] rounded-full blur-[100px] pointer-events-none" />
 
       {/* Subtle dot pattern */}
       <div
@@ -173,7 +173,7 @@ export default function Testimonials() {
         transition={{ duration: 1, delay: 0.3 }}
         className="absolute top-20 left-6 lg:left-16 pointer-events-none"
       >
-        <Quote className="w-24 h-24 lg:w-36 lg:h-36 text-[#FF5A1F]/[0.06]" />
+        <Quote className="w-24 h-24 lg:w-36 lg:h-36 text-[#D4AF37]/[0.06]" />
       </motion.div>
 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 relative z-10">
@@ -185,11 +185,11 @@ export default function Testimonials() {
           className="text-center max-w-2xl mx-auto mb-16 lg:mb-20"
         >
           <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-8 h-[2px] bg-[#FF5A1F]" />
-            <span className="text-[#FF5A1F] font-semibold uppercase tracking-wider text-sm">
+            <div className="w-8 h-[2px] bg-[#D4AF37]" />
+            <span className="text-[#D4AF37] font-semibold uppercase tracking-wider text-sm">
               Client Stories
             </span>
-            <div className="w-8 h-[2px] bg-[#FF5A1F]" />
+            <div className="w-8 h-[2px] bg-[#D4AF37]" />
           </div>
           <h2 className="font-sora text-3xl md:text-4xl lg:text-[44px] font-bold text-white leading-[1.15] mb-5">
             Trusted by Families Across
@@ -224,7 +224,7 @@ export default function Testimonials() {
           <div className="flex items-center justify-center gap-4 mt-8">
             <button
               onClick={goToPrevious}
-              className="w-12 h-12 rounded-full bg-[#1c2128] border border-white/[0.06] flex items-center justify-center text-white hover:bg-[#FF5A1F] hover:border-[#FF5A1F] transition-all duration-300"
+              className="w-12 h-12 rounded-full bg-[#1c2128] border border-white/[0.06] flex items-center justify-center text-white hover:bg-[#D4AF37] hover:border-[#D4AF37] transition-all duration-300"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -238,7 +238,7 @@ export default function Testimonials() {
                   onClick={() => goToSlide(index)}
                   className={`transition-all duration-300 rounded-full ${
                     index === currentIndex
-                      ? "w-8 h-2 bg-[#FF5A1F]"
+                      ? "w-8 h-2 bg-[#D4AF37]"
                       : "w-2 h-2 bg-white/30 hover:bg-white/50"
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
@@ -248,7 +248,7 @@ export default function Testimonials() {
 
             <button
               onClick={goToNext}
-              className="w-12 h-12 rounded-full bg-[#1c2128] border border-white/[0.06] flex items-center justify-center text-white hover:bg-[#FF5A1F] hover:border-[#FF5A1F] transition-all duration-300"
+              className="w-12 h-12 rounded-full bg-[#1c2128] border border-white/[0.06] flex items-center justify-center text-white hover:bg-[#D4AF37] hover:border-[#D4AF37] transition-all duration-300"
               aria-label="Next testimonial"
             >
               <ChevronRight className="w-5 h-5" />
@@ -279,7 +279,7 @@ export default function Testimonials() {
                   />
                 </div>
               ))}
-              <div className="w-8 h-8 rounded-full bg-[#FF5A1F] border-2 border-[#0d1117] flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full bg-[#D4AF37] border-2 border-[#0d1117] flex items-center justify-center">
                 <span className="text-[10px] font-bold text-white">50+</span>
               </div>
             </div>
@@ -295,7 +295,7 @@ export default function Testimonials() {
               {Array.from({ length: 5 }).map((_, i) => (
                 <Star
                   key={i}
-                  className="w-4 h-4 fill-[#FF5A1F] text-[#FF5A1F]"
+                  className="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]"
                 />
               ))}
             </div>

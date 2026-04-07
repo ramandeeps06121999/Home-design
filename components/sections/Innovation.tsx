@@ -64,8 +64,8 @@ export default function Innovation() {
       )}
 
       {/* Subtle background glows */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#FF5A1F]/5 rounded-full blur-[120px] -z-0" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#FF5A1F]/3 rounded-full blur-[100px] -z-0" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#D4AF37]/5 rounded-full blur-[120px] -z-0" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#D4AF37]/3 rounded-full blur-[100px] -z-0" />
 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 relative z-10">
         {/* Header */}
@@ -76,8 +76,8 @@ export default function Innovation() {
           className="mb-16"
         >
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-8 h-[2px] bg-[#FF5A1F]" />
-            <span className="text-[#FF5A1F] font-semibold uppercase tracking-wider text-sm">
+            <div className="w-8 h-[2px] bg-[#D4AF37]" />
+            <span className="text-[#A88725] font-semibold uppercase tracking-wider text-sm">
               Innovation & Excellence
             </span>
           </div>
@@ -104,7 +104,7 @@ export default function Innovation() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
             <div className="absolute bottom-8 left-8 right-8">
-              <span className="bg-[#FF5A1F] text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
+              <span className="bg-[#D4AF37] text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
                 Featured Project
               </span>
               <h3 className="font-sora text-2xl lg:text-3xl font-bold text-white mt-3">
@@ -123,7 +123,7 @@ export default function Innovation() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 + index * 0.15 }}
-              className="bg-[#1c2128] rounded-3xl overflow-hidden flex flex-col border border-white/5 hover:border-[#FF5A1F]/20 transition-all duration-500 group hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(255,90,31,0.15)]"
+              className="bg-[#1c2128] rounded-3xl overflow-hidden flex flex-col border border-white/5 hover:border-[#A88725]/20 transition-all duration-500 group hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(255,90,31,0.15)]"
             >
               {/* Card Image */}
               <div className="relative h-[200px] lg:h-[180px] overflow-hidden">
@@ -137,7 +137,7 @@ export default function Innovation() {
 
                 {/* Floating number badge */}
                 <div className="absolute top-4 right-4 w-10 h-10 bg-[#0d1117]/70 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/10">
-                  <span className="font-sora text-sm font-bold text-[#FF5A1F]">
+                  <span className="font-sora text-sm font-bold text-[#A88725]">
                     {feature.number}
                   </span>
                 </div>
@@ -147,8 +147,8 @@ export default function Innovation() {
               <div className="p-7 lg:p-8 flex flex-col flex-1">
                 <div className="flex-1">
                   {/* Icon */}
-                  <div className="w-12 h-12 bg-gradient-to-br from-[#FF5A1F]/20 to-[#FF5A1F]/5 rounded-xl flex items-center justify-center mb-5 group-hover:from-[#FF5A1F]/30 group-hover:to-[#FF5A1F]/10 transition-all duration-500">
-                    <feature.icon className="w-6 h-6 text-[#FF5A1F]" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#D4AF37]/20 to-[#D4AF37]/5 rounded-xl flex items-center justify-center mb-5 group-hover:from-[#D4AF37]/30 group-hover:to-[#D4AF37]/10 transition-all duration-500">
+                    <feature.icon className="w-6 h-6 text-[#A88725]" />
                   </div>
 
                   <h3 className="font-sora text-xl lg:text-[22px] font-bold text-white mb-3">
@@ -165,7 +165,7 @@ export default function Innovation() {
                       .querySelector(feature.link)
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
-                  className="mt-6 inline-flex items-center gap-2 bg-white/5 hover:bg-[#FF5A1F] text-white px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 w-fit group/btn cursor-pointer"
+                  className="mt-6 inline-flex items-center gap-2 bg-white/5 hover:bg-[#D4AF37] text-white px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 w-fit group/btn cursor-pointer"
                 >
                   {feature.cta}
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />

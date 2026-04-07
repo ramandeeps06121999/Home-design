@@ -69,8 +69,8 @@ export default function ContactPage() {
                     transition={{ delay: 0.1 + index * 0.1 }}
                     className="flex items-center gap-5 group"
                   >
-                    <div className="w-14 h-14 bg-[#fafafa] rounded-2xl flex items-center justify-center group-hover:bg-[#FF5A1F] transition-colors duration-300 shadow-sm border border-gray-100">
-                      <item.icon className="w-5 h-5 text-[#FF5A1F] group-hover:text-white transition-colors duration-300" />
+                    <div className="w-14 h-14 bg-[#fafafa] rounded-2xl flex items-center justify-center group-hover:bg-[#D4AF37] transition-colors duration-300 shadow-sm border border-gray-100">
+                      <item.icon className="w-5 h-5 text-[#D4AF37] group-hover:text-white transition-colors duration-300" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 text-sm mb-0.5">{item.title}</h4>
@@ -92,7 +92,7 @@ export default function ContactPage() {
               {/* Map Placeholder */}
               <div className="bg-[#fafafa] rounded-3xl h-64 flex items-center justify-center border border-gray-100">
                 <div className="text-center">
-                  <MapPin className="w-8 h-8 text-[#FF5A1F]/40 mx-auto mb-2" />
+                  <MapPin className="w-8 h-8 text-[#D4AF37]/40 mx-auto mb-2" />
                   <p className="text-gray-400 text-sm">Brisbane, QLD, Australia</p>
                 </div>
               </div>
@@ -124,25 +124,25 @@ export default function ContactPage() {
                     <div className="grid md:grid-cols-2 gap-5">
                       <div className="space-y-2">
                         <Label htmlFor="firstName" className="text-gray-700 font-medium text-sm">First Name</Label>
-                        <Input id="firstName" placeholder="John" required className="h-13 rounded-xl border-gray-200 focus:border-[#FF5A1F] focus:ring-[#FF5A1F]/20 bg-white" />
+                        <Input id="firstName" placeholder="John" required className="h-13 rounded-xl border-gray-200 focus:border-[#D4AF37] focus:ring-[#D4AF37]/20 bg-white" />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="lastName" className="text-gray-700 font-medium text-sm">Last Name</Label>
-                        <Input id="lastName" placeholder="Doe" required className="h-13 rounded-xl border-gray-200 focus:border-[#FF5A1F] focus:ring-[#FF5A1F]/20 bg-white" />
+                        <Input id="lastName" placeholder="Doe" required className="h-13 rounded-xl border-gray-200 focus:border-[#D4AF37] focus:ring-[#D4AF37]/20 bg-white" />
                       </div>
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email" className="text-gray-700 font-medium text-sm">Email Address</Label>
-                      <Input id="email" type="email" placeholder="john@example.com" required className="h-13 rounded-xl border-gray-200 focus:border-[#FF5A1F] focus:ring-[#FF5A1F]/20 bg-white" />
+                      <Input id="email" type="email" placeholder="john@example.com" required className="h-13 rounded-xl border-gray-200 focus:border-[#D4AF37] focus:ring-[#D4AF37]/20 bg-white" />
                     </div>
                     <div className="grid md:grid-cols-2 gap-5">
                       <div className="space-y-2">
                         <Label htmlFor="phone" className="text-gray-700 font-medium text-sm">Phone Number</Label>
-                        <Input id="phone" type="tel" placeholder="+61 400 000 000" className="h-13 rounded-xl border-gray-200 focus:border-[#FF5A1F] focus:ring-[#FF5A1F]/20 bg-white" />
+                        <Input id="phone" type="tel" placeholder="+61 400 000 000" className="h-13 rounded-xl border-gray-200 focus:border-[#D4AF37] focus:ring-[#D4AF37]/20 bg-white" />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="service" className="text-gray-700 font-medium text-sm">Service Required</Label>
-                        <select id="service" className="w-full h-13 px-4 rounded-xl border border-gray-200 focus:border-[#FF5A1F] focus:ring-2 focus:ring-[#FF5A1F]/20 focus:outline-none bg-white text-sm text-gray-700">
+                        <select id="service" className="w-full h-13 px-4 rounded-xl border border-gray-200 focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 focus:outline-none bg-white text-sm text-gray-700">
                           <option value="">Select a service</option>
                           <option value="new-home">New Home Build</option>
                           <option value="renovation">Renovation</option>
@@ -155,12 +155,12 @@ export default function ContactPage() {
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="message" className="text-gray-700 font-medium text-sm">Message</Label>
-                      <Textarea id="message" placeholder="Tell us about your project..." required rows={5} className="rounded-xl border-gray-200 focus:border-[#FF5A1F] focus:ring-[#FF5A1F]/20 resize-none bg-white" />
+                      <Textarea id="message" placeholder="Tell us about your project..." required rows={5} className="rounded-xl border-gray-200 focus:border-[#D4AF37] focus:ring-[#D4AF37]/20 resize-none bg-white" />
                     </div>
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full h-14 bg-[#FF5A1F] hover:bg-[#e54e1a] text-white rounded-xl font-semibold text-base transition-all duration-300 hover:shadow-lg hover:shadow-[#FF5A1F]/30 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                      className="w-full h-14 bg-[#D4AF37] hover:bg-[#C49B2A] text-white rounded-xl font-semibold text-base transition-all duration-300 hover:shadow-lg hover:shadow-[#D4AF37]/30 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                     >
                       {isSubmitting ? (
                         <>

@@ -55,8 +55,8 @@ export default function FAQ() {
             className="lg:sticky lg:top-32 lg:self-start"
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-[2px] bg-[#FF5A1F]" />
-              <span className="text-[#FF5A1F] font-semibold uppercase tracking-wider text-sm">
+              <div className="w-8 h-[2px] bg-[#D4AF37]" />
+              <span className="text-[#A88725] font-semibold uppercase tracking-wider text-sm">
                 FAQ
               </span>
             </div>
@@ -78,7 +78,7 @@ export default function FAQ() {
               </p>
               <button
                 onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-                className="inline-flex items-center gap-2 bg-[#FF5A1F] hover:bg-[#e54e1a] text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:shadow-[#FF5A1F]/30 group"
+                className="inline-flex items-center gap-2 bg-[#D4AF37] hover:bg-[#C49B2A] text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:shadow-[#D4AF37]/30 group"
               >
                 Contact Us
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -99,9 +99,9 @@ export default function FAQ() {
                   value={`item-${index}`}
                   className="border-b border-gray-100 py-1 group"
                 >
-                  <AccordionTrigger className="text-left font-sora text-lg lg:text-xl font-semibold text-gray-900 hover:text-[#FF5A1F] transition-colors duration-300 py-6 [&[data-state=open]]:text-[#FF5A1F]">
+                  <AccordionTrigger className="text-left font-sora text-lg lg:text-xl font-semibold text-gray-900 hover:text-[#A88725] transition-colors duration-300 py-6 [&[data-state=open]]:text-[#A88725]">
                     <div className="flex items-start gap-4">
-                      <span className="text-[#FF5A1F]/30 group-hover:text-[#FF5A1F]/60 font-bold text-sm mt-1 font-mono transition-colors duration-300">
+                      <span className="text-[#A88725]/30 group-hover:text-[#A88725]/60 font-bold text-sm mt-1 font-mono transition-colors duration-300">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                       {faq.question}

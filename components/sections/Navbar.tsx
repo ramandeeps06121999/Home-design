@@ -13,14 +13,12 @@ const navLinks = [
     href: "#services",
     children: [
       { name: "New Home Builds", href: "#services" },
-      { name: "Renovations", href: "#services" },
-      { name: "Interior Design", href: "#services" },
       { name: "Duplex & Townhouses", href: "#services" },
       { name: "Custom Builds", href: "#services" },
-      { name: "Commercial", href: "#services" },
+      { name: "Queenslander Homes", href: "#services" },
     ],
   },
-  { name: "Portfolio", href: "#portfolio" },
+  // { name: "Portfolio", href: "#portfolio" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -69,20 +67,20 @@ export default function Navbar() {
             : "bg-transparent"
         }`}
       >
-        <nav className="flex items-center justify-between px-6 lg:px-10 h-20 max-w-[1400px] mx-auto">
+        <nav className="flex items-center justify-between px-6 lg:px-10 h-36 pt-4 max-w-[1400px] mx-auto">
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <button onClick={() => scrollToSection("#home")} className="relative h-14 w-auto block">
+            <button onClick={() => scrollToSection("#home")} className="relative h-32 w-auto block">
               <Image
-                src="/images/logo.webp"
+                src="/images/logo-main.png"
                 alt="Design Homes Logo"
-                width={140}
-                height={56}
-                className="h-14 w-auto object-contain"
+                width={260}
+                height={128}
+                className="h-32 w-auto object-contain"
                 priority
               />
             </button>
@@ -155,8 +153,8 @@ export default function Navbar() {
             className="hidden lg:block"
           >
             <a
-              href="tel:+61123456789"
-              className="inline-flex items-center gap-2 bg-[#FF5A1F] hover:bg-[#e54e1a] text-white px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#FF5A1F]/30"
+              href="tel:0436376001"
+              className="inline-flex items-center gap-2 bg-[#D4AF37] hover:bg-[#C49B2A] text-white px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#D4AF37]/30"
             >
               <Phone className="w-4 h-4" />
               Call Now
@@ -199,8 +197,8 @@ export default function Navbar() {
                     }}
                     className={`text-2xl font-semibold transition-colors flex items-center gap-2 ${
                       activeSection === link.href.replace("#", "")
-                        ? "text-[#FF5A1F]"
-                        : "text-white hover:text-[#FF5A1F]"
+                        ? "text-[#D4AF37]"
+                        : "text-white hover:text-[#D4AF37]"
                     }`}
                   >
                     {link.name}
@@ -218,7 +216,7 @@ export default function Navbar() {
                         <button
                           key={child.name}
                           onClick={() => scrollToSection(child.href)}
-                          className="text-white text-lg hover:text-[#FF5A1F] transition-colors"
+                          className="text-white text-lg hover:text-[#D4AF37] transition-colors"
                         >
                           {child.name}
                         </button>
@@ -231,8 +229,8 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                href="tel:+61123456789"
-                className="inline-flex items-center gap-2 bg-[#FF5A1F] text-white px-8 py-4 rounded-xl font-semibold mt-4"
+                href="tel:0436376001"
+                className="inline-flex items-center gap-2 bg-[#D4AF37] text-white px-8 py-4 rounded-xl font-semibold mt-4"
               >
                 <Phone className="w-5 h-5" />
                 Call Now

@@ -132,16 +132,16 @@ export default function FAQPage() {
               className="mb-16 last:mb-0"
             >
               <div className="flex items-center gap-3 mb-8">
-                <div className="w-8 h-[2px] bg-[#FF5A1F]" />
+                <div className="w-8 h-[2px] bg-[#D4AF37]" />
                 <h2 className="font-sora text-2xl font-bold text-gray-900">{category.title}</h2>
               </div>
 
               <Accordion className="w-full">
                 {category.faqs.map((faq, index) => (
                   <AccordionItem key={index} value={`${catIndex}-${index}`} className="border-b border-gray-100 py-1">
-                    <AccordionTrigger className="text-left font-sora text-lg font-semibold text-gray-900 hover:text-[#FF5A1F] transition-colors py-5 [&[data-state=open]]:text-[#FF5A1F]">
+                    <AccordionTrigger className="text-left font-sora text-lg font-semibold text-gray-900 hover:text-[#D4AF37] transition-colors py-5 [&[data-state=open]]:text-[#D4AF37]">
                       <div className="flex items-start gap-4">
-                        <span className="text-[#FF5A1F]/30 font-bold text-sm mt-1 font-mono">
+                        <span className="text-[#D4AF37]/30 font-bold text-sm mt-1 font-mono">
                           {String(index + 1).padStart(2, "0")}
                         </span>
                         {faq.question}
@@ -165,7 +165,7 @@ export default function FAQPage() {
           >
             <h3 className="font-sora text-2xl font-bold text-white mb-3">Still Have Questions?</h3>
             <p className="text-white text-sm mb-6 max-w-md mx-auto">Can&apos;t find the answer you&apos;re looking for? Our team is happy to help with any questions you have.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 bg-[#FF5A1F] hover:bg-[#e54e1a] text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:shadow-[#FF5A1F]/30 group">
+            <Link href="/contact" className="inline-flex items-center gap-2 bg-[#D4AF37] hover:bg-[#C49B2A] text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:shadow-[#D4AF37]/30 group">
               Contact Us <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </motion.div>

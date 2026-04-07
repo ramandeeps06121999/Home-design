@@ -5,62 +5,45 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Home, Hammer, Palette, Building2, Wrench, Store } from "lucide-react";
+import { ArrowRight, Home, Building2, Wrench, Landmark } from "lucide-react";
 
 const services = [
   {
     number: "01",
     icon: Home,
-    image: "/images/new-home-build-1.jpg",
+    image: "/images/hero-home.jpg",
     title: "New Home Builds",
     slug: "new-home-builds",
-    description: "Custom-designed homes tailored to your lifestyle and budget. From concept to completion, we bring your dream home to life.",
+    description: "Custom-designed homes tailored to your lifestyle and budget. From concept to completion, we bring your dream home to life with quality workmanship and attention to detail.",
     features: ["Fixed-price contracts", "6-year warranty", "Turnkey solutions"],
   },
   {
     number: "02",
-    icon: Hammer,
-    image: "/images/renovation-kitchen.jpg",
-    title: "Renovations",
-    slug: "renovations",
-    description: "Transforming existing spaces into modern masterpieces. We breathe new life into your property with stunning renovations.",
-    features: ["Kitchen & bathroom", "Extensions", "Full home makeovers"],
-  },
-  {
-    number: "03",
-    icon: Palette,
-    image: "/images/interior-living-room.jpg",
-    title: "Interior Design",
-    slug: "interior-design",
-    description: "Premium interior design services to complete your dream home. Our designers create spaces that inspire and delight.",
-    features: ["Space planning", "3D visualization", "Custom furnishings"],
-  },
-  {
-    number: "04",
     icon: Building2,
-    image: "/images/duplex-exterior.jpg",
+    image: "/images/townhouse-new.webp",
+    imagePosition: "object-top",
     title: "Duplex & Townhouses",
     slug: "duplex-townhouses",
     description: "Maximize your property potential with dual occupancy solutions. Perfect for investors and multi-generational families.",
     features: ["Dual occupancy", "Investment focused", "Council approval"],
   },
   {
-    number: "05",
+    number: "03",
     icon: Wrench,
-    image: "/images/custom-home-luxury.jpg",
+    image: "/images/custom-built-house.jpg",
     title: "Custom Builds",
     slug: "custom-builds",
-    description: "Bespoke architectural homes designed for unique sites and specific requirements. Your vision, our expertise.",
+    description: "Bespoke architectural homes designed for unique sites and specific requirements. Your vision, our expertise and craftsmanship.",
     features: ["Architectural design", "Challenging sites", "Luxury finishes"],
   },
   {
-    number: "06",
-    icon: Store,
-    image: "/images/commercial-building-modern.jpg",
-    title: "Commercial",
-    slug: "commercial",
-    description: "Professional construction services for offices, retail spaces, and industrial projects. Built to code, delivered on time.",
-    features: ["Office fit-outs", "Retail spaces", "BCA compliant"],
+    number: "04",
+    icon: Landmark,
+    image: "/images/queenslander-house.webp",
+    title: "Queenslander Homes",
+    slug: "queenslander-homes",
+    description: "Beautiful Queenslander-style homes that honour traditional character while incorporating modern living standards and quality finishes.",
+    features: ["Traditional character", "Modern amenities", "Heritage style"],
   },
 ];
 
@@ -110,21 +93,21 @@ export default function Services() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-8 h-[2px] bg-[#FF5A1F]" />
-            <span className="text-[#FF5A1F] font-semibold uppercase tracking-wider text-sm">Our Services</span>
-            <div className="w-8 h-[2px] bg-[#FF5A1F]" />
+            <div className="w-8 h-[2px] bg-[#D4AF37]" />
+            <span className="text-[#A88725] font-semibold uppercase tracking-wider text-sm">Our Services</span>
+            <div className="w-8 h-[2px] bg-[#D4AF37]" />
           </div>
           <h2 className="font-sora text-3xl md:text-4xl lg:text-[44px] font-bold text-gray-900 leading-[1.15] mb-4">
-            Comprehensive Building &
-            <span className="text-gradient"> Design Services</span>
+            Quality Residential
+            <span className="text-gradient"> Building Services</span>
           </h2>
           <p className="text-gray-500 text-lg mt-4">
-            From new builds to commercial projects, we deliver exceptional quality across every service.
+            From new builds to custom projects, we deliver exceptional quality and craftsmanship across every service.
           </p>
         </motion.div>
 
         {/* 3x2 Grid Layout */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
@@ -137,14 +120,14 @@ export default function Services() {
                 <TiltCard className="group relative h-full">
                   <Link href={`/services/${service.slug}`} className="block h-full">
                     {/* Card container */}
-                    <div className="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.12)] transition-all duration-700 border border-gray-100/80 hover:border-[#FF5A1F]/20 h-full flex flex-col">
+                    <div className="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.12)] transition-all duration-700 border border-gray-100/80 hover:border-[#A88725]/20 h-full flex flex-col">
                       {/* Image area */}
-                      <div className="relative h-56 overflow-hidden">
+                      <div className="relative h-72 lg:h-80 overflow-hidden">
                         <Image
                           src={service.image}
                           alt={service.title}
                           fill
-                          className="object-cover transition-transform duration-[800ms] ease-out group-hover:scale-110"
+                          className={`object-cover ${service.imagePosition || "object-center"} transition-transform duration-[800ms] ease-out group-hover:scale-110`}
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
                         {/* Gradient overlay */}
@@ -152,11 +135,11 @@ export default function Services() {
 
                         {/* Number badge */}
                         <div className="absolute top-4 left-4 w-10 h-10 bg-white/95 backdrop-blur-md rounded-xl flex items-center justify-center shadow-lg">
-                          <span className="font-sora text-sm font-bold text-[#FF5A1F]">{service.number}</span>
+                          <span className="font-sora text-sm font-bold text-[#A88725]">{service.number}</span>
                         </div>
 
                         {/* Icon badge */}
-                        <div className="absolute top-4 right-4 w-10 h-10 bg-[#FF5A1F] rounded-xl flex items-center justify-center shadow-lg">
+                        <div className="absolute top-4 right-4 w-10 h-10 bg-[#D4AF37] rounded-xl flex items-center justify-center shadow-lg">
                           <IconComponent className="w-5 h-5 text-white" />
                         </div>
 
@@ -188,19 +171,19 @@ export default function Services() {
 
                         {/* CTA row */}
                         <div className="flex items-center justify-between pt-3 border-t border-gray-100">
-                          <span className="inline-flex items-center gap-2 text-[#FF5A1F] font-semibold text-sm">
+                          <span className="inline-flex items-center gap-2 text-[#A88725] font-semibold text-sm">
                             Learn More
                             <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5" />
                           </span>
 
                           {/* Arrow circle */}
-                          <div className="w-9 h-9 rounded-full bg-[#FF5A1F]/10 group-hover:bg-[#FF5A1F] flex items-center justify-center transition-all duration-500">
-                            <ArrowRight className="w-4 h-4 text-[#FF5A1F] group-hover:text-white transition-colors duration-500 -rotate-45 group-hover:rotate-0" />
+                          <div className="w-9 h-9 rounded-full bg-[#D4AF37]/10 group-hover:bg-[#D4AF37] flex items-center justify-center transition-all duration-500">
+                            <ArrowRight className="w-4 h-4 text-[#A88725] group-hover:text-white transition-colors duration-500 -rotate-45 group-hover:rotate-0" />
                           </div>
                         </div>
 
                         {/* Bottom accent line */}
-                        <div className="mt-4 h-[2px] bg-gradient-to-r from-[#FF5A1F] to-[#FF5A1F]/30 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-full" />
+                        <div className="mt-4 h-[2px] bg-gradient-to-r from-[#D4AF37] to-[#D4AF37]/30 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-full" />
                       </div>
                     </div>
                   </Link>
@@ -218,7 +201,7 @@ export default function Services() {
         >
           <Link
             href="/services"
-            className="inline-flex items-center gap-3 bg-gray-900 hover:bg-[#FF5A1F] text-white px-8 py-4 rounded-full font-semibold transition-all duration-500 hover:shadow-[0_10px_40px_rgba(255,90,31,0.3)] group"
+            className="inline-flex items-center gap-3 bg-gray-900 hover:bg-[#D4AF37] text-white px-8 py-4 rounded-full font-semibold transition-all duration-500 hover:shadow-[0_10px_40px_rgba(212,175,55,0.3)] group"
           >
             View All Services
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />

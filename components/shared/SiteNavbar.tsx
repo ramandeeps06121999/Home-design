@@ -15,14 +15,12 @@ const navLinks = [
     href: "/services",
     children: [
       { name: "New Home Builds", href: "/services/new-home-builds" },
-      { name: "Renovations", href: "/services/renovations" },
-      { name: "Interior Design", href: "/services/interior-design" },
       { name: "Duplex & Townhouses", href: "/services/duplex-townhouses" },
       { name: "Custom Builds", href: "/services/custom-builds" },
-      { name: "Commercial", href: "/services/commercial" },
+      { name: "Queenslander Homes", href: "/services/queenslander-homes" },
     ],
   },
-  { name: "Portfolio", href: "/portfolio" },
+  // { name: "Portfolio", href: "/portfolio" },
   { name: "FAQ", href: "/faq" },
   { name: "Contact", href: "/contact" },
 ];
@@ -60,14 +58,14 @@ export default function SiteNavbar() {
             : "bg-transparent"
         }`}
       >
-        <nav className="flex items-center justify-between px-6 lg:px-10 h-20 max-w-[1400px] mx-auto">
-          <Link href="/" className="relative h-14 w-auto block">
+        <nav className="flex items-center justify-between px-6 lg:px-10 h-36 pt-4 max-w-[1400px] mx-auto">
+          <Link href="/" className="relative h-32 w-auto block">
             <Image
-              src="/images/logo.webp"
+              src="/images/logo-main.png"
               alt="Design Homes Logo"
-              width={140}
-              height={56}
-              className="h-14 w-auto object-contain"
+              width={260}
+              height={128}
+              className="h-32 w-auto object-contain"
               priority
             />
           </Link>
@@ -106,7 +104,7 @@ export default function SiteNavbar() {
                             href={child.href}
                             className={`block w-full text-left px-5 py-3 text-sm transition-all duration-200 first:rounded-t-xl last:rounded-b-xl ${
                               pathname === child.href
-                                ? "text-[#FF5A1F] bg-white/5"
+                                ? "text-[#D4AF37] bg-white/5"
                                 : "text-white hover:text-white hover:bg-white/5"
                             }`}
                           >
@@ -124,8 +122,8 @@ export default function SiteNavbar() {
           {/* CTA */}
           <div className="hidden lg:block">
             <a
-              href="tel:+61123456789"
-              className="inline-flex items-center gap-2 bg-[#FF5A1F] hover:bg-[#e54e1a] text-white px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#FF5A1F]/30"
+              href="tel:0436376001"
+              className="inline-flex items-center gap-2 bg-[#D4AF37] hover:bg-[#C49B2A] text-white px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#D4AF37]/30"
             >
               <Phone className="w-4 h-4" />
               Call Now
@@ -160,7 +158,7 @@ export default function SiteNavbar() {
                         transition={{ delay: index * 0.08 }}
                         onClick={() => setServicesOpen(!servicesOpen)}
                         className={`text-2xl font-semibold transition-colors flex items-center gap-2 ${
-                          isActive(link.href) ? "text-[#FF5A1F]" : "text-white hover:text-[#FF5A1F]"
+                          isActive(link.href) ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
                         }`}
                       >
                         {link.name}
@@ -172,14 +170,14 @@ export default function SiteNavbar() {
                           animate={{ opacity: 1, height: "auto" }}
                           className="flex flex-col items-center gap-3 mt-3"
                         >
-                          <Link href="/services" className="text-white text-lg hover:text-[#FF5A1F] transition-colors">
+                          <Link href="/services" className="text-white text-lg hover:text-[#D4AF37] transition-colors">
                             All Services
                           </Link>
                           {link.children.map((child) => (
                             <Link
                               key={child.name}
                               href={child.href}
-                              className="text-white text-lg hover:text-[#FF5A1F] transition-colors"
+                              className="text-white text-lg hover:text-[#D4AF37] transition-colors"
                             >
                               {child.name}
                             </Link>
@@ -196,7 +194,7 @@ export default function SiteNavbar() {
                       <Link
                         href={link.href}
                         className={`text-2xl font-semibold transition-colors ${
-                          isActive(link.href) ? "text-[#FF5A1F]" : "text-white hover:text-[#FF5A1F]"
+                          isActive(link.href) ? "text-[#D4AF37]" : "text-white hover:text-[#D4AF37]"
                         }`}
                       >
                         {link.name}
@@ -209,8 +207,8 @@ export default function SiteNavbar() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                href="tel:+61123456789"
-                className="inline-flex items-center gap-2 bg-[#FF5A1F] text-white px-8 py-4 rounded-xl font-semibold mt-4"
+                href="tel:0436376001"
+                className="inline-flex items-center gap-2 bg-[#D4AF37] text-white px-8 py-4 rounded-xl font-semibold mt-4"
               >
                 <Phone className="w-5 h-5" />
                 Call Now

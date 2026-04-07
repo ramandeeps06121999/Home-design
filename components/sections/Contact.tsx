@@ -12,25 +12,25 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    content: "+61 123 456 789",
-    href: "tel:+61123456789",
+    content: "0436 376 001",
+    href: "tel:0436376001",
   },
   {
     icon: Mail,
     title: "Email",
-    content: "hello@designhomes.com.au",
-    href: "mailto:hello@designhomes.com.au",
+    content: "harj@thedesignhomes.com.au",
+    href: "mailto:harj@thedesignhomes.com.au",
   },
   {
     icon: MapPin,
     title: "Location",
-    content: "Brisbane, QLD, Australia",
+    content: "South East Queensland, Australia",
     href: "#",
   },
   {
     icon: Clock,
     title: "Business Hours",
-    content: "Mon – Fri: 8am – 5pm",
+    content: "Mon – Fri: 7am – 5pm",
     href: "#",
   },
 ];
@@ -66,8 +66,8 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-[2px] bg-[#FF5A1F]" />
-              <span className="text-[#FF5A1F] font-semibold uppercase tracking-wider text-sm">
+              <div className="w-8 h-[2px] bg-[#D4AF37]" />
+              <span className="text-[#A88725] font-semibold uppercase tracking-wider text-sm">
                 Contact Us
               </span>
             </div>
@@ -76,8 +76,8 @@ export default function Contact() {
               <span className="text-gradient"> Project</span>
             </h2>
             <p className="text-gray-500 text-lg leading-relaxed mb-10">
-              Ready to start building? Contact us today for a free consultation
-              and quote. Our team is ready to bring your vision to life.
+              Ready to start building? Contact us today to discuss your project.
+              We&apos;re here to answer any questions and bring your vision to life.
             </p>
 
             {/* Contact Info Items */}
@@ -91,8 +91,8 @@ export default function Contact() {
                   transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
                   className="flex items-center gap-5 group"
                 >
-                  <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center group-hover:bg-[#FF5A1F] transition-colors duration-300 shadow-sm">
-                    <item.icon className="w-5 h-5 text-[#FF5A1F] group-hover:text-white transition-colors duration-300" />
+                  <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center group-hover:bg-[#D4AF37] transition-colors duration-300 shadow-sm">
+                    <item.icon className="w-5 h-5 text-[#A88725] group-hover:text-white transition-colors duration-300" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 text-sm mb-0.5">
@@ -168,7 +168,7 @@ export default function Contact() {
                         id="firstName"
                         placeholder="John"
                         required
-                        className="h-13 rounded-xl border-gray-200 focus:border-[#FF5A1F] focus:ring-[#FF5A1F]/20 bg-[#fafafa]"
+                        className="h-13 rounded-xl border-gray-200 focus:border-[#A88725] focus:ring-[#D4AF37]/20 bg-[#fafafa]"
                       />
                     </div>
                     <div className="space-y-2">
@@ -179,7 +179,7 @@ export default function Contact() {
                         id="lastName"
                         placeholder="Doe"
                         required
-                        className="h-13 rounded-xl border-gray-200 focus:border-[#FF5A1F] focus:ring-[#FF5A1F]/20 bg-[#fafafa]"
+                        className="h-13 rounded-xl border-gray-200 focus:border-[#A88725] focus:ring-[#D4AF37]/20 bg-[#fafafa]"
                       />
                     </div>
                   </div>
@@ -192,7 +192,7 @@ export default function Contact() {
                       type="email"
                       placeholder="john@example.com"
                       required
-                      className="h-13 rounded-xl border-gray-200 focus:border-[#FF5A1F] focus:ring-[#FF5A1F]/20 bg-[#fafafa]"
+                      className="h-13 rounded-xl border-gray-200 focus:border-[#A88725] focus:ring-[#D4AF37]/20 bg-[#fafafa]"
                     />
                   </div>
                   <div className="grid md:grid-cols-2 gap-5">
@@ -204,7 +204,7 @@ export default function Contact() {
                         id="phone"
                         type="tel"
                         placeholder="+61 400 000 000"
-                        className="h-13 rounded-xl border-gray-200 focus:border-[#FF5A1F] focus:ring-[#FF5A1F]/20 bg-[#fafafa]"
+                        className="h-13 rounded-xl border-gray-200 focus:border-[#A88725] focus:ring-[#D4AF37]/20 bg-[#fafafa]"
                       />
                     </div>
                     <div className="space-y-2">
@@ -213,15 +213,13 @@ export default function Contact() {
                       </Label>
                       <select
                         id="service"
-                        className="w-full h-13 px-4 rounded-xl border border-gray-200 focus:border-[#FF5A1F] focus:ring-2 focus:ring-[#FF5A1F]/20 focus:outline-none bg-[#fafafa] text-sm text-gray-700"
+                        className="w-full h-13 px-4 rounded-xl border border-gray-200 focus:border-[#A88725] focus:ring-2 focus:ring-[#D4AF37]/20 focus:outline-none bg-[#fafafa] text-sm text-gray-700"
                       >
                         <option value="">Select a service</option>
                         <option value="new-home">New Home Build</option>
-                        <option value="renovation">Renovation</option>
-                        <option value="interior">Interior Design</option>
                         <option value="duplex">Duplex / Townhouse</option>
                         <option value="custom">Custom Build</option>
-                        <option value="commercial">Commercial</option>
+                        <option value="queenslander">Queenslander Home</option>
                       </select>
                     </div>
                   </div>
@@ -234,13 +232,13 @@ export default function Contact() {
                       placeholder="Tell us about your project..."
                       required
                       rows={4}
-                      className="rounded-xl border-gray-200 focus:border-[#FF5A1F] focus:ring-[#FF5A1F]/20 resize-none bg-[#fafafa]"
+                      className="rounded-xl border-gray-200 focus:border-[#A88725] focus:ring-[#D4AF37]/20 resize-none bg-[#fafafa]"
                     />
                   </div>
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full h-14 bg-[#FF5A1F] hover:bg-[#e54e1a] text-white rounded-xl font-semibold text-base transition-all duration-300 hover:shadow-lg hover:shadow-[#FF5A1F]/30 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full h-14 bg-[#D4AF37] hover:bg-[#C49B2A] text-white rounded-xl font-semibold text-base transition-all duration-300 hover:shadow-lg hover:shadow-[#D4AF37]/30 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
                       <>

@@ -126,8 +126,8 @@ export default function AboutPage() {
               transition={{ duration: 0.7, delay: 0.2 }}
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-8 h-[2px] bg-[#FF5A1F]" />
-                <span className="text-[#FF5A1F] font-semibold uppercase tracking-wider text-sm">Our Story</span>
+                <div className="w-8 h-[2px] bg-[#D4AF37]" />
+                <span className="text-[#D4AF37] font-semibold uppercase tracking-wider text-sm">Our Story</span>
               </div>
               <h2 className="font-sora text-3xl md:text-4xl lg:text-[44px] font-bold text-gray-900 leading-[1.15] mb-8">
                 From a Small Team to South East Queensland&apos;s
@@ -140,17 +140,17 @@ export default function AboutPage() {
                 Over the years, we&apos;ve grown from a small team working on local projects in Brisbane to one of South East Queensland&apos;s most trusted residential builders. Our portfolio now spans custom homes, duplexes, townhouses, renovations, and commercial projects across Brisbane, Gold Coast, and Sunshine Coast.
               </p>
 
-              <div className="relative bg-white rounded-2xl p-6 lg:p-8 border-l-4 border-[#FF5A1F] shadow-sm">
+              <div className="relative bg-white rounded-2xl p-6 lg:p-8 border-l-4 border-[#D4AF37] shadow-sm">
                 <p className="text-gray-600 italic leading-relaxed mb-4">
                   &ldquo;Every home we build is a reflection of our commitment to quality, innovation, and our client&apos;s vision. We don&apos;t just build houses — we create homes.&rdquo;
                 </p>
                 <div className="flex items-center gap-4">
-                  <div className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-[#FF5A1F]/20">
+                  <div className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-[#D4AF37]/20">
                     <Image src="https://i.pravatar.cc/100?u=ceo" alt="Jason Smith" fill className="object-cover" />
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-900 text-sm">Jason Smith</h4>
-                    <p className="text-[#FF5A1F] text-xs font-semibold">Managing Director</p>
+                    <p className="text-[#D4AF37] text-xs font-semibold">Managing Director</p>
                   </div>
                 </div>
               </div>
@@ -169,9 +169,9 @@ export default function AboutPage() {
             className="text-center max-w-3xl mx-auto mb-16"
           >
             <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="w-8 h-[2px] bg-[#FF5A1F]" />
-              <span className="text-[#FF5A1F] font-semibold uppercase tracking-wider text-sm">Our Values</span>
-              <div className="w-8 h-[2px] bg-[#FF5A1F]" />
+              <div className="w-8 h-[2px] bg-[#D4AF37]" />
+              <span className="text-[#D4AF37] font-semibold uppercase tracking-wider text-sm">Our Values</span>
+              <div className="w-8 h-[2px] bg-[#D4AF37]" />
             </div>
             <h2 className="font-sora text-3xl md:text-4xl lg:text-[44px] font-bold text-gray-900 leading-[1.15]">
               The Principles That
@@ -186,10 +186,10 @@ export default function AboutPage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={valuesInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: index * 0.1 }}
-                className="bg-[#fafafa] rounded-3xl p-8 hover:shadow-lg transition-all duration-500 group border border-gray-100 hover:border-[#FF5A1F]/20"
+                className="bg-[#fafafa] rounded-3xl p-8 hover:shadow-lg transition-all duration-500 group border border-gray-100 hover:border-[#D4AF37]/20"
               >
-                <div className="w-14 h-14 bg-gradient-to-br from-[#FF5A1F]/10 to-[#FF5A1F]/5 rounded-2xl flex items-center justify-center mb-6 group-hover:from-[#FF5A1F]/20 group-hover:to-[#FF5A1F]/10 transition-all duration-500">
-                  <value.icon className="w-7 h-7 text-[#FF5A1F]" />
+                <div className="w-14 h-14 bg-gradient-to-br from-[#D4AF37]/10 to-[#D4AF37]/5 rounded-2xl flex items-center justify-center mb-6 group-hover:from-[#D4AF37]/20 group-hover:to-[#D4AF37]/10 transition-all duration-500">
+                  <value.icon className="w-7 h-7 text-[#D4AF37]" />
                 </div>
                 <h3 className="font-sora text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
                 <p className="text-gray-500 leading-relaxed text-[15px]">{value.description}</p>
@@ -209,9 +209,9 @@ export default function AboutPage() {
             className="text-center max-w-3xl mx-auto mb-16"
           >
             <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="w-8 h-[2px] bg-[#FF5A1F]" />
-              <span className="text-[#FF5A1F] font-semibold uppercase tracking-wider text-sm">Our Journey</span>
-              <div className="w-8 h-[2px] bg-[#FF5A1F]" />
+              <div className="w-8 h-[2px] bg-[#D4AF37]" />
+              <span className="text-[#D4AF37] font-semibold uppercase tracking-wider text-sm">Our Journey</span>
+              <div className="w-8 h-[2px] bg-[#D4AF37]" />
             </div>
             <h2 className="font-sora text-3xl md:text-4xl lg:text-[44px] font-bold text-white leading-[1.15]">
               Key Milestones in Our
@@ -233,7 +233,7 @@ export default function AboutPage() {
                   className={`lg:grid lg:grid-cols-2 lg:gap-16 lg:py-10 ${index % 2 === 0 ? "" : "lg:direction-rtl"}`}
                 >
                   <div className={`${index % 2 === 0 ? "lg:text-right lg:pr-16" : "lg:col-start-2 lg:pl-16"}`}>
-                    <span className="text-[#FF5A1F] font-sora text-4xl font-bold">{item.year}</span>
+                    <span className="text-[#D4AF37] font-sora text-4xl font-bold">{item.year}</span>
                     <h3 className="font-sora text-2xl font-bold text-white mt-2 mb-3">{item.title}</h3>
                     <p className="text-white leading-relaxed">{item.description}</p>
                   </div>
@@ -254,9 +254,9 @@ export default function AboutPage() {
             className="text-center max-w-3xl mx-auto mb-16"
           >
             <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="w-8 h-[2px] bg-[#FF5A1F]" />
-              <span className="text-[#FF5A1F] font-semibold uppercase tracking-wider text-sm">Our Team</span>
-              <div className="w-8 h-[2px] bg-[#FF5A1F]" />
+              <div className="w-8 h-[2px] bg-[#D4AF37]" />
+              <span className="text-[#D4AF37] font-semibold uppercase tracking-wider text-sm">Our Team</span>
+              <div className="w-8 h-[2px] bg-[#D4AF37]" />
             </div>
             <h2 className="font-sora text-3xl md:text-4xl lg:text-[44px] font-bold text-gray-900 leading-[1.15]">
               Meet the People Behind
@@ -288,7 +288,7 @@ export default function AboutPage() {
                   />
                 </div>
                 <h3 className="font-sora text-lg font-bold text-gray-900">{member.name}</h3>
-                <p className="text-[#FF5A1F] text-sm font-semibold">{member.role}</p>
+                <p className="text-[#D4AF37] text-sm font-semibold">{member.role}</p>
               </motion.div>
             ))}
           </div>

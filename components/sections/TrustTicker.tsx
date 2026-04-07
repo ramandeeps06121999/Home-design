@@ -2,15 +2,17 @@
 
 const items = [
   "QBCC Licensed Builder",
-  "50+ Homes Built",
-  "15+ Years Experience",
+  "New Builds",
+  "Duplexes",
+  "Townhouses",
+  "Custom Builds",
+  "Queenslander Homes",
   "Brisbane",
   "Gold Coast",
   "Sunshine Coast",
   "Fixed Price Contracts",
-  "HIA Member",
-  "100% Completion Rate",
   "Fully Insured",
+  "Award-Winning Experience",
 ];
 
 export default function TrustTicker() {
@@ -19,7 +21,7 @@ export default function TrustTicker() {
       <div className="ticker-track flex gap-12 whitespace-nowrap">
         {[...items, ...items, ...items].map((item, i) => (
           <span key={i} className="flex items-center gap-3 text-white text-sm font-medium uppercase tracking-wider shrink-0">
-            <span className="w-1.5 h-1.5 bg-[#FF5A1F] rounded-full" />
+            <span className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full" />
             {item}
           </span>
         ))}

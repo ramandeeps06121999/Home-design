@@ -60,7 +60,7 @@ export default function PageHero({ title, highlight, description, image, breadcr
               <a
                 href={item.href}
                 className={`text-sm font-medium transition-colors ${
-                  i === breadcrumb.length - 1 ? "text-[#FF5A1F]" : "text-white hover:text-white"
+                  i === breadcrumb.length - 1 ? "text-[#D4AF37]" : "text-white hover:text-white"
                 }`}
               >
                 {item.label}

@@ -48,8 +48,8 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 
   /* Custom colors for Design Homes */
-  --color-orange: #FF5A1F;
-  --color-orange-hover: #e54e1a;
+  --color-orange: #D4AF37;
+  --color-orange-hover: #C49B2A;
   --color-dark-bg: #0d1117;
   --color-dark-card: #1c2128;
   --color-dark-card-hover: #252b35;
@@ -62,7 +62,7 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: #FF5A1F;
+  --primary: #D4AF37;
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -73,7 +73,7 @@
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
-  --ring: #FF5A1F;
+  --ring: #D4AF37;
   --chart-1: oklch(0.809 0.105 251.813);
   --chart-2: oklch(0.623 0.214 259.815);
   --chart-3: oklch(0.546 0.245 262.881);
@@ -97,7 +97,7 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: #FF5A1F;
+  --primary: #D4AF37;
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
@@ -108,7 +108,7 @@
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: #FF5A1F;
+  --ring: #D4AF37;
   --chart-1: oklch(0.809 0.105 251.813);
   --chart-2: oklch(0.623 0.214 259.815);
   --chart-3: oklch(0.546 0.245 262.881);
@@ -151,12 +151,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 90, 31, 0.4);
+  background: rgba(201, 168, 76, 0.4);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #FF5A1F;
+  background: #D4AF37;
 }
 
 /* Glassmorphism effect */
@@ -169,7 +169,7 @@
 
 /* Animated Text gradient with shimmer */
 .text-gradient {
-  background: linear-gradient(135deg, #FF5A1F 0%, #ff8c5a 50%, #FF5A1F 100%);
+  background: linear-gradient(135deg, #A88725 0%, #D4AF37 50%, #A88725 100%);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -184,7 +184,7 @@
 
 /* Selection */
 ::selection {
-  background: rgba(255, 90, 31, 0.3);
+  background: rgba(168, 135, 37, 0.3);
   color: white;
 }
 
@@ -261,7 +261,7 @@ img {
 /* Link hover underline animation               */
 /* ============================================ */
 .link-underline {
-  background-image: linear-gradient(#FF5A1F, #FF5A1F);
+  background-image: linear-gradient(#D4AF37, #D4AF37);
   background-size: 0% 2px;
   background-position: left bottom;
   background-repeat: no-repeat;

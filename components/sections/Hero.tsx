@@ -2,18 +2,11 @@
 
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion";
 import { useRef, useCallback } from "react";
-import { ArrowRight, ArrowDown, Shield, Award, CheckCircle2 } from "lucide-react";
-import Image from "next/image";
-
-const avatars = [
-  "https://i.pravatar.cc/100?u=1",
-  "https://i.pravatar.cc/100?u=2",
-  "https://i.pravatar.cc/100?u=3",
-];
+import { ArrowRight, ArrowDown, Shield, Award, CheckCircle2, Phone } from "lucide-react";
 
 const trustBadges = [
   { icon: Shield, label: "QBCC Licensed" },
-  { icon: Award, label: "15+ Years" },
+  { icon: Award, label: "Award-Winning" },
   { icon: CheckCircle2, label: "Fully Insured" },
 ];
 
@@ -72,17 +65,13 @@ export default function Hero() {
       ref={sectionRef}
       className="relative min-h-screen flex items-center pt-20 overflow-hidden"
     >
-      {/* Parallax Background Video */}
+      {/* Parallax Background Image */}
       <motion.div className="absolute inset-0 z-0" style={{ y: bgY }}>
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
+        <img
+          src="/images/hero-home.jpg"
+          alt="Design Homes - Quality New Home"
           className="absolute inset-0 w-full h-full object-cover scale-110"
-        >
-          <source src="/videos/hero-bg.mp4" type="video/mp4" />
-        </video>
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-[#0d1117]" />
       </motion.div>
 
@@ -133,7 +122,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center text-white text-lg md:text-xl max-w-[600px] mx-auto mb-12 lg:mb-16 leading-relaxed"
         >
-          Building new homes, duplexes, townhouses and custom builds across South East Queensland.
+          Quality new homes, duplexes, townhouses and custom builds across South East Queensland. Built with care, integrity, and pride.
         </motion.p>
 
         {/* CTAs with pulse ring */}
@@ -145,81 +134,28 @@ export default function Hero() {
         >
           <div className="relative">
             {/* Pulse ring */}
-            <div className="absolute inset-0 rounded-full bg-[#FF5A1F]/30 animate-ping-slow" />
-            <MagneticButton
-              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-              className="relative inline-flex items-center gap-3 bg-[#FF5A1F] hover:bg-[#e54e1a] text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-[#FF5A1F]/30 group cursor-pointer"
+            <div className="absolute inset-0 rounded-full bg-[#D4AF37]/30 animate-ping-slow" />
+            <a
+              href="tel:0436376001"
+              className="relative inline-flex items-center gap-3 bg-[#D4AF37] hover:bg-[#C49B2A] text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-[#D4AF37]/30 group"
             >
-              Get a Free Quote
-              <span className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
-                <ArrowRight className="w-4 h-4" />
-              </span>
-            </MagneticButton>
+              <Phone className="w-5 h-5" />
+              0436 376 001
+            </a>
           </div>
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            onClick={() => document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
             className="inline-flex items-center gap-3 bg-white/10 hover:bg-white/15 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300"
           >
-            View Our Work
+            Have a Question? Contact Us
+            <ArrowRight className="w-4 h-4" />
           </motion.button>
         </motion.div>
 
         {/* Bottom Row */}
-        <div className="flex flex-col lg:flex-row justify-between items-end gap-10 lg:gap-16">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="w-full lg:w-auto"
-          >
-            <div className="glass rounded-3xl p-8 lg:p-10 max-w-[380px] mx-auto lg:mx-0">
-              <motion.div
-                initial={{ scale: 0.5 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.5, delay: 1 }}
-                className="text-6xl lg:text-7xl font-bold font-sora text-white mb-2"
-              >
-                100<span className="text-gradient">%</span>
-              </motion.div>
-              <p className="text-lg font-semibold text-white mb-6">Project Completion Rate</p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-3 text-white text-sm">
-                  <span className="w-1.5 h-1.5 bg-[#FF5A1F] rounded-full" />
-                  50+ Homes Built Across SEQ
-                </li>
-                <li className="flex items-center gap-3 text-white text-sm">
-                  <span className="w-1.5 h-1.5 bg-[#FF5A1F] rounded-full" />
-                  Serving Brisbane, Gold Coast & Sunshine Coast
-                </li>
-              </ul>
-              <div className="flex items-center">
-                <div className="flex -space-x-3">
-                  {avatars.map((avatar, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, scale: 0 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 1.1 + index * 0.1 }}
-                      className="relative w-10 h-10 rounded-full border-2 border-[#1c2128] overflow-hidden"
-                    >
-                      <Image src={avatar} alt={`Team member ${index + 1}`} fill className="object-cover" />
-                    </motion.div>
-                  ))}
-                </div>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1.4 }}
-                  className="w-10 h-10 rounded-full bg-[#FF5A1F] flex items-center justify-center text-white font-bold ml-1"
-                >
-                  +
-                </motion.div>
-              </div>
-            </div>
-          </motion.div>
-
+        <div className="flex justify-center lg:justify-end">
           {/* Trust Badges with slide-in */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -235,7 +171,7 @@ export default function Hero() {
                 transition={{ delay: 1 + index * 0.12, type: "spring", stiffness: 100 }}
                 className="flex items-center gap-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl px-5 py-3"
               >
-                <badge.icon className="w-5 h-5 text-[#FF5A1F]" />
+                <badge.icon className="w-5 h-5 text-[#D4AF37]" />
                 <span className="text-white text-sm font-medium">{badge.label}</span>
               </motion.div>
             ))}

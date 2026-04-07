@@ -57,7 +57,7 @@ function FeatureIcon({ iconName }: { iconName: string }) {
 
   const IconComponent = icons[iconName];
   if (!IconComponent) return null;
-  return <IconComponent className="w-7 h-7 text-[#FF5A1F] group-hover:text-white transition-colors duration-500" />;
+  return <IconComponent className="w-7 h-7 text-[#D4AF37] group-hover:text-white transition-colors duration-500" />;
 }
 
 interface ServicePageProps {
@@ -193,8 +193,8 @@ export default function ServicePageTemplate({
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
               </div>
               {/* Decorative floating accent */}
-              <div className="absolute -bottom-5 -right-5 w-28 h-28 bg-[#FF5A1F]/10 rounded-3xl -z-10 hidden lg:block" />
-              <div className="absolute -top-5 -left-5 w-20 h-20 bg-[#FF5A1F]/5 rounded-2xl -z-10 hidden lg:block" />
+              <div className="absolute -bottom-5 -right-5 w-28 h-28 bg-[#D4AF37]/10 rounded-3xl -z-10 hidden lg:block" />
+              <div className="absolute -top-5 -left-5 w-20 h-20 bg-[#D4AF37]/5 rounded-2xl -z-10 hidden lg:block" />
             </motion.div>
 
             {/* Text side */}
@@ -204,8 +204,8 @@ export default function ServicePageTemplate({
               transition={{ duration: 0.7, delay: 0.2 }}
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-8 h-[2px] bg-[#FF5A1F]" />
-                <span className="text-[#FF5A1F] font-semibold uppercase tracking-wider text-sm">
+                <div className="w-8 h-[2px] bg-[#D4AF37]" />
+                <span className="text-[#D4AF37] font-semibold uppercase tracking-wider text-sm">
                   Overview
                 </span>
               </div>
@@ -232,9 +232,9 @@ export default function ServicePageTemplate({
                     initial={{ opacity: 0, y: 16 }}
                     animate={benefitsInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ delay: idx * 0.06, duration: 0.4 }}
-                    className="flex items-center gap-3 bg-gradient-to-r from-[#FF5A1F]/[0.06] to-transparent rounded-xl px-4 py-3 border border-[#FF5A1F]/10 hover:border-[#FF5A1F]/25 hover:from-[#FF5A1F]/[0.1] transition-all duration-300"
+                    className="flex items-center gap-3 bg-gradient-to-r from-[#D4AF37]/[0.06] to-transparent rounded-xl px-4 py-3 border border-[#D4AF37]/10 hover:border-[#D4AF37]/25 hover:from-[#D4AF37]/[0.1] transition-all duration-300"
                   >
-                    <CheckCircle2 className="w-[18px] h-[18px] text-[#FF5A1F] shrink-0" />
+                    <CheckCircle2 className="w-[18px] h-[18px] text-[#D4AF37] shrink-0" />
                     <span className="text-gray-700 text-sm font-medium">
                       {benefit}
                     </span>
@@ -256,11 +256,11 @@ export default function ServicePageTemplate({
             className="text-center max-w-3xl mx-auto mb-16"
           >
             <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="w-8 h-[2px] bg-[#FF5A1F]" />
-              <span className="text-[#FF5A1F] font-semibold uppercase tracking-wider text-sm">
+              <div className="w-8 h-[2px] bg-[#D4AF37]" />
+              <span className="text-[#D4AF37] font-semibold uppercase tracking-wider text-sm">
                 What We Offer
               </span>
-              <div className="w-8 h-[2px] bg-[#FF5A1F]" />
+              <div className="w-8 h-[2px] bg-[#D4AF37]" />
             </div>
             <h2 className="font-sora text-3xl md:text-4xl font-bold text-gray-900 leading-[1.15]">
               Why Choose Our
@@ -275,12 +275,12 @@ export default function ServicePageTemplate({
                 initial={{ opacity: 0, y: 30 }}
                 animate={featuresInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="relative bg-white rounded-3xl p-8 border border-gray-100 hover:shadow-xl hover:shadow-black/[0.06] hover:border-[#FF5A1F]/20 hover:-translate-y-1 transition-all duration-500 group overflow-hidden"
+                className="relative bg-white rounded-3xl p-8 border border-gray-100 hover:shadow-xl hover:shadow-black/[0.06] hover:border-[#D4AF37]/20 hover:-translate-y-1 transition-all duration-500 group overflow-hidden"
               >
                 {/* Subtle top accent line on hover */}
-                <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#FF5A1F] to-orange-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#D4AF37] to-orange-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 
-                <div className="w-14 h-14 bg-gradient-to-br from-[#FF5A1F]/10 to-[#FF5A1F]/5 rounded-2xl flex items-center justify-center mb-6 group-hover:from-[#FF5A1F] group-hover:to-orange-500 transition-all duration-500">
+                <div className="w-14 h-14 bg-gradient-to-br from-[#D4AF37]/10 to-[#D4AF37]/5 rounded-2xl flex items-center justify-center mb-6 group-hover:from-[#D4AF37] group-hover:to-orange-500 transition-all duration-500">
                   <FeatureIcon iconName={feature.iconName} />
                 </div>
                 <h3 className="font-sora text-xl font-bold text-gray-900 mb-3">
@@ -306,11 +306,11 @@ export default function ServicePageTemplate({
               className="text-center mb-16"
             >
               <div className="flex items-center justify-center gap-3 mb-6">
-                <div className="w-8 h-[2px] bg-[#FF5A1F]" />
-                <span className="text-[#FF5A1F] font-semibold uppercase tracking-wider text-sm">
+                <div className="w-8 h-[2px] bg-[#D4AF37]" />
+                <span className="text-[#D4AF37] font-semibold uppercase tracking-wider text-sm">
                   Our Work
                 </span>
-                <div className="w-8 h-[2px] bg-[#FF5A1F]" />
+                <div className="w-8 h-[2px] bg-[#D4AF37]" />
               </div>
               <h2 className="font-sora text-3xl md:text-4xl font-bold text-white leading-[1.15]">
                 Project <span className="text-gradient">Gallery</span>
@@ -355,11 +355,11 @@ export default function ServicePageTemplate({
             className="text-center mb-16"
           >
             <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="w-8 h-[2px] bg-[#FF5A1F]" />
-              <span className="text-[#FF5A1F] font-semibold uppercase tracking-wider text-sm">
+              <div className="w-8 h-[2px] bg-[#D4AF37]" />
+              <span className="text-[#D4AF37] font-semibold uppercase tracking-wider text-sm">
                 Explore More
               </span>
-              <div className="w-8 h-[2px] bg-[#FF5A1F]" />
+              <div className="w-8 h-[2px] bg-[#D4AF37]" />
             </div>
             <h2 className="font-sora text-3xl md:text-4xl font-bold text-gray-900">
               Related <span className="text-gradient">Services</span>
@@ -383,7 +383,7 @@ export default function ServicePageTemplate({
                 >
                   <Link
                     href={service.href}
-                    className="group block h-full bg-white rounded-3xl overflow-hidden border border-gray-100 hover:shadow-xl hover:shadow-black/[0.06] hover:border-[#FF5A1F]/20 transition-all duration-500"
+                    className="group block h-full bg-white rounded-3xl overflow-hidden border border-gray-100 hover:shadow-xl hover:shadow-black/[0.06] hover:border-[#D4AF37]/20 transition-all duration-500"
                   >
                     {/* Card image */}
                     <div className="relative h-[220px] overflow-hidden">
@@ -396,7 +396,7 @@ export default function ServicePageTemplate({
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                       {/* Floating badge */}
                       <div className="absolute top-4 left-4 flex items-center gap-1.5 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1.5">
-                        <Sparkles className="w-3.5 h-3.5 text-[#FF5A1F]" />
+                        <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
                         <span className="text-[11px] font-semibold text-gray-800 uppercase tracking-wide">
                           Service
                         </span>
@@ -405,13 +405,13 @@ export default function ServicePageTemplate({
 
                     {/* Card content */}
                     <div className="p-7">
-                      <h3 className="font-sora text-xl font-bold text-gray-900 mb-2 group-hover:text-[#FF5A1F] transition-colors duration-300">
+                      <h3 className="font-sora text-xl font-bold text-gray-900 mb-2 group-hover:text-[#D4AF37] transition-colors duration-300">
                         {service.title}
                       </h3>
                       <p className="text-gray-500 text-sm leading-relaxed mb-5">
                         {service.description}
                       </p>
-                      <span className="inline-flex items-center gap-2 text-[#FF5A1F] font-semibold text-sm">
+                      <span className="inline-flex items-center gap-2 text-[#D4AF37] font-semibold text-sm">
                         Learn More
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" />
                       </span>

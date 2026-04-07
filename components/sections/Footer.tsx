@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Facebook, Instagram, Linkedin, Twitter, ArrowUp, ArrowRight } from "lucide-react";
+import { Facebook, Instagram, ArrowUp, ArrowRight } from "lucide-react";
 
 const quickLinks = [
   { name: "Home", href: "#home" },
@@ -14,18 +14,14 @@ const quickLinks = [
 
 const services = [
   { name: "New Home Builds", href: "#services" },
-  { name: "Renovations", href: "#services" },
-  { name: "Interior Design", href: "#services" },
   { name: "Duplex & Townhouses", href: "#services" },
   { name: "Custom Builds", href: "#services" },
-  { name: "Commercial", href: "#services" },
+  { name: "Queenslander Homes", href: "#services" },
 ];
 
 const socials = [
   { icon: Facebook, href: "#", label: "Facebook" },
   { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
 ];
 
 export default function Footer() {
@@ -60,9 +56,9 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 bg-white/5 border border-white/10 rounded-l-xl px-5 py-3.5 text-white text-sm placeholder:text-white focus:outline-none focus:border-[#FF5A1F]/50 transition-colors"
+                className="flex-1 bg-white/5 border border-white/10 rounded-l-xl px-5 py-3.5 text-white text-sm placeholder:text-white focus:outline-none focus:border-[#D4AF37]/50 transition-colors"
               />
-              <button className="bg-[#FF5A1F] hover:bg-[#e54e1a] text-white px-6 py-3.5 rounded-r-xl font-semibold text-sm transition-all duration-300 flex items-center gap-2 whitespace-nowrap">
+              <button className="bg-[#D4AF37] hover:bg-[#C49B2A] text-white px-6 py-3.5 rounded-r-xl font-semibold text-sm transition-all duration-300 flex items-center gap-2 whitespace-nowrap">
                 Subscribe
                 <ArrowRight className="w-4 h-4" />
               </button>
@@ -81,19 +77,17 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <button onClick={scrollToTop} className="relative h-14 w-auto mb-6 block">
+            <button onClick={scrollToTop} className="relative h-32 w-auto mb-6 block">
               <Image
-                src="/images/logo.webp"
+                src="/images/logo-main.png"
                 alt="Design Homes Logo"
-                width={140}
-                height={56}
-                className="h-14 w-auto object-contain"
+                width={260}
+                height={128}
+                className="h-32 w-auto object-contain"
               />
             </button>
             <p className="text-white leading-relaxed mb-8 max-w-sm text-sm">
-              Custom home builders specializing in high-quality residential
-              construction across South East Queensland. Building dreams since
-              2008.
+              Queensland-based residential building company delivering quality new homes, duplexes, townhouses and custom builds across South East Queensland.
             </p>
             {/* Social Links */}
             <div className="flex items-center gap-3">
@@ -102,7 +96,7 @@ export default function Footer() {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="w-10 h-10 bg-white/5 hover:bg-[#FF5A1F] rounded-xl flex items-center justify-center text-white hover:text-white transition-all duration-300 hover:-translate-y-1"
+                  className="w-10 h-10 bg-white/5 hover:bg-[#D4AF37] rounded-xl flex items-center justify-center text-white hover:text-white transition-all duration-300 hover:-translate-y-1"
                 >
                   <social.icon className="w-4 h-4" />
                 </a>
@@ -125,7 +119,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <button
                     onClick={() => scrollToSection(link.href)}
-                    className="text-white hover:text-[#FF5A1F] transition-all duration-300 text-sm hover:translate-x-1 inline-block"
+                    className="text-white hover:text-[#D4AF37] transition-all duration-300 text-sm hover:translate-x-1 inline-block"
                   >
                     {link.name}
                   </button>
@@ -149,7 +143,7 @@ export default function Footer() {
                 <li key={service.name}>
                   <button
                     onClick={() => scrollToSection(service.href)}
-                    className="text-white hover:text-[#FF5A1F] transition-all duration-300 text-sm hover:translate-x-1 inline-block"
+                    className="text-white hover:text-[#D4AF37] transition-all duration-300 text-sm hover:translate-x-1 inline-block"
                   >
                     {service.name}
                   </button>
@@ -169,12 +163,19 @@ export default function Footer() {
               Contact
             </h4>
             <ul className="space-y-3 text-white text-sm">
-              <li>+61 123 456 789</li>
-              <li>hello@designhomes.com.au</li>
-              <li>Brisbane, QLD, Australia</li>
-              <li className="pt-2">Mon – Fri: 8am – 5pm</li>
+              <li><a href="tel:0436376001" className="hover:text-[#D4AF37] transition-colors">0436 376 001</a></li>
+              <li><a href="mailto:harj@thedesignhomes.com.au" className="hover:text-[#D4AF37] transition-colors">harj@thedesignhomes.com.au</a></li>
+              <li>South East Queensland</li>
+              <li className="pt-2">Mon – Fri: 7am – 5pm</li>
             </ul>
           </motion.div>
+        </div>
+
+        {/* QBCC License */}
+        <div className="border-t border-white/5 pt-8 pb-6 text-center">
+          <p className="text-white font-sora font-bold text-lg lg:text-xl tracking-wide">
+            QBCC License No. 15519791
+          </p>
         </div>
 
         {/* Bottom Bar */}
@@ -187,7 +188,7 @@ export default function Footer() {
               <span className="text-white text-sm">Built with Precision in SEQ</span>
               <button
                 onClick={scrollToTop}
-                className="w-10 h-10 bg-white/5 hover:bg-[#FF5A1F] rounded-xl flex items-center justify-center text-white hover:text-white transition-all duration-300"
+                className="w-10 h-10 bg-white/5 hover:bg-[#D4AF37] rounded-xl flex items-center justify-center text-white hover:text-white transition-all duration-300"
                 aria-label="Back to top"
               >
                 <ArrowUp className="w-4 h-4" />
