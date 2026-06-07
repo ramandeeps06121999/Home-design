@@ -88,7 +88,7 @@ export default function NewHomeBuildsPage() {
       relatedServices={[
         { title: "Queenslander Homes", href: "/services/queenslander-homes", description: "Authentic Queenslander homes with traditional character and modern comfort." },
         { title: "Custom Builds", href: "/services/custom-builds", description: "Looking for something truly unique? Explore our custom build options." },
-        { title: "Duplex & Townhouses", href: "/services/duplex-townhouses", description: "Maximize your investment with dual occupancy builds." },
+        { title: "Duplex & Townhouses", href: "/services/duplex-townhouses", description: "Maximise your investment with dual occupancy builds." },
       ]}
     />
   );

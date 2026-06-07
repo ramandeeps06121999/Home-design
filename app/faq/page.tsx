@@ -17,14 +17,14 @@ const faqCategories = [
       { question: "How long does a typical build take?", answer: "The duration depends on complexity and size, but typically ranges from 6 to 12 months. During our initial consultation, we'll provide a detailed timeline specific to your project, including all phases from design to final handover." },
       { question: "What is the building process from start to finish?", answer: "Our process follows 5 key stages: (1) Free consultation to understand your vision, (2) Design and planning phase, (3) Council approvals and permits, (4) Construction with regular updates, and (5) Final inspection and handover. We keep you informed at every stage." },
       { question: "Do I need council approval for my build?", answer: "Most construction projects require council approval. We handle the entire approval process for you, including preparing and submitting all required documentation. Our experience with local councils ensures a smooth approval process." },
-      { question: "Can I make changes during construction?", answer: "While we encourage finalizing all details during the planning phase, we understand that changes may be needed. We have a clear variation process that ensures any changes are documented, priced, and approved before implementation." },
+      { question: "Can I make changes during construction?", answer: "While we encourage finalising all details during the planning phase, we understand that changes may be needed. We have a clear variation process that ensures any changes are documented, priced, and approved before implementation." },
     ],
   },
   {
     title: "Pricing & Contracts",
     faqs: [
       { question: "Do you offer fixed-price contracts?", answer: "Yes, we provide fixed-price contracts to ensure transparency and peace of mind. No hidden costs or surprise expenses during construction. Everything is clearly outlined before we begin." },
-      { question: "What is included in the quoted price?", answer: "Our quotes include all construction costs, materials, labor, project management, council fees, and standard inclusions. We provide a comprehensive breakdown so you know exactly what you're paying for." },
+      { question: "What is included in the quoted price?", answer: "Our quotes include all construction costs, materials, labour, project management, council fees, and standard inclusions. We provide a comprehensive breakdown so you know exactly what you're paying for." },
       { question: "Do you require a deposit?", answer: "Yes, a deposit is required to secure your build in our schedule. The amount varies based on project size but is typically 5-10% of the total contract value. This is clearly outlined in our contract." },
       { question: "Are there any hidden costs I should be aware of?", answer: "Absolutely not. We pride ourselves on complete transparency. Our fixed-price contracts cover everything outlined in the agreement. Any potential additional costs (like site-specific requirements) are identified during the initial assessment." },
     ],
@@ -121,7 +121,7 @@ export default function FAQPage() {
       />
 
       {/* FAQ Section */}
-      <section className="bg-white py-24 lg:py-32" ref={ref}>
+      <section className="bg-white py-12 lg:py-20" ref={ref}>
         <div className="max-w-[900px] mx-auto px-6 lg:px-10">
           {faqCategories.map((category, catIndex) => (
             <motion.div
@@ -132,22 +132,22 @@ export default function FAQPage() {
               className="mb-16 last:mb-0"
             >
               <div className="flex items-center gap-3 mb-8">
-                <div className="w-8 h-[2px] bg-[#D4AF37]" />
-                <h2 className="font-sora text-2xl font-bold text-gray-900">{category.title}</h2>
+                <span className="h-px w-6 bg-[#D4AF37]" />
+                <h2 className="font-sora text-2xl font-bold text-black">{category.title}</h2>
               </div>
 
               <Accordion className="w-full">
                 {category.faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`${catIndex}-${index}`} className="border-b border-gray-100 py-1">
-                    <AccordionTrigger className="text-left font-sora text-lg font-semibold text-gray-900 hover:text-[#D4AF37] transition-colors py-5 [&[data-state=open]]:text-[#D4AF37]">
+                  <AccordionItem key={index} value={`${catIndex}-${index}`} className="border-b border-black/[0.06] py-1">
+                    <AccordionTrigger className="text-left font-sora text-lg font-semibold text-black hover:text-black transition-colors py-5 [&[data-state=open]]:text-black">
                       <div className="flex items-start gap-4">
-                        <span className="text-[#D4AF37]/30 font-bold text-sm mt-1 font-mono">
+                        <span className="text-black/25 font-bold text-sm mt-1 font-mono">
                           {String(index + 1).padStart(2, "0")}
                         </span>
                         {faq.question}
                       </div>
                     </AccordionTrigger>
-                    <AccordionContent className="text-gray-500 leading-relaxed pb-5 text-base pl-10">
+                    <AccordionContent className="text-black/55 leading-relaxed pb-5 text-base pl-10">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -161,11 +161,11 @@ export default function FAQPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-[#0d1117] rounded-3xl p-10 text-center mt-16"
+            className="bg-white border border-black/10 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.12)] rounded-3xl p-10 text-center mt-16"
           >
-            <h3 className="font-sora text-2xl font-bold text-white mb-3">Still Have Questions?</h3>
-            <p className="text-white text-sm mb-6 max-w-md mx-auto">Can&apos;t find the answer you&apos;re looking for? Our team is happy to help with any questions you have.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 bg-[#D4AF37] hover:bg-[#C49B2A] text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:shadow-[#D4AF37]/30 group">
+            <h3 className="font-sora text-2xl font-bold text-black mb-3">Still Have Questions?</h3>
+            <p className="text-black/60 text-sm mb-6 max-w-md mx-auto">Can&apos;t find the answer you&apos;re looking for? Our team is happy to help with any questions you have.</p>
+            <Link href="/contact" className="inline-flex items-center gap-2 bg-black hover:bg-black text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:shadow-black/10 group">
               Contact Us <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </motion.div>

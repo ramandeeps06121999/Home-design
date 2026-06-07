@@ -5,7 +5,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://thedesignhomes.com.
 
 export const metadata: Metadata = {
   title: "Interior Design Services Brisbane, Gold Coast & Sunshine Coast",
-  description: "Premium interior design services across SEQ. Space planning, material selection, 3D visualization & styling for homes in Brisbane, Gold Coast & Sunshine Coast.",
+  description: "Premium interior design services across SEQ. Space planning, material selection, 3D visualisation & styling for homes in Brisbane, Gold Coast & Sunshine Coast.",
   keywords: [
     "interior design Brisbane",
     "interior designers Gold Coast",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Interior Design Services | Premium Home Styling",
-    description: "Premium interior design services across Brisbane, Gold Coast & Sunshine Coast. Space planning, material selection & 3D visualization.",
+    description: "Premium interior design services across Brisbane, Gold Coast & Sunshine Coast. Space planning, material selection & 3D visualisation.",
     type: "article",
     url: `${siteUrl}/services/interior-design`,
     images: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Interior Design | Design Homes",
-    description: "Premium interior design services across SEQ. Space planning, material selection & 3D visualization.",
+    description: "Premium interior design services across SEQ. Space planning, material selection & 3D visualisation.",
     images: ["/images/ImageGen-1-1.webp"],
   },
   alternates: {
@@ -58,17 +58,17 @@ export default function InteriorDesignPage() {
         highlight: "Delight",
         description: [
           "Our interior design team brings spaces to life with a perfect blend of aesthetics and functionality. We work closely with you to understand your style preferences, how you use each space, and what makes you feel at home.",
-          "From initial concept boards and 3D visualizations to material selection and final styling, we handle every aspect of the design process to deliver interiors that truly reflect who you are.",
+          "From initial concept boards and 3D visualisations to material selection and final styling, we handle every aspect of the design process to deliver interiors that truly reflect who you are.",
         ],
         image: "/images/interior-luxury-modern.jpg",
       }}
       features={[
-        { iconName: "Palette", title: "Color Consulting", description: "Expert color schemes that set the mood and create cohesion throughout your home's interior spaces." },
-        { iconName: "BadgeCheck", title: "3D Visualization", description: "See your new interior before construction begins with detailed 3D renders and virtual walkthroughs." },
+        { iconName: "Palette", title: "Colour Consulting", description: "Expert colour schemes that set the mood and create cohesion throughout your home's interior spaces." },
+        { iconName: "BadgeCheck", title: "3D Visualisation", description: "See your new interior before construction begins with detailed 3D renders and virtual walkthroughs." },
         { iconName: "Lightbulb", title: "Lighting Design", description: "Strategic lighting plans that enhance ambiance, highlight features, and improve functionality." },
         { iconName: "Layers", title: "Material Selection", description: "Access to premium materials, tiles, stones, and finishes from Australia's top suppliers." },
         { iconName: "Sofa", title: "Furniture & Styling", description: "Custom furniture specifications and complete styling to create a magazine-worthy finish." },
-        { iconName: "Paintbrush", title: "Space Planning", description: "Optimized layouts that maximize space efficiency while maintaining beautiful flow between rooms." },
+        { iconName: "Paintbrush", title: "Space Planning", description: "Optimised layouts that maximise space efficiency while maintaining beautiful flow between rooms." },
       ]}
       benefits={[
         "Personalized design approach",
@@ -88,7 +88,7 @@ export default function InteriorDesignPage() {
       relatedServices={[
         { title: "New Home Builds", href: "/services/new-home-builds", description: "Build a new home with interior design included from day one." },
         { title: "Renovations", href: "/services/renovations", description: "Renovating? Let us redesign your interiors at the same time." },
-        { title: "Custom Builds", href: "/services/custom-builds", description: "Bespoke builds with fully customized interiors." },
+        { title: "Custom Builds", href: "/services/custom-builds", description: "Bespoke builds with fully customised interiors." },
       ]}
     />
   );

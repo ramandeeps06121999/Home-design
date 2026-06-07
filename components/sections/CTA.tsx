@@ -1,9 +1,8 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Phone, Shield, Award, CheckCircle2 } from "lucide-react";
 
@@ -19,151 +18,98 @@ const highlights = [
   "Quality workmanship with attention to detail",
 ];
 
+const whyUs = [
+  { title: "Quality Workmanship", desc: "Every detail crafted with precision and care" },
+  { title: "Honest Communication", desc: "Clear, transparent updates at every stage" },
+  { title: "Award-Winning Experience", desc: "Proven excellence from New Zealand to Queensland" },
+];
+
+const EASE = [0.22, 1, 0.36, 1] as const;
+
 export default function CTA() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   return (
-    <section className="relative py-28 lg:py-40 overflow-hidden -mt-[200px]" ref={ref}>
-      {/* Parallax Background */}
-      <motion.div className="absolute inset-0 z-0 -mt-[200px]" style={{ y: bgY }}>
-        <Image
-          src="/images/todd-kent-178j8tJrNlc-unsplash-2048x1365.webp"
-          alt="Construction Background"
-          fill
-          className="object-cover scale-110"
-        />
-        <div className="absolute inset-0 bg-[#0d1117]/95" style={{ marginTop: '-200px' }} />
-      </motion.div>
-
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent z-10" />
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent z-10" />
-
-      {/* Content */}
-      <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10">
-        <div className="grid lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-20 items-center">
-          {/* Left: Text content */}
+    <section className="bg-[#000000] py-12 lg:py-20" ref={ref}>
+      <div className="mx-auto max-w-[1240px] px-6 lg:px-10">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.3fr_1fr] lg:gap-20">
+          {/* Left */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7, ease: EASE }}
           >
-            {/* Trust pills */}
-            <div className="flex flex-wrap gap-3 mb-8">
-              {trustItems.map((item, index) => (
-                <motion.div
+            <div className="mb-7 flex flex-wrap gap-3">
+              {trustItems.map((item) => (
+                <div
                   key={item.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ delay: 0.2 + index * 0.1 }}
-                  className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2"
+                  className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2"
                 >
-                  <item.icon className="w-4 h-4 text-[#D4AF37]" />
-                  <span className="text-white text-sm font-medium">{item.label}</span>
-                </motion.div>
+                  <item.icon className="h-4 w-4 text-white/70" />
+                  <span className="text-sm font-medium text-white/80">{item.label}</span>
+                </div>
               ))}
             </div>
 
-            <h2 className="font-sora text-4xl md:text-5xl lg:text-[56px] font-bold text-white leading-[1.1] mb-6">
-              Ready to Build Your
-              <span className="text-gradient"> Dream Home?</span>
+            <h2 className="font-sora text-3xl font-semibold leading-[1.1] tracking-[-0.01em] text-white md:text-4xl lg:text-[52px]">
+              Ready to build your
+              <span className="text-gradient"> dream home?</span>
             </h2>
-            <p className="text-white text-lg leading-relaxed mb-8 max-w-[520px]">
-              From new builds to duplexes and custom projects — let&apos;s create something extraordinary together.
+            <p className="mt-5 max-w-[520px] text-lg leading-relaxed text-white/70">
+              From new builds to duplexes and custom projects — let&apos;s create
+              something extraordinary together.
             </p>
 
-            {/* Highlights */}
-            <div className="space-y-3 mb-10">
-              {highlights.map((item, index) => (
-                <motion.div
-                  key={item}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ delay: 0.4 + index * 0.1 }}
-                  className="flex items-center gap-3"
-                >
-                  <CheckCircle2 className="w-5 h-5 text-[#D4AF37] shrink-0" />
-                  <span className="text-white text-[15px]">{item}</span>
-                </motion.div>
+            <ul className="mt-8 space-y-3">
+              {highlights.map((item) => (
+                <li key={item} className="flex items-center gap-3">
+                  <CheckCircle2 className="h-5 w-5 shrink-0 text-white/70" />
+                  <span className="text-[15px] text-white/80">{item}</span>
+                </li>
               ))}
-            </div>
+            </ul>
 
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-start gap-4">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className="relative"
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2.5 rounded-full bg-white px-8 py-4 text-base font-semibold tracking-tight text-black transition-colors hover:bg-white/90"
               >
-                <div className="absolute inset-0 rounded-full bg-[#D4AF37]/20 animate-ping-slow" />
-                <Link
-                  href="/contact"
-                  className="relative inline-flex items-center gap-3 bg-[#D4AF37] hover:bg-[#C49B2A] text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-[#D4AF37]/40 group"
-                >
-                  Contact Us Today
-                  <span className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
-                    <ArrowRight className="w-4 h-4" />
-                  </span>
-                </Link>
-              </motion.div>
-
-              <motion.a
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.6 }}
+                Contact Us Today
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+              <a
                 href="tel:0436376001"
-                className="inline-flex items-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 group"
+                className="inline-flex items-center justify-center gap-2.5 rounded-full border border-white/30 px-8 py-4 text-base font-semibold tracking-tight text-white transition-colors hover:bg-white/10"
               >
-                <Phone className="w-5 h-5 text-[#D4AF37] group-hover:rotate-12 transition-transform" />
+                <Phone className="h-[18px] w-[18px]" />
                 Call Us Now
-              </motion.a>
+              </a>
             </div>
           </motion.div>
 
-          {/* Right: Stats card */}
+          {/* Right: Why choose us */}
           <motion.div
-            initial={{ opacity: 0, y: 40, scale: 0.95 }}
-            animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            initial={{ opacity: 0, y: 24 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, ease: EASE, delay: 0.2 }}
             className="hidden lg:block"
           >
-            <div className="glass rounded-3xl p-10 relative">
-              {/* Orange accent */}
-              <div className="absolute top-0 left-8 right-8 h-[3px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent rounded-full" />
-
-              <div className="text-center mb-8">
-                <div className="font-sora text-4xl font-bold text-white mb-3">
-                  Why Choose <span className="text-gradient">Us?</span>
-                </div>
+            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-10">
+              <h3 className="mb-8 text-center font-sora text-3xl font-semibold text-white">
+                Why choose <span className="text-gradient">us?</span>
+              </h3>
+              <div className="space-y-4">
+                {whyUs.map((item) => (
+                  <div key={item.title} className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                    <h4 className="mb-1 font-sora text-sm font-semibold text-white">{item.title}</h4>
+                    <p className="text-sm text-white/60">{item.desc}</p>
+                  </div>
+                ))}
               </div>
-
-              <div className="space-y-4 mb-8">
-                <div className="bg-white/5 rounded-2xl p-5 border border-white/5">
-                  <h4 className="font-sora font-bold text-white text-sm mb-1">Quality Workmanship</h4>
-                  <p className="text-white/70 text-sm">Every detail crafted with precision and care</p>
-                </div>
-                <div className="bg-white/5 rounded-2xl p-5 border border-white/5">
-                  <h4 className="font-sora font-bold text-white text-sm mb-1">Honest Communication</h4>
-                  <p className="text-white/70 text-sm">Clear, transparent updates at every stage</p>
-                </div>
-                <div className="bg-white/5 rounded-2xl p-5 border border-white/5">
-                  <h4 className="font-sora font-bold text-white text-sm mb-1">Award-Winning Experience</h4>
-                  <p className="text-white/70 text-sm">Proven excellence from New Zealand to Queensland</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-3 bg-[#D4AF37]/10 border border-[#D4AF37]/20 rounded-xl p-4">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse shrink-0" />
-                <p className="text-white text-sm">
-                  Currently accepting new projects for 2026
-                </p>
+              <div className="mt-8 flex items-center gap-3 rounded-xl border border-white/15 bg-white/5 p-4">
+                <span className="h-2 w-2 shrink-0 rounded-full bg-white/60" />
+                <p className="text-sm text-white/80">Currently accepting new projects for 2026</p>
               </div>
             </div>
           </motion.div>

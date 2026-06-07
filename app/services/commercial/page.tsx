@@ -66,7 +66,7 @@ export default function CommercialPage() {
         { iconName: "Store", title: "Office Fit-outs", description: "Modern office spaces designed for productivity, collaboration, and employee wellbeing." },
         { iconName: "Building2", title: "Retail Construction", description: "Eye-catching retail spaces that attract customers and enhance the shopping experience." },
         { iconName: "FileCheck", title: "Code Compliance", description: "Full compliance with BCA, fire safety, accessibility standards, and local council requirements." },
-        { iconName: "Clock", title: "Minimal Downtime", description: "Efficient construction schedules that minimize disruption to your business operations." },
+        { iconName: "Clock", title: "Minimal Downtime", description: "Efficient construction schedules that minimise disruption to your business operations." },
         { iconName: "Shield", title: "Quality Assurance", description: "Rigorous quality control processes throughout every phase of construction." },
         { iconName: "Users", title: "Stakeholder Management", description: "Professional communication with all stakeholders including tenants, landlords, and authorities." },
       ]}

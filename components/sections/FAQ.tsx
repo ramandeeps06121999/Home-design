@@ -39,75 +39,78 @@ const faqs = [
   },
 ];
 
+const EASE = [0.22, 1, 0.36, 1] as const;
+
 export default function FAQ() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="bg-white py-24 lg:py-32" ref={ref}>
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20">
-          {/* Left Side */}
+    <section className="bg-white py-12 lg:py-20" ref={ref}>
+      <div className="mx-auto max-w-[1240px] px-6 lg:px-10">
+        <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
+          {/* Left */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 24 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, ease: EASE }}
             className="lg:sticky lg:top-32 lg:self-start"
           >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-[2px] bg-[#D4AF37]" />
-              <span className="text-[#A88725] font-semibold uppercase tracking-wider text-sm">
+            <div className="mb-6 flex items-center gap-3">
+              <span className="h-px w-6 bg-[#D4AF37]" />
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-black/50">
                 FAQ
               </span>
             </div>
-            <h2 className="font-sora text-3xl md:text-4xl lg:text-[44px] font-bold text-gray-900 leading-[1.15] mb-6">
-              Common Questions About
-              <span className="text-gradient"> Building</span>
+            <h2 className="font-sora text-3xl font-semibold leading-[1.12] tracking-[-0.01em] text-black md:text-4xl lg:text-[44px]">
+              Common questions about
+              <span className="text-gradient"> building</span>
             </h2>
-            <p className="text-gray-500 text-lg leading-relaxed mb-8">
-              Find answers to the most frequently asked questions about our building process, pricing, and services.
+            <p className="mt-5 text-lg leading-relaxed text-black/60">
+              Find answers to the most frequently asked questions about our building
+              process, pricing, and services.
             </p>
 
-            {/* CTA Card */}
-            <div className="bg-[#0d1117] rounded-3xl p-8 text-white">
-              <h3 className="font-sora text-xl font-bold mb-3">
-                Still have questions?
-              </h3>
-              <p className="text-white text-sm mb-6 leading-relaxed">
+            {/* CTA card */}
+            <div className="mt-8 rounded-[2rem] border border-black/10 bg-white p-8 text-black shadow-[0_24px_60px_-20px_rgba(0,0,0,0.12)]">
+              <h3 className="font-sora text-xl font-semibold">Still have questions?</h3>
+              <p className="mt-3 text-sm leading-relaxed text-black/60">
                 Can&apos;t find the answer you&apos;re looking for? Our team is happy to help.
               </p>
               <button
-                onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-                className="inline-flex items-center gap-2 bg-[#D4AF37] hover:bg-[#C49B2A] text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:shadow-[#D4AF37]/30 group"
+                onClick={() =>
+                  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
+                }
+                className="group mt-6 inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-black"
               >
                 Contact Us
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </button>
             </div>
           </motion.div>
 
-          {/* Right Side - Accordion */}
+          {/* Right: accordion */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={{ opacity: 0, y: 24 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, ease: EASE, delay: 0.15 }}
           >
             <Accordion className="w-full">
               {faqs.map((faq, index) => (
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="border-b border-gray-100 py-1 group"
+                  className="group border-b border-black/[0.06] py-1"
                 >
-                  <AccordionTrigger className="text-left font-sora text-lg lg:text-xl font-semibold text-gray-900 hover:text-[#A88725] transition-colors duration-300 py-6 [&[data-state=open]]:text-[#A88725]">
+                  <AccordionTrigger className="py-6 text-left font-sora text-lg font-semibold text-black transition-colors duration-300 hover:text-black/60 lg:text-xl">
                     <div className="flex items-start gap-4">
-                      <span className="text-[#A88725]/30 group-hover:text-[#A88725]/60 font-bold text-sm mt-1 font-mono transition-colors duration-300">
+                      <span className="mt-1 font-mono text-sm font-semibold text-black/30 transition-colors duration-300 group-hover:text-black/50">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                       {faq.question}
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-500 leading-relaxed pb-6 text-base pl-10 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0">
+                  <AccordionContent className="pb-6 pl-10 text-base leading-relaxed text-black/60 data-[state=closed]:animate-out data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

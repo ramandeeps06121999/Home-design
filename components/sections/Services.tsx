@@ -1,11 +1,11 @@
 "use client";
 
-import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Home, Building2, Wrench, Landmark } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Home, Building2, Wrench, Landmark } from "lucide-react";
 
 const services = [
   {
@@ -14,7 +14,8 @@ const services = [
     image: "/images/hero-home.jpg",
     title: "New Home Builds",
     slug: "new-home-builds",
-    description: "Custom-designed homes tailored to your lifestyle and budget. From concept to completion, we bring your dream home to life with quality workmanship and attention to detail.",
+    description:
+      "Custom-designed homes tailored to your lifestyle and budget — from concept to completion with quality workmanship and attention to detail.",
     features: ["Fixed-price contracts", "6-year warranty", "Turnkey solutions"],
   },
   {
@@ -24,7 +25,8 @@ const services = [
     imagePosition: "object-top",
     title: "Duplex & Townhouses",
     slug: "duplex-townhouses",
-    description: "Maximize your property potential with dual occupancy solutions. Perfect for investors and multi-generational families.",
+    description:
+      "Maximise your property potential with dual occupancy solutions — perfect for investors and multi-generational families.",
     features: ["Dual occupancy", "Investment focused", "Council approval"],
   },
   {
@@ -33,7 +35,8 @@ const services = [
     image: "/images/custom-built-house.jpg",
     title: "Custom Builds",
     slug: "custom-builds",
-    description: "Bespoke architectural homes designed for unique sites and specific requirements. Your vision, our expertise and craftsmanship.",
+    description:
+      "Bespoke architectural homes designed for unique sites and specific requirements. Your vision, our expertise and craftsmanship.",
     features: ["Architectural design", "Challenging sites", "Luxury finishes"],
   },
   {
@@ -42,169 +45,126 @@ const services = [
     image: "/images/queenslander-house.webp",
     title: "Queenslander Homes",
     slug: "queenslander-homes",
-    description: "Beautiful Queenslander-style homes that honour traditional character while incorporating modern living standards and quality finishes.",
+    description:
+      "Beautiful Queenslander-style homes that honour traditional character while incorporating modern living standards and quality finishes.",
     features: ["Traditional character", "Modern amenities", "Heritage style"],
   },
 ];
 
-function TiltCard({ children, className }: { children: React.ReactNode; className?: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  const rotateX = useSpring(useTransform(y, [-0.5, 0.5], [4, -4]), { stiffness: 300, damping: 30 });
-  const rotateY = useSpring(useTransform(x, [-0.5, 0.5], [-4, 4]), { stiffness: 300, damping: 30 });
-
-  const handleMouse = (e: React.MouseEvent) => {
-    if (!ref.current) return;
-    const rect = ref.current.getBoundingClientRect();
-    x.set((e.clientX - rect.left) / rect.width - 0.5);
-    y.set((e.clientY - rect.top) / rect.height - 0.5);
-  };
-
-  const handleLeave = () => { x.set(0); y.set(0); };
-
-  return (
-    <motion.div
-      ref={ref}
-      onMouseMove={handleMouse}
-      onMouseLeave={handleLeave}
-      style={{ rotateX, rotateY, transformPerspective: 1000 }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-}
+const EASE = [0.22, 1, 0.36, 1] as const;
 
 export default function Services() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="services" className="bg-[#fafafa] py-24 lg:py-32 relative overflow-hidden" ref={ref}>
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, #000 1px, transparent 0)", backgroundSize: "40px 40px" }} />
-
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 relative z-10">
+    <section id="services" className="bg-[#ffffff] py-12 lg:py-20" ref={ref}>
+      <div className="mx-auto max-w-[1240px] px-6 lg:px-10">
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          transition={{ duration: 0.7, ease: EASE }}
+          className="mx-auto mb-10 max-w-2xl text-center"
         >
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-8 h-[2px] bg-[#D4AF37]" />
-            <span className="text-[#A88725] font-semibold uppercase tracking-wider text-sm">Our Services</span>
-            <div className="w-8 h-[2px] bg-[#D4AF37]" />
+          <div className="mb-5 flex items-center justify-center gap-3">
+            <span className="h-px w-6 bg-[#D4AF37]" />
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-black/50">
+              Our Services
+            </span>
+            <span className="h-px w-6 bg-[#D4AF37]" />
           </div>
-          <h2 className="font-sora text-3xl md:text-4xl lg:text-[44px] font-bold text-gray-900 leading-[1.15] mb-4">
-            Quality Residential
-            <span className="text-gradient"> Building Services</span>
+          <h2 className="font-sora text-3xl font-semibold leading-[1.12] tracking-[-0.01em] text-black md:text-4xl lg:text-[44px]">
+            Quality residential
+            <span className="text-gradient"> building services</span>
           </h2>
-          <p className="text-gray-500 text-lg mt-4">
-            From new builds to custom projects, we deliver exceptional quality and craftsmanship across every service.
+          <p className="mt-5 text-lg leading-relaxed text-black/60">
+            From new builds to custom projects, we deliver exceptional quality and
+            craftsmanship across every service.
           </p>
         </motion.div>
 
-        {/* 3x2 Grid Layout */}
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+        {/* Cards */}
+        <div className="grid gap-6 md:grid-cols-2 lg:gap-7">
           {services.map((service, index) => {
-            const IconComponent = service.icon;
+            const Icon = service.icon;
             return (
               <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 50 }}
+                key={service.slug}
+                initial={{ opacity: 0, y: 28 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.7, delay: index * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
+                transition={{ duration: 0.6, ease: EASE, delay: index * 0.08 }}
               >
-                <TiltCard className="group relative h-full">
-                  <Link href={`/services/${service.slug}`} className="block h-full">
-                    {/* Card container */}
-                    <div className="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.12)] transition-all duration-700 border border-gray-100/80 hover:border-[#A88725]/20 h-full flex flex-col">
-                      {/* Image area */}
-                      <div className="relative h-72 lg:h-80 overflow-hidden">
-                        <Image
-                          src={service.image}
-                          alt={service.title}
-                          fill
-                          className={`object-cover ${service.imagePosition || "object-center"} transition-transform duration-[800ms] ease-out group-hover:scale-110`}
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        />
-                        {/* Gradient overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-
-                        {/* Number badge */}
-                        <div className="absolute top-4 left-4 w-10 h-10 bg-white/95 backdrop-blur-md rounded-xl flex items-center justify-center shadow-lg">
-                          <span className="font-sora text-sm font-bold text-[#A88725]">{service.number}</span>
-                        </div>
-
-                        {/* Icon badge */}
-                        <div className="absolute top-4 right-4 w-10 h-10 bg-[#D4AF37] rounded-xl flex items-center justify-center shadow-lg">
-                          <IconComponent className="w-5 h-5 text-white" />
-                        </div>
-
-                        {/* Title overlay at bottom of image */}
-                        <div className="absolute bottom-0 left-0 right-0 p-5">
-                          <h3 className="font-sora text-xl font-bold text-white drop-shadow-sm">
-                            {service.title}
-                          </h3>
-                        </div>
-                      </div>
-
-                      {/* Content area */}
-                      <div className="p-5 flex flex-col flex-1">
-                        <p className="text-gray-500 leading-relaxed text-sm mb-4 flex-1">
-                          {service.description}
-                        </p>
-
-                        {/* Features list */}
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          {service.features.map((feature, i) => (
-                            <span 
-                              key={i} 
-                              className="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-full"
-                            >
-                              {feature}
-                            </span>
-                          ))}
-                        </div>
-
-                        {/* CTA row */}
-                        <div className="flex items-center justify-between pt-3 border-t border-gray-100">
-                          <span className="inline-flex items-center gap-2 text-[#A88725] font-semibold text-sm">
-                            Learn More
-                            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5" />
-                          </span>
-
-                          {/* Arrow circle */}
-                          <div className="w-9 h-9 rounded-full bg-[#D4AF37]/10 group-hover:bg-[#D4AF37] flex items-center justify-center transition-all duration-500">
-                            <ArrowRight className="w-4 h-4 text-[#A88725] group-hover:text-white transition-colors duration-500 -rotate-45 group-hover:rotate-0" />
-                          </div>
-                        </div>
-
-                        {/* Bottom accent line */}
-                        <div className="mt-4 h-[2px] bg-gradient-to-r from-[#D4AF37] to-[#D4AF37]/30 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-full" />
-                      </div>
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-black/[0.08] bg-white transition-all duration-500 hover:-translate-y-1 hover:border-black/20 hover:shadow-[0_24px_60px_-20px_rgba(0,0,0,0.12)]"
+                >
+                  {/* Image */}
+                  <div className="relative h-64 overflow-hidden lg:h-72">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className={`object-cover ${service.imagePosition || "object-center"} transition-transform duration-[800ms] ease-out group-hover:scale-105`}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
+                    <div className="absolute left-5 top-5 flex h-10 w-10 items-center justify-center rounded-xl bg-white/90 backdrop-blur-sm">
+                      <span className="font-sora text-sm font-semibold text-black">
+                        {service.number}
+                      </span>
                     </div>
-                  </Link>
-                </TiltCard>
+                    <div className="absolute inset-x-5 bottom-5 flex items-center gap-2.5">
+                      <Icon className="h-5 w-5 text-white" />
+                      <h3 className="font-sora text-xl font-semibold text-white drop-shadow-sm lg:text-2xl">
+                        {service.title}
+                      </h3>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex flex-1 flex-col p-7">
+                    <p className="mb-5 flex-1 text-[15px] leading-relaxed text-black/60">
+                      {service.description}
+                    </p>
+                    <div className="mb-6 flex flex-wrap gap-2">
+                      {service.features.map((f) => (
+                        <span
+                          key={f}
+                          className="rounded-full border border-black/10 px-3 py-1 text-xs text-black/60"
+                        >
+                          {f}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex items-center justify-between border-t border-black/[0.06] pt-4">
+                      <span className="text-sm font-semibold text-black">
+                        Learn more
+                      </span>
+                      <span className="flex h-9 w-9 items-center justify-center rounded-full bg-black/[0.06] transition-all duration-500 group-hover:bg-black">
+                        <ArrowUpRight className="h-4 w-4 text-black transition-colors duration-500 group-hover:text-white" />
+                      </span>
+                    </div>
+                  </div>
+                </Link>
               </motion.div>
             );
           })}
         </div>
 
+        {/* View all */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mt-14"
+          transition={{ duration: 0.6, ease: EASE, delay: 0.3 }}
+          className="mt-14 text-center"
         >
           <Link
             href="/services"
-            className="inline-flex items-center gap-3 bg-gray-900 hover:bg-[#D4AF37] text-white px-8 py-4 rounded-full font-semibold transition-all duration-500 hover:shadow-[0_10px_40px_rgba(212,175,55,0.3)] group"
+            className="group inline-flex items-center gap-3 rounded-full bg-black px-8 py-4 font-semibold text-white transition-colors hover:bg-black/90"
           >
             View All Services
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </motion.div>
       </div>

@@ -63,9 +63,9 @@ export default function CustomBuildsPage() {
         image: "/images/bespoke-architecture.jpg",
       }}
       features={[
-        { iconName: "Wrench", title: "Bespoke Design", description: "Fully customized designs that reflect your unique vision, from architectural concept through to finished details." },
+        { iconName: "Wrench", title: "Bespoke Design", description: "Fully customised designs that reflect your unique vision, from architectural concept through to finished details." },
         { iconName: "Award", title: "Premium Finishes", description: "Access to the finest materials, fixtures, and finishes from around the world for a truly luxury result." },
-        { iconName: "Gem", title: "Unique Architecture", description: "We specialize in complex architectural designs including cantilevered structures, curved walls, and innovative forms." },
+        { iconName: "Gem", title: "Unique Architecture", description: "We specialise in complex architectural designs including cantilevered structures, curved walls, and innovative forms." },
         { iconName: "MapPin", title: "Challenging Sites", description: "Expert solutions for difficult blocks including steep slopes, waterfront, bushfire zones, and flood-prone areas." },
         { iconName: "Shield", title: "Engineering Excellence", description: "Advanced structural engineering solutions that make seemingly impossible designs a reality." },
         { iconName: "Paintbrush", title: "Artisan Craftsmanship", description: "We engage specialist craftspeople for bespoke joinery, metalwork, stone masonry, and other artisan finishes." },
@@ -88,7 +88,7 @@ export default function CustomBuildsPage() {
       relatedServices={[
         { title: "New Home Builds", href: "/services/new-home-builds", description: "For standard custom homes with efficient build processes." },
         { title: "Queenslander Homes", href: "/services/queenslander-homes", description: "Authentic Queenslander homes with traditional character and modern comfort." },
-        { title: "Duplex & Townhouses", href: "/services/duplex-townhouses", description: "Maximize your investment with expertly built dual occupancy properties." },
+        { title: "Duplex & Townhouses", href: "/services/duplex-townhouses", description: "Maximise your investment with expertly built dual occupancy properties." },
       ]}
     />
   );

@@ -13,15 +13,6 @@ const categories = ["All", "Custom Build", "New Home Build", "Duplex & Townhouse
 
 const projects = [
   {
-    image: "/images/portfolio-luxury-1.jpg",
-    title: "Luxury Pool Villa",
-    location: "Gold Coast",
-    category: "Custom Build",
-    description: "A stunning 5-bedroom villa with infinity pool, featuring floor-to-ceiling glass and premium finishes throughout.",
-    size: "450m²",
-    year: "2024",
-  },
-  {
     image: "/images/portfolio-modern-1.jpg",
     title: "Contemporary Timber Home",
     location: "Brisbane",
@@ -62,7 +53,7 @@ const projects = [
     title: "Architectural Masterpiece",
     location: "Gold Coast",
     category: "Custom Build",
-    description: "Built into the hillside with spectacular ocean views, this custom home maximizes natural light and ventilation.",
+    description: "Built into the hillside with spectacular ocean views, this custom home maximises natural light and ventilation.",
     size: "380m²",
     year: "2022",
   },
@@ -97,14 +88,14 @@ export default function PortfolioPage() {
       />
 
       {/* Portfolio Grid */}
-      <section className="bg-white py-24 lg:py-32">
+      <section className="bg-white py-12 lg:py-20">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           {/* Category Filter */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex flex-wrap justify-center gap-3 mb-16"
+            className="flex flex-wrap justify-center gap-3 mb-12"
           >
             {categories.map((cat) => (
               <button
@@ -112,8 +103,8 @@ export default function PortfolioPage() {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
                   activeCategory === cat
-                    ? "bg-[#D4AF37] text-white shadow-lg shadow-[#D4AF37]/30"
-                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                    ? "bg-black text-white shadow-lg shadow-black/10"
+                    : "bg-black/[0.04] text-black/70 hover:bg-black/10"
                 }`}
               >
                 {cat}
@@ -131,7 +122,7 @@ export default function PortfolioPage() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08 }}
                 layout
-                className="group relative rounded-3xl overflow-hidden cursor-pointer bg-white border border-gray-100 hover:shadow-2xl transition-all duration-500"
+                className="group relative rounded-3xl overflow-hidden cursor-pointer bg-white border border-black/[0.06] hover:shadow-2xl transition-all duration-500"
               >
                 <div className="relative h-[300px] lg:h-[350px] overflow-hidden">
                   <Image
@@ -143,14 +134,14 @@ export default function PortfolioPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500" />
 
                   <div className="absolute top-5 left-5">
-                    <span className="bg-[#D4AF37] text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
+                    <span className="bg-black text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
                       {project.category}
                     </span>
                   </div>
 
                   <div className="absolute top-5 right-5 opacity-0 group-hover:opacity-100 transition-all duration-500 scale-75 group-hover:scale-100">
                     <div className="w-11 h-11 bg-white rounded-full flex items-center justify-center shadow-lg">
-                      <ArrowUpRight className="w-5 h-5 text-gray-900" />
+                      <ArrowUpRight className="w-5 h-5 text-black" />
                     </div>
                   </div>
 

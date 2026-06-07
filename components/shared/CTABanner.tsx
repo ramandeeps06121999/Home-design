@@ -21,29 +21,29 @@ export default function CTABanner({
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section className="bg-[#0d1117] py-20 lg:py-28" ref={ref}>
+    <section className="bg-white py-14 lg:py-24" ref={ref}>
       <div className="max-w-[900px] mx-auto px-6 lg:px-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="font-sora text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
+          <h2 className="font-sora text-3xl md:text-4xl lg:text-5xl font-bold text-black leading-tight mb-6">
             {title}
             <span className="text-gradient"> {highlight}</span>
           </h2>
-          <p className="text-white text-lg mb-10 max-w-[550px] mx-auto">{description}</p>
+          <p className="text-black/60 text-lg mb-10 max-w-[550px] mx-auto">{description}</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-3 bg-[#D4AF37] hover:bg-[#C49B2A] text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-[#D4AF37]/30 group"
+              className="inline-flex items-center gap-3 bg-black hover:bg-black text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-black/10 group"
             >
               Get a Free Quote
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a
               href="tel:0436376001"
-              className="inline-flex items-center gap-2 text-white hover:text-white font-medium transition-colors text-lg"
+              className="inline-flex items-center gap-2 text-black hover:text-black font-medium transition-colors text-lg"
             >
               <Phone className="w-5 h-5" />
               0436 376 001

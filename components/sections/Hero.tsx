@@ -72,7 +72,7 @@ export default function Hero() {
           alt="Design Homes - Quality New Home"
           className="absolute inset-0 w-full h-full object-cover scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-[#0d1117]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-[#000000]" />
       </motion.div>
 
       {/* Grain overlay */}
@@ -88,14 +88,14 @@ export default function Hero() {
           className="flex justify-center mb-8"
         >
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full px-5 py-2.5">
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+            <div className="w-2 h-2 bg-[#D4AF37] rounded-full animate-pulse" />
             <span className="text-white text-sm font-medium tracking-wide">Licensed QBCC Builder — South East Queensland</span>
           </div>
         </motion.div>
 
         {/* Split-Text Title */}
         <div className="text-center mb-6">
-          <h1 className="font-sora text-[clamp(48px,11vw,140px)] font-bold text-white leading-[0.9] tracking-[-0.04em]">
+          <h1 className="font-sora text-[clamp(40px,9vw,140px)] font-bold text-white leading-[0.95] sm:leading-[0.9] tracking-[-0.03em]">
             {titleWords.map((word, i) => (
               <motion.span
                 key={i}
@@ -120,7 +120,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center text-white text-lg md:text-xl max-w-[600px] mx-auto mb-12 lg:mb-16 leading-relaxed"
+          className="text-center text-white/75 text-lg md:text-xl max-w-[600px] mx-auto mb-12 lg:mb-16 leading-relaxed"
         >
           Quality new homes, duplexes, townhouses and custom builds across South East Queensland. Built with care, integrity, and pride.
         </motion.p>
@@ -132,26 +132,20 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 lg:mb-20"
         >
-          <div className="relative">
-            {/* Pulse ring */}
-            <div className="absolute inset-0 rounded-full bg-[#D4AF37]/30 animate-ping-slow" />
-            <a
-              href="tel:0436376001"
-              className="relative inline-flex items-center gap-3 bg-[#D4AF37] hover:bg-[#C49B2A] text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-[#D4AF37]/30 group"
-            >
-              <Phone className="w-5 h-5" />
-              0436 376 001
-            </a>
-          </div>
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-            className="inline-flex items-center gap-3 bg-white/10 hover:bg-white/15 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300"
+          <a
+            href="tel:0436376001"
+            className="inline-flex items-center gap-2.5 bg-white text-black px-8 py-4 rounded-full font-semibold text-base tracking-tight transition-colors hover:bg-white/90"
           >
-            Have a Question? Contact Us
+            <Phone className="w-[18px] h-[18px]" />
+            <span className="opacity-50">Call</span> 0436 376 001
+          </a>
+          <button
+            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+            className="inline-flex items-center gap-2.5 bg-transparent border border-white/30 text-white px-8 py-4 rounded-full font-semibold text-base tracking-tight transition-colors hover:bg-white/10"
+          >
+            Contact Us
             <ArrowRight className="w-4 h-4" />
-          </motion.button>
+          </button>
         </motion.div>
 
         {/* Bottom Row */}

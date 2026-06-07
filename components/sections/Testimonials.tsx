@@ -36,7 +36,7 @@ const testimonials = [
     project: "New Home Build",
     rating: 5,
     avatar: "https://i.pravatar.cc/200?u=james",
-    text: "From day one, Jason and the team treated our project like it was their own home. The attention to detail is remarkable — every finish, every corner, every material choice was carefully considered. Truly world-class.",
+    text: "From day one, the team treated our project like it was their own home. The attention to detail is remarkable — every finish, every corner, every material choice was carefully considered. Truly world-class.",
   },
   {
     name: "Rachel & Tom Williams",
@@ -48,57 +48,40 @@ const testimonials = [
   },
 ];
 
-function TestimonialCard({
-  testimonial,
-}: {
-  testimonial: (typeof testimonials)[0];
-}) {
+const EASE = [0.22, 1, 0.36, 1] as const;
+
+function TestimonialCard({ testimonial }: { testimonial: (typeof testimonials)[0] }) {
   return (
-    <div className="group relative h-full">
-      <div className="relative h-full bg-[#1c2128] rounded-2xl border border-white/[0.06] p-7 lg:p-8 flex flex-col gap-6 transition-all duration-500 hover:border-[#D4AF37]/30 hover:shadow-[0_0_40px_-12px_rgba(255,90,31,0.15)]">
-        {/* Decorative corner quote */}
-        <div className="absolute top-5 right-5 opacity-[0.06] group-hover:opacity-[0.12] transition-opacity duration-500">
-          <Quote className="w-16 h-16 text-[#D4AF37]" />
+    <div className="group relative flex h-full flex-col gap-6 rounded-[2rem] border border-black/[0.08] bg-white p-7 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-black/20 hover:shadow-[0_24px_60px_-20px_rgba(0,0,0,0.10)] lg:p-8">
+      <div className="absolute right-6 top-6 opacity-[0.06] transition-opacity duration-500 group-hover:opacity-10">
+        <Quote className="h-14 w-14 text-black" />
+      </div>
+
+      <div className="flex gap-1">
+        {Array.from({ length: testimonial.rating }).map((_, i) => (
+          <Star key={i} className="h-4 w-4 fill-[#D4AF37] text-[#D4AF37]" />
+        ))}
+      </div>
+
+      <blockquote className="relative z-10 flex-1 text-[15px] leading-[1.75] text-black/70">
+        &ldquo;{testimonial.text}&rdquo;
+      </blockquote>
+
+      <div className="h-px bg-black/[0.04]" />
+
+      <div className="flex items-center gap-4">
+        <div className="relative h-11 w-11 flex-shrink-0 overflow-hidden rounded-full ring-1 ring-black/10">
+          <Image src={testimonial.avatar} alt={testimonial.name} fill className="object-cover" />
         </div>
-
-        {/* Stars */}
-        <div className="flex gap-1">
-          {Array.from({ length: testimonial.rating }).map((_, i) => (
-            <Star
-              key={i}
-              className="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]"
-            />
-          ))}
+        <div className="min-w-0">
+          <h4 className="truncate font-sora text-sm font-semibold text-black">
+            {testimonial.name}
+          </h4>
+          <p className="mt-0.5 text-xs text-black/45">{testimonial.location}</p>
         </div>
-
-        {/* Quote text */}
-        <blockquote className="text-white text-[15px] leading-[1.75] font-light flex-1 relative z-10">
-          &ldquo;{testimonial.text}&rdquo;
-        </blockquote>
-
-        {/* Divider */}
-        <div className="h-px bg-gradient-to-r from-white/[0.06] via-white/[0.1] to-white/[0.06]" />
-
-        {/* Author */}
-        <div className="flex items-center gap-4">
-          <div className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-[#D4AF37]/20 ring-offset-2 ring-offset-[#1c2128] flex-shrink-0">
-            <Image
-              src={testimonial.avatar}
-              alt={testimonial.name}
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="min-w-0">
-            <h4 className="font-sora font-semibold text-white text-sm truncate">
-              {testimonial.name}
-            </h4>
-            <p className="text-white text-xs mt-0.5">{testimonial.location}</p>
-          </div>
-          <span className="ml-auto text-[11px] font-medium text-[#D4AF37]/70 bg-[#D4AF37]/[0.08] px-2.5 py-1 rounded-full whitespace-nowrap flex-shrink-0">
-            {testimonial.project}
-          </span>
-        </div>
+        <span className="ml-auto flex-shrink-0 whitespace-nowrap rounded-full bg-black/[0.04] px-2.5 py-1 text-[11px] font-medium text-black/60">
+          {testimonial.project}
+        </span>
       </div>
     </div>
   );
@@ -110,14 +93,11 @@ export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  // Auto-play carousel
   useEffect(() => {
     if (!isAutoPlaying) return;
-    
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, [isAutoPlaying]);
 
@@ -125,18 +105,15 @@ export default function Testimonials() {
     setIsAutoPlaying(false);
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
-
   const goToNext = () => {
     setIsAutoPlaying(false);
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   };
-
   const goToSlide = (index: number) => {
     setIsAutoPlaying(false);
     setCurrentIndex(index);
   };
 
-  // Get visible testimonials (3 on desktop, 1 on mobile)
   const getVisibleTestimonials = () => {
     const visible = [];
     for (let i = 0; i < 3; i++) {
@@ -147,170 +124,109 @@ export default function Testimonials() {
   };
 
   return (
-    <section
-      className="bg-[#0d1117] py-24 lg:py-36 relative overflow-hidden"
-      ref={ref}
-    >
-      {/* Ambient glow effects */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-[#D4AF37]/[0.025] rounded-full blur-[150px] pointer-events-none" />
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#D4AF37]/[0.03] rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[#D4AF37]/[0.02] rounded-full blur-[100px] pointer-events-none" />
-
-      {/* Subtle dot pattern */}
-      <div
-        className="absolute inset-0 opacity-[0.03] pointer-events-none"
-        style={{
-          backgroundImage:
-            "radial-gradient(rgba(255,255,255,0.5) 1px, transparent 1px)",
-          backgroundSize: "32px 32px",
-        }}
-      />
-
-      {/* Large decorative quote mark */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={isInView ? { opacity: 1, scale: 1 } : {}}
-        transition={{ duration: 1, delay: 0.3 }}
-        className="absolute top-20 left-6 lg:left-16 pointer-events-none"
-      >
-        <Quote className="w-24 h-24 lg:w-36 lg:h-36 text-[#D4AF37]/[0.06]" />
-      </motion.div>
-
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 relative z-10">
+    <section className="bg-[#ffffff] py-12 lg:py-20" ref={ref}>
+      <div className="mx-auto max-w-[1240px] px-6 lg:px-10">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-2xl mx-auto mb-16 lg:mb-20"
+          transition={{ duration: 0.7, ease: EASE }}
+          className="mx-auto mb-10 max-w-2xl text-center lg:mb-16"
         >
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-8 h-[2px] bg-[#D4AF37]" />
-            <span className="text-[#D4AF37] font-semibold uppercase tracking-wider text-sm">
+          <div className="mb-5 flex items-center justify-center gap-3">
+            <span className="h-px w-6 bg-[#D4AF37]" />
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-black/50">
               Client Stories
             </span>
-            <div className="w-8 h-[2px] bg-[#D4AF37]" />
+            <span className="h-px w-6 bg-[#D4AF37]" />
           </div>
-          <h2 className="font-sora text-3xl md:text-4xl lg:text-[44px] font-bold text-white leading-[1.15] mb-5">
-            Trusted by Families Across
+          <h2 className="font-sora text-3xl font-semibold leading-[1.12] tracking-[-0.01em] text-black md:text-4xl lg:text-[44px]">
+            Trusted by families across
             <span className="text-gradient"> South East QLD</span>
           </h2>
-          <p className="text-white text-base lg:text-lg leading-relaxed">
-            Real stories from real homeowners who trusted us to build their
-            dream homes.
+          <p className="mt-5 text-base leading-relaxed text-black/60 lg:text-lg">
+            Real stories from real homeowners who trusted us to build their dream homes.
           </p>
         </motion.div>
 
-        {/* Carousel Container */}
+        {/* Carousel */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative"
+          transition={{ duration: 0.7, ease: EASE, delay: 0.15 }}
         >
-          {/* Desktop Carousel (3 visible) */}
-          <div className="hidden lg:grid grid-cols-3 gap-6">
-            {getVisibleTestimonials().map((testimonial, i) => (
-              <TestimonialCard key={`desktop-${testimonial.originalIndex}`} testimonial={testimonial} />
+          <div className="hidden grid-cols-3 gap-6 lg:grid">
+            {getVisibleTestimonials().map((t) => (
+              <TestimonialCard key={`d-${t.originalIndex}`} testimonial={t} />
             ))}
           </div>
-
-          {/* Mobile Carousel (1 visible) */}
           <div className="lg:hidden">
             <TestimonialCard testimonial={testimonials[currentIndex]} />
           </div>
 
-          {/* Navigation Arrows */}
-          <div className="flex items-center justify-center gap-4 mt-8">
+          {/* Controls */}
+          <div className="mt-8 flex items-center justify-center gap-4">
             <button
               onClick={goToPrevious}
-              className="w-12 h-12 rounded-full bg-[#1c2128] border border-white/[0.06] flex items-center justify-center text-white hover:bg-[#D4AF37] hover:border-[#D4AF37] transition-all duration-300"
               aria-label="Previous testimonial"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-black/10 text-black/70 transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="h-5 w-5" />
             </button>
-
-            {/* Dots Indicator */}
             <div className="flex items-center gap-2">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className={`transition-all duration-300 rounded-full ${
-                    index === currentIndex
-                      ? "w-8 h-2 bg-[#D4AF37]"
-                      : "w-2 h-2 bg-white/30 hover:bg-white/50"
-                  }`}
                   aria-label={`Go to testimonial ${index + 1}`}
+                  className={`rounded-full transition-all duration-300 ${
+                    index === currentIndex ? "h-2 w-8 bg-black" : "h-2 w-2 bg-black/25 hover:bg-black/40"
+                  }`}
                 />
               ))}
             </div>
-
             <button
               onClick={goToNext}
-              className="w-12 h-12 rounded-full bg-[#1c2128] border border-white/[0.06] flex items-center justify-center text-white hover:bg-[#D4AF37] hover:border-[#D4AF37] transition-all duration-300"
               aria-label="Next testimonial"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-black/10 text-black/70 transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="h-5 w-5" />
             </button>
           </div>
         </motion.div>
 
-        {/* Bottom trust bar */}
+        {/* Trust bar */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-14 lg:mt-16 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10"
+          transition={{ duration: 0.6, ease: EASE, delay: 0.3 }}
+          className="mt-14 flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-10"
         >
-          {/* Stacked avatars */}
           <div className="flex items-center gap-3">
             <div className="flex -space-x-2.5">
               {testimonials.slice(0, 4).map((item, i) => (
-                <div
-                  key={i}
-                  className="relative w-8 h-8 rounded-full overflow-hidden border-2 border-[#0d1117]"
-                >
-                  <Image
-                    src={item.avatar}
-                    alt=""
-                    fill
-                    className="object-cover"
-                  />
+                <div key={i} className="relative h-8 w-8 overflow-hidden rounded-full border-2 border-[#ffffff]">
+                  <Image src={item.avatar} alt="" fill className="object-cover" />
                 </div>
               ))}
-              <div className="w-8 h-8 rounded-full bg-[#D4AF37] border-2 border-[#0d1117] flex items-center justify-center">
-                <span className="text-[10px] font-bold text-white">50+</span>
+              <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-[#ffffff] bg-black">
+                <span className="text-[10px] font-semibold text-white">50+</span>
               </div>
             </div>
-            <span className="text-white text-sm">Happy families</span>
+            <span className="text-sm text-black/60">Happy families</span>
           </div>
-
-          {/* Divider */}
-          <div className="hidden sm:block w-px h-6 bg-white/10" />
-
-          {/* Rating summary */}
+          <div className="hidden h-6 w-px bg-black/10 sm:block" />
           <div className="flex items-center gap-2">
             <div className="flex gap-0.5">
               {Array.from({ length: 5 }).map((_, i) => (
-                <Star
-                  key={i}
-                  className="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]"
-                />
+                <Star key={i} className="h-4 w-4 fill-[#D4AF37] text-[#D4AF37]" />
               ))}
             </div>
-            <span className="text-white text-sm">
-              5.0 average rating
-            </span>
+            <span className="text-sm text-black/60">5.0 average rating</span>
           </div>
-
-          {/* Divider */}
-          <div className="hidden sm:block w-px h-6 bg-white/10" />
-
-          {/* Years */}
-          <div className="text-white text-sm">
-            <span className="text-white font-semibold">15+</span> years of
-            excellence
+          <div className="hidden h-6 w-px bg-black/10 sm:block" />
+          <div className="text-sm text-black/60">
+            <span className="font-semibold text-black">15+</span> years of excellence
           </div>
         </motion.div>
       </div>

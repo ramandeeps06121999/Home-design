@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     default: "Design Homes Pty Ltd | Custom Home Builders Brisbane, Gold Coast & Sunshine Coast",
     template: "%s | Design Homes Pty Ltd",
   },
-  description: "Award-winning custom home builders in South East Queensland. We specialize in new home builds, duplexes, townhouses, custom builds & Queenslander homes across Brisbane, Gold Coast & Sunshine Coast.",
+  description: "Award-winning custom home builders in South East Queensland. We specialise in new home builds, duplexes, townhouses, custom builds & Queenslander homes across Brisbane, Gold Coast & Sunshine Coast.",
   keywords: [
     "custom home builders",
     "Brisbane",
@@ -95,7 +95,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#D4AF37" },
-    { media: "(prefers-color-scheme: dark)", color: "#0d1117" },
+    { media: "(prefers-color-scheme: dark)", color: "#000000" },
   ],
   colorScheme: "dark light",
   width: "device-width",
@@ -109,7 +109,7 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   "@id": `${siteUrl}/#business`,
   name: "Design Homes Pty Ltd",
-  description: "Award-winning custom home builders in South East Queensland specializing in new home builds, duplexes, townhouses, custom builds, and Queenslander homes.",
+  description: "Award-winning custom home builders in South East Queensland specialising in new home builds, duplexes, townhouses, custom builds, and Queenslander homes.",
   url: siteUrl,
   telephone: "0436376001",
   email: "harj@thedesignhomes.com.au",
@@ -283,7 +283,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${sora.variable} antialiased bg-[#0d1117]`}
+        className={`${sora.variable} antialiased bg-white`}
         style={{ fontFamily: "var(--font-sora), sans-serif" }}
         suppressHydrationWarning
       >

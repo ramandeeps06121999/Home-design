@@ -40,7 +40,7 @@ export default function PageHero({ title, highlight, description, image, breadcr
       <div className="absolute inset-0 z-0">
         <Image src={image} alt={title} fill className="object-cover" priority quality={85} />
         {/* Bottom-up gradient for content visibility */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-black/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-black/60 to-transparent" />
         {/* Top-down gradient for navbar visibility - stronger at top */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-transparent" />
       </div>
@@ -60,7 +60,7 @@ export default function PageHero({ title, highlight, description, image, breadcr
               <a
                 href={item.href}
                 className={`text-sm font-medium transition-colors ${
-                  i === breadcrumb.length - 1 ? "text-[#D4AF37]" : "text-white hover:text-white"
+                  i === breadcrumb.length - 1 ? "text-white" : "text-white/60 hover:text-white"
                 }`}
               >
                 {item.label}

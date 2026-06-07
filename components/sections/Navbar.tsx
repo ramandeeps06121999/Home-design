@@ -63,7 +63,7 @@ export default function Navbar() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-[#0d1117]/80 backdrop-blur-xl shadow-[0_1px_0_rgba(255,255,255,0.05)]"
+            ? "bg-[#000000]/80 backdrop-blur-xl shadow-[0_1px_0_rgba(255,255,255,0.05)]"
             : "bg-transparent"
         }`}
       >
@@ -127,7 +127,7 @@ export default function Navbar() {
                   {/* Services Dropdown */}
                   {link.children && (
                     <div className="absolute top-full left-0 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-                      <div className="bg-[#1c2128]/95 backdrop-blur-xl border border-white/10 rounded-2xl py-2 min-w-[220px] shadow-2xl shadow-black/50">
+                      <div className="bg-[#000000]/95 backdrop-blur-xl border border-white/10 rounded-2xl py-2 min-w-[220px] shadow-2xl shadow-black/50">
                         {link.children.map((child) => (
                           <button
                             key={child.name}
@@ -154,7 +154,7 @@ export default function Navbar() {
           >
             <a
               href="tel:0436376001"
-              className="inline-flex items-center gap-2 bg-[#D4AF37] hover:bg-[#C49B2A] text-white px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#D4AF37]/30"
+              className="inline-flex items-center gap-2 bg-black hover:bg-black text-white px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#D4AF37]/30"
             >
               <Phone className="w-4 h-4" />
               Call Now
@@ -179,7 +179,7 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-[#0d1117]/98 backdrop-blur-xl lg:hidden pt-20"
+            className="fixed inset-0 z-40 bg-[#000000]/98 backdrop-blur-xl lg:hidden pt-20"
           >
             <div className="flex flex-col items-center justify-center h-full gap-6">
               {navLinks.map((link, index) => (
@@ -230,7 +230,7 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
                 href="tel:0436376001"
-                className="inline-flex items-center gap-2 bg-[#D4AF37] text-white px-8 py-4 rounded-xl font-semibold mt-4"
+                className="inline-flex items-center gap-2 bg-black text-white px-8 py-4 rounded-xl font-semibold mt-4"
               >
                 <Phone className="w-5 h-5" />
                 Call Now
